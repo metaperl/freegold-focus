@@ -1,0 +1,20 @@
+Daniel,
+
+I'm sending along 20 more pounds because you did a job worth much
+more, plus I have a few questions:
+
+1. On [this link](http://focus.freegold.biz/?s=flash73#theplan-link)
+how can I get the text of the table of earnings to be white and a bit
+larger?
+
+2. On [this
+link](http://focus.freegold.biz/?s=flash73#theproduct-link) the title
+tab says "THE RESULTS" but it should say "THE PRODUCT"
+
+3. On [this
+link](http://focus.freegold.biz/?s=flash73#moreinformation-link)
+There is a lot of space between the h6 tags and the paragraph
+text.. How can the header not occupy so much vertical space?
+
+4. On [this link](http://focus.freegold.biz/?s=flash73#contact-link)
+how can I reduce the space between the CONTACT tab and the iframe?
