@@ -16,15 +16,20 @@ import sqlalchemy as sa
 
 def upgrade():
     op.create_table(
-        'person',
-        sa.Column('karatbars_id', sa.String(128), primary_key=True),
+        'affiliate',
+        sa.Column('id', sa.String(128), primary_key=True),
         sa.Column('name', sa.String(128)),
         sa.Column('number', sa.String(128)),
         sa.Column('email', sa.String(128)),
-        sa.Column('skype', sa.String(128)),
-        sa.Column('pic', sa.String(512))
+        sa.Column('skype', sa.String(128), nullable=True),
+        sa.Column(
+            'pic', sa.String(512),
+            default="https://www.evernote.com/shard/s309/sh/ff96d662-fe19-45b0-b845-9173abc1aa58/309fd4d7c62dcbea928682bc9ef5fbed/deep/0/Screenshot%208/24/13%201:33%20PM.jpg"
+        ),
+        sa.Column('kbuk_id', sa.Integer, nullable=True)
+
     )
 
 
 def downgrade():
-    op.drop_table('account')
+    op.drop_table('affiliate')
