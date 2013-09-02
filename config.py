@@ -4,8 +4,7 @@ def full_path(p=""): return os.path.join(os.path.dirname(__file__), p)
 config = {
     'global': {
         'environment': 'embedded',
-        'log.error_file': full_path('cherrypy-errors.log'),
-        'log.access_file': full_path('cherrypy-access.log')
+        'log.screen': True
     },
     '/': {
         'tools.staticdir.root' : full_path(),

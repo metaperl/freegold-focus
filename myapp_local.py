@@ -1,3 +1,4 @@
+
 # -*- python -*-
 
 # core
@@ -14,5 +15,4 @@ sys.path.insert(0, full_path())
 import config
 import myapp
 
-
-application = cherrypy.Application(myapp.Root(), "/", config.config)
+cherrypy.quickstart(myapp.Root(), script_name="/", config=config.config)
