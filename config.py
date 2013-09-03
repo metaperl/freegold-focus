@@ -37,5 +37,9 @@ config = {
         'tools.staticdir.on' : True,
         'tools.staticdir.dir' : 'js',
     },
+    '/media': {
+        'tools.staticdir.on' : True,
+        'tools.staticdir.dir': 'media'
+    }
 
 }
