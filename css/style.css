@@ -341,7 +341,7 @@ background-repeat:no-repeat;
 
 #theplan-left {
 height: 550px;
-width: 585px;
+width: 500px;
 float: left;
 font-size: 90%;
 text-align:left;
@@ -350,9 +350,9 @@ text-align:left;
 #theplan-right {
 height: 500px;
 width: 320px;
-float: right;
-margin-right: 35px;
-padding-top: 75px;
+float: left;
+margin-right: 5px;
+padding-top: 150px;
 }
 
 #theplan-title {
