@@ -82,17 +82,16 @@ class Reese(AffiliatePage):
 
         followers = dict(lead_and_followers(l) for l in src.keys())
 
-        carousel = dict(
-            opener=src[self.opener],
-            follower = src[followers[self.opener][0]],
-            follower2 = src[followers[self.opener][1]]
-
-        )
-
         def autoplay(u): return '{0}?autoplay=1'.format(u)
 
+        carousel = dict(
+            opener=autoplay(src[self.opener]),
+            follower = src[followers[self.opener][0]],
+            follower2 = src[followers[self.opener][1]]
+        )
+
         for meld_id, url in carousel.iteritems():
-            self.root.findmeld(meld_id).attributes(src=autoplay(url))
+            self.root.findmeld(meld_id).attributes(src=url)
 
 
 class Root(object):
