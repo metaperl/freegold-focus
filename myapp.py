@@ -27,7 +27,9 @@ class AffiliateModel(object):
         #example on how to query your Schema
         from sqlalchemy.orm import sessionmaker
         session = sessionmaker(bind=engine)()
-        p = session.query(Affiliate).filter_by(id=self.kb_id).first()
+        p = session.query(Affiliate).get(self.kb_id)
+        if p is None:
+            raise Exception("could not locate affiliate instance with primary key {0}".format(self.kb_id))
         return p
 
 class AffiliatePage(object):
@@ -59,52 +61,66 @@ class AffiliatePage(object):
         self.root.findmeld('email').content(self.p.email)
 
 
+class Superior(AffiliatePage):
+
+    def __init__(self, kb_id, html_file='index.html'):
+        super(Superior, self).__init__(kb_id, html_file=html_file)
+        self.base_dir = 'superior'
+        self.html_file = full_path(self.base_dir, html_file)
+
+    def render(self):
+        pass
+
+
 class Reese(AffiliatePage):
 
     def __init__(self, kb_id, opener):
         self.opener = opener
+        self.src = {
+            'corp': 'http://www.youtube.com/embed/0lrqEGlu0Fo',
+            'uk': 'http://www.youtube.com/embed/30MfCTLhdZ4',
+            'selina' : 'http://www.youtube.com/embed/37l6Wdzw490'
+        }
         super(Reese, self).__init__(kb_id)
+
+    def followers(self):
+        followers = dict(self.lead_and_followers(l) for l in self.src.keys())
+        return followers
+
+    def lead_and_followers(self, lead):
+        followers = self.src.keys()
+        followers.remove(lead)
+        return (lead, followers)
 
     def render(self):
 
         super(Reese, self).render()
 
-        src = {
-            'corp': 'http://www.youtube.com/embed/0lrqEGlu0Fo',
-            'uk': 'http://www.youtube.com/embed/30MfCTLhdZ4',
-            'selina' : 'http://www.youtube.com/embed/37l6Wdzw490'
-        }
-
-        def lead_and_followers(lead):
-            followers = src.keys()
-            followers.remove(lead)
-            return (lead, followers)
-
-        followers = dict(lead_and_followers(l) for l in src.keys())
-
         def autoplay(u): return '{0}?autoplay=1'.format(u)
 
+        followers = self.followers()
+
         carousel = dict(
-            opener=autoplay(src[self.opener]),
-            follower = src[followers[self.opener][0]],
-            follower2 = src[followers[self.opener][1]]
+            opener=autoplay(self.src[self.opener]),
+            follower = self.src[followers[self.opener][0]],
+            follower2 = self.src[followers[self.opener][1]]
         )
 
         for meld_id, url in carousel.iteritems():
             self.root.findmeld(meld_id).attributes(src=url)
 
 
+class ReeseMentor(Reese):
+
+    def __init__(self, kb_id, opener='selina'):
+        super(ReeseMentor, self).__init__(kb_id, opener)
+
+    def render(self):
+        pass
+
 class Root(object):
 
-    @cherrypy.expose
-    def index(self, s="supreme", page='Reese', opener='selina', cmpg=None, banner=None):
-
-        module = __import__(__name__)
-        class_ = getattr(module, page)
-        if page == 'Reese':
-            affiliate_page = class_(s, opener)
-        else:
-            affiliate_page = class_(s)
+    def render(self, affiliate_page):
 
         with open(affiliate_page.html_file, 'r') as fp:
             html = fp.read()
@@ -113,4 +129,16 @@ class Root(object):
         affiliate_page.render()
 
         return affiliate_page.root.write_htmlstring()
+
+    @cherrypy.expose
+    def index(self, s="supreme", opener='selina', cmpg=None, banner=None):
+
+        return self.render(Reese(s, opener))
+
+
+    @cherrypy.expose
+    def superior(self, s="supreme", cmpg=None, banner=None):
+
+        return self.render(Superior(s))
+
 
