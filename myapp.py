@@ -63,6 +63,7 @@ class AffiliatePage(object):
 
 class Superior(AffiliatePage):
 
+
     def __init__(self, kb_id, html_file='index.html'):
         super(Superior, self).__init__(kb_id, html_file=html_file)
         self.base_dir = 'superior'
@@ -138,6 +139,8 @@ class Root(object):
 
     @cherrypy.expose
     def superior(self, s="supreme", cmpg=None, banner=None):
+
+        _cp_config = { 'tools.staticdir.root' : full_path('superior') }
 
         return self.render(Superior(s))
 

@@ -20,7 +20,8 @@ config = {
 
     'global': {
         'environment': 'embedded',
-        'log.screen': True
+        'log.screen': True,
+        'tools.staticdir.debug': True
     },
     '/': {
         'tools.staticdir.root' : full_path(),
