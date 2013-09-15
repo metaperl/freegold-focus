@@ -39,6 +39,7 @@ class AffiliatePage(object):
         self.p = AffiliateModel(kb_id).affiliate
         self.affiliate_url = 'http://karatbars.com/signup.php?s={0}'.format(kb_id)
         self.landing_url = 'http://karatbars.com/landing/?s={0}'.format(kb_id)
+        self.superior_url = 'http://focus.freegold.biz/superior/{0}'.format(kb_id)
         self.skype_url = 'skype:{0}?add'.format(self.p.skype)
         self.kbgold_uk_url = 'http://www.karatbarsgold.co.uk/{0}'.format(self.p.kbuk_id)
         self.email_href = 'mailto:{0}'.format(self.p.email)
@@ -63,26 +64,28 @@ class AffiliatePage(object):
 
 class Superior(AffiliatePage):
 
-
     def __init__(self, kb_id, html_file='index.html'):
         super(Superior, self).__init__(kb_id, html_file=html_file)
         self.base_dir = 'superior'
         self.html_file = full_path(self.base_dir, html_file)
 
     def render(self):
-        pass
+        super(Superior, self).render()
 
 
 class Reese(AffiliatePage):
 
-    def __init__(self, kb_id, opener):
+    def __init__(self, kb_id, opener='selina.html', html_file='index.html'):
         self.opener = opener
         self.src = {
             'corp': 'http://www.youtube.com/embed/0lrqEGlu0Fo',
             'uk': 'http://www.youtube.com/embed/30MfCTLhdZ4',
             'selina' : 'http://www.youtube.com/embed/37l6Wdzw490'
         }
-        super(Reese, self).__init__(kb_id)
+        super(Reese, self).__init__(kb_id, html_file)
+        self.shop_url = 'http://karatbars.com/shop/?s={0}'.format(kb_id)
+        self.main_url = 'http://karatbars.com/?s={0}'.format(kb_id)
+
 
     def followers(self):
         followers = dict(self.lead_and_followers(l) for l in self.src.keys())
@@ -110,14 +113,34 @@ class Reese(AffiliatePage):
         for meld_id, url in carousel.iteritems():
             self.root.findmeld(meld_id).attributes(src=url)
 
+        self.root.findmeld('shop_url').attributes(href=self.shop_url)
+        self.root.findmeld('main_url').attributes(href=self.main_url)
 
-class ReeseMentor(Reese):
 
-    def __init__(self, kb_id, opener='selina'):
-        super(ReeseMentor, self).__init__(kb_id, opener)
+class ReeseMentor(AffiliatePage):
+
+    def __init__(self, kb_id):
+        super(ReeseMentor, self).__init__(kb_id, 'mentor.html')
 
     def render(self):
-        pass
+        self.root.findmeld('affiliate_url').attributes(href=self.affiliate_url)
+        self.root.findmeld('kbgold_uk_url').attributes(href=self.kbgold_uk_url)
+        self.root.findmeld('enroll_free').attributes(href=self.affiliate_url)
+        self.root.findmeld('superior_url').attributes(href=self.superior_url)
+        self.root.findmeld('landing_url').attributes(href=self.landing_url)
+
+
+        self.root.findmeld('name').content(self.p.name)
+        self.root.findmeld('name_in_title').content(
+            "Karatbars International - {0}".format(self.p.name)
+        )
+
+        self.root.findmeld('pic').attributes(src=self.p.pic)
+        self.root.findmeld('phone').content(self.p.number)
+        self.root.findmeld('skype_url').attributes(href=self.skype_url)
+        self.root.findmeld('skype_id').content(self.p.skype)
+        self.root.findmeld('email_href').attributes(href=self.email_href)
+        self.root.findmeld('email').content(self.p.email)
 
 class Root(object):
 
@@ -133,15 +156,16 @@ class Root(object):
 
     @cherrypy.expose
     def index(self, s="supreme", opener='selina', cmpg=None, banner=None):
-
         return self.render(Reese(s, opener))
 
 
     @cherrypy.expose
     def superior(self, s="supreme", cmpg=None, banner=None):
-
-        _cp_config = { 'tools.staticdir.root' : full_path('superior') }
-
         return self.render(Superior(s))
+
+
+    @cherrypy.expose
+    def trainwith(self, s):
+        return self.render(ReeseMentor(s))
 
 

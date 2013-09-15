@@ -13,7 +13,8 @@ def static_dirs():
     _static_dirs = 'css img images js media'.split()
     for static_dir in _static_dirs:
         yield config_static_directory(static_dir)
-        yield config_static_directory("superior/{0}".format(static_dir))
+        for subdir in 'superior trainwith'.split():
+            yield config_static_directory("{0}/{1}".format(subdir, static_dir))
 
 
 config = {
