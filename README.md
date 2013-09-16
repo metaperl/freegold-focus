@@ -1,4 +1,4 @@
 freegold-focus
 ==============
 
-source code for http://Focus.FreeGold.biz
+source code for my [Karatbars Affiliate Pages](http://TerrenceBrannon.com)
