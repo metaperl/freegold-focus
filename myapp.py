@@ -34,9 +34,12 @@ class AffiliateModel(object):
 
 class AffiliatePage(object):
 
-    def __init__(self, kb_id, html_file='index.html'):
-        self.html_file = full_path(html_file)
+    def __init__(self, kb_id, base_dir='', html_file='index.html'):
+        self.base_dir = base_dir
+        self.html_file = full_path(self.base_dir, html_file)
         self.p = AffiliateModel(kb_id).affiliate
+
+        self.supreme_team_url = '/?s={0}'.format(kb_id)
         self.affiliate_url = 'http://karatbars.com/signup.php?s={0}'.format(kb_id)
         self.landing_url = 'http://karatbars.com/landing/?s={0}'.format(kb_id)
         self.superior_url = '/superior/{0}'.format(kb_id)
@@ -46,45 +49,35 @@ class AffiliatePage(object):
 
     def render(self):
         self.root.findmeld('affiliate_url').attributes(href=self.affiliate_url)
-        self.root.findmeld('kbgold_uk_url').attributes(href=self.kbgold_uk_url)
-        self.root.findmeld('enroll_free').attributes(href=self.affiliate_url)
-        self.root.findmeld('contact_iframe').attributes(src=self.landing_url)
-        self.root.findmeld('name').content(self.p.name)
-        self.root.findmeld('name_in_title').content(
-            "Karatbars International - {0}".format(self.p.name)
-        )
-
-        self.root.findmeld('pic').attributes(src=self.p.pic)
-        self.root.findmeld('phone').content(self.p.number)
-        self.root.findmeld('skype_url').attributes(href=self.skype_url)
-        self.root.findmeld('skype_id').content(self.p.skype)
-        self.root.findmeld('email_href').attributes(href=self.email_href)
-        self.root.findmeld('email').content(self.p.email)
 
 
 class Superior(AffiliatePage):
 
-    def __init__(self, kb_id, html_file='index.html'):
-        super(Superior, self).__init__(kb_id, html_file=html_file)
-        self.base_dir = 'superior'
-        self.html_file = full_path(self.base_dir, html_file)
+    def __init__(self, kb_id):
+        super(Superior, self).__init__(kb_id, base_dir='superior')
 
     def render(self):
-        self.root.findmeld('affiliate_url').attributes(href=self.affiliate_url)
-        self.root.findmeld('enroll_free').attributes(href=self.affiliate_url)
-        # self.root.findmeld('contact_iframe').attributes(src=self.landing_url)
-        self.root.findmeld('name').content(self.p.name)
-        # self.root.findmeld('name_in_title').content(
-        #     "Karatbars International - {0}".format(self.p.name)
-        # )
-        #
-        # self.root.findmeld('pic').attributes(src=self.p.pic)
-        # self.root.findmeld('phone').content(self.p.number)
-        # self.root.findmeld('skype_url').attributes(href=self.skype_url)
-        # self.root.findmeld('skype_id').content(self.p.skype)
-        # self.root.findmeld('email_href').attributes(href=self.email_href)
-        # self.root.findmeld('email').content(self.p.email)
+        super(Superior, self).render()
+        for affiliate_url_id in 'affiliate_url2 affiliate_url3'.split():
+            self.root.findmeld(affiliate_url_id).attributes(href=self.affiliate_url)
 
+        self.root.findmeld('name').content(self.p.name)
+        self.root.findmeld('name_in_title').content("{0}'s Superior Retirement Plan with Karatbars International".format(self.p.name))
+        self.root.findmeld('pic').attributes(src=self.p.pic)
+
+class BuyGold(AffiliatePage):
+
+    def __init__(self, kb_id):
+        super(BuyGold, self).__init__(kb_id, base_dir='buygold')
+
+    def render(self):
+        super(BuyGold, self).render()
+        for affiliate_url_id in 'affiliate_url2'.split():
+            self.root.findmeld(affiliate_url_id).attributes(href=self.affiliate_url)
+
+        self.root.findmeld('home').attributes(href=self.supreme_team_url)
+        self.root.findmeld('name_in_title').content("Buy Gold from {0} with Karatbars International".format(self.p.name))
+        #self.root.findmeld('pic').attributes(src=self.p.pic)
 
 class Reese(AffiliatePage):
 
@@ -127,6 +120,21 @@ class Reese(AffiliatePage):
         for meld_id, url in carousel.iteritems():
             self.root.findmeld(meld_id).attributes(src=url)
 
+        self.root.findmeld('kbgold_uk_url').attributes(href=self.kbgold_uk_url)
+        self.root.findmeld('enroll_free').attributes(href=self.affiliate_url)
+        self.root.findmeld('contact_iframe').attributes(src=self.landing_url)
+        self.root.findmeld('name').content(self.p.name)
+        self.root.findmeld('name_in_title').content(
+            "Karatbars International - {0}".format(self.p.name)
+        )
+
+        self.root.findmeld('pic').attributes(src=self.p.pic)
+        self.root.findmeld('phone').content(self.p.number)
+        self.root.findmeld('skype_url').attributes(href=self.skype_url)
+        self.root.findmeld('skype_id').content(self.p.skype)
+        self.root.findmeld('email_href').attributes(href=self.email_href)
+        self.root.findmeld('email').content(self.p.email)
+
         self.root.findmeld('shop_url').attributes(href=self.shop_url)
         self.root.findmeld('main_url').attributes(href=self.main_url)
         self.root.findmeld('mentor_url').attributes(href=self.mentor_url)
@@ -136,11 +144,12 @@ class ReeseMentor(AffiliatePage):
 
     def __init__(self, kb_id):
         super(ReeseMentor, self).__init__(kb_id, 'mentor.html')
-        self.supreme_team_url = '/?s={0}'.format(kb_id)
         self.lttw_url = 'http://www.littletickettowealth.com/?id={0}'.format(self.p.lttw_id)
 
     def render(self):
-        self.root.findmeld('affiliate_url').attributes(href=self.affiliate_url)
+
+        super(ReeseMentor, self).render()
+
         self.root.findmeld('kbgold_uk_url').attributes(href=self.kbgold_uk_url)
         self.root.findmeld('kbgold_uk_url2').attributes(href=self.kbgold_uk_url)
         self.root.findmeld('lttw_url').attributes(href=self.lttw_url)
@@ -148,7 +157,6 @@ class ReeseMentor(AffiliatePage):
         self.root.findmeld('supreme_team_site').attributes(href=self.supreme_team_url)
         self.root.findmeld('superior_url').attributes(href=self.superior_url)
         self.root.findmeld('landing_url').attributes(href=self.landing_url)
-
 
         self.root.findmeld('name').content(self.p.name)
         self.root.findmeld('name_in_title').content(
@@ -180,9 +188,12 @@ class Root(object):
 
 
     @cherrypy.expose
-    def superior(self, s="supreme", cmpg=None, banner=None):
+    def superior(self, s, cmpg=None, banner=None):
         return self.render(Superior(s))
 
+    @cherrypy.expose
+    def buygold(self, s, cmpg=None, banner=None):
+        return self.render(BuyGold(s))
 
     @cherrypy.expose
     def trainwith(self, s):
