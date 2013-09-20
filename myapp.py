@@ -16,6 +16,16 @@ def full_path(*extra):
 sys.path.insert(0, full_path())
 from saorm import *
 
+import logging
+
+logging.basicConfig()
+logging.getLogger('sqlalchemy.engine').setLevel(logging.DEBUG)
+
+
+def make_session():
+    from sqlalchemy.orm import sessionmaker
+    session = sessionmaker(bind=engine)()
+    return session
 
 class AffiliateModel(object):
 
@@ -25,8 +35,7 @@ class AffiliateModel(object):
 
     def person(self):
         #example on how to query your Schema
-        from sqlalchemy.orm import sessionmaker
-        session = sessionmaker(bind=engine)()
+        session = make_session()
         p = session.query(Affiliate).get(self.kb_id)
         if p is None:
             raise Exception("could not locate affiliate instance with primary key {0}".format(self.kb_id))
@@ -178,6 +187,8 @@ class ReeseMentor(AffiliatePage):
 
         super(ReeseMentor, self).render()
 
+        self.root.findmeld('tools_register_url').attributes(href='/tools/{0}'.format(self.p.id))
+
         self.root.findmeld('kbgold_uk_url').attributes(href=self.kbgold_uk_url)
         self.root.findmeld('kbgold_uk_url2').attributes(href=self.kbgold_uk_url)
         self.root.findmeld('lttw_url').attributes(href=self.lttw_url)
@@ -193,7 +204,7 @@ class ReeseMentor(AffiliatePage):
 
         self.root.findmeld('name').content(self.p.name)
         self.root.findmeld('name_in_title').content(
-            "Karatbars International - {0}".format(self.p.name)
+            "{0} - Karatbars International Mentor Page".format(self.p.name)
         )
 
         self.root.findmeld('pic').attributes(src=self.p.pic)
@@ -202,6 +213,43 @@ class ReeseMentor(AffiliatePage):
         self.root.findmeld('skype_id').content(self.p.skype)
         self.root.findmeld('email_href').attributes(href=self.email_href)
         self.root.findmeld('email').content(self.p.email)
+
+class Tools(AffiliatePage):
+
+    def __init__(self, kb_id):
+        super(Tools, self).__init__(kb_id, 'tools')
+
+    def render(self):
+        super(Tools, self).render()
+
+class ToolsRegister(object):
+
+    def __init__(self, **dbargs):
+        self.dbargs = dbargs
+
+    def render(self):
+
+        session = make_session()
+        for deletable in 'form_id submit'.split():
+            self.dbargs.pop(deletable, None)
+        if self.dbargs['kbuk_id'] == '':
+            self.dbargs['kbuk_id'] = None
+        a = Affiliate(**self.dbargs)
+        session.add(a)
+        session.flush()
+        session.commit()
+        supreme_team_url = 'http://{0}/?s={1}'.format(cherrypy.request.headers.get('Host', ''), self.dbargs['id'])
+        html = """<html><head></head><body>
+                        <div style="padding-top: 400px; padding-right: 40px;">
+        <h3>
+
+        Check the affiliate page by visiting <a target='_blank' href="{0}">{1}</a>
+        </h3>
+        </div>
+               </body></html>
+               """.format(supreme_team_url, supreme_team_url)
+        return html
+
 
 class Root(object):
 
@@ -219,7 +267,6 @@ class Root(object):
     def index(self, s="supreme", opener='selina', cmpg=None, banner=None):
         return self.render(Reese(s, opener))
 
-
     @cherrypy.expose
     def superior(self, s, cmpg=None, banner=None):
         return self.render(Superior(s))
@@ -231,6 +278,14 @@ class Root(object):
     @cherrypy.expose
     def get13kilos(self, s, cmpg=None, banner=None):
         return self.render(Get13Kilos(s))
+
+    @cherrypy.expose
+    def tools(self, s):
+        return self.render(Tools(s))
+
+    @cherrypy.expose
+    def tools_register(self, **dbargs):
+        return (ToolsRegister(**dbargs)).render()
 
     @cherrypy.expose
     def trainwith(self, s):
