@@ -106,9 +106,13 @@ class Ben919(AffiliatePage):
         self.root.findmeld('skype_id').content(self.p.skype)
         self.root.findmeld('number').content(self.p.number)
 
-        self.root.findmeld('cyprus_url').attributes(href=self.cyprus_url)
         self.root.findmeld('buy_gold_url').attributes(href=self.buy_gold_url)
         self.root.findmeld('get13kilos_url').attributes(href=self.get13kilos_url)
+
+        for i in xrange(1,4):
+            c = 'cyprus_url{0}'.format(i)
+            self.root.findmeld(c).attributes(href=self.cyprus_url)
+
 
 class Cyprus(AffiliatePage):
 
@@ -116,9 +120,7 @@ class Cyprus(AffiliatePage):
         super(Cyprus, self).__init__(kb_id, base_dir='cyprus')
 
     def render(self):
-        super(Cyprus, self).render()
-        for affiliate_url_id in self.affiliate_url_ids:
-            self.root.findmeld(affiliate_url_id).attributes(href=self.affiliate_url)
+        self.root.findmeld('superior_url').attributes(href=self.superior_url)
 
 
 class BuyGold(AffiliatePage):

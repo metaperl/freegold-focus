@@ -10,7 +10,7 @@ def config_static_directory(d):
     }
 
 def static_dirs():
-    _static_dirs = 'css form img images js media slides'.split()
+    _static_dirs = 'css form img images includes js media slides styles'.split()
     for static_dir in _static_dirs:
         yield config_static_directory(static_dir)
         for subdir in 'ben919 buygold get13kilos superior tools trainwith'.split():
