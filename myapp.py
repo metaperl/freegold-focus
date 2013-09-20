@@ -56,6 +56,7 @@ class AffiliatePage(object):
         self.landing_url = 'http://karatbars.com/landing/?s={0}'.format(kb_id)
 
         self.superior_url = '/superior/{0}'.format(kb_id)
+        self.ben919_url = '/ben919/{0}'.format(kb_id)
         self.buy_gold_url = '/buygold/{0}'.format(kb_id)
         self.get13kilos_url = '/get13kilos/{0}'.format(kb_id)
 
@@ -235,7 +236,7 @@ class ReeseMentor(AffiliatePage):
         self.root.findmeld('supreme_team_url_uk').attributes(href=self.supreme_team_url_uk)
 
         self.root.findmeld('superior_url').attributes(href=self.superior_url)
-
+        self.root.findmeld('ben919_url').attributes(href=self.ben919_url)
         self.root.findmeld('landing_url').attributes(href=self.landing_url)
 
         self.root.findmeld('name').content(self.p.name)
