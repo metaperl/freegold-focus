@@ -69,8 +69,8 @@ class AffiliatePage(object):
 
 class Superior(AffiliatePage):
 
-    def __init__(self, kb_id):
-        super(Superior, self).__init__(kb_id, base_dir='superior')
+    def __init__(self, kb_id, base_dir='superior'):
+        super(Superior, self).__init__(kb_id, base_dir=base_dir)
 
     def render(self):
         super(Superior, self).render()
@@ -83,9 +83,43 @@ class Superior(AffiliatePage):
         self.root.findmeld('skype_url').attributes(href=self.skype_url)
         self.root.findmeld('skype_id').content(self.p.skype)
 
-        self.root.findmeld('home').attributes(href=self.supreme_team_url)
+        #self.root.findmeld('home').attributes(href=self.supreme_team_url)
         self.root.findmeld('buy_gold_url').attributes(href=self.buy_gold_url)
         self.root.findmeld('get13kilos_url').attributes(href=self.get13kilos_url)
+
+class Ben919(AffiliatePage):
+
+    def __init__(self, kb_id):
+        super(Ben919, self).__init__(kb_id, base_dir='ben919')
+        self.affiliate_url_ids = ('affiliate_url{0}'.format(i) for i in xrange(2,9))
+        self.cyprus_url = '/cyprus/{0}'.format(kb_id)
+
+
+    def render(self):
+        super(Ben919, self).render()
+        for affiliate_url_id in self.affiliate_url_ids:
+            self.root.findmeld(affiliate_url_id).attributes(href=self.affiliate_url)
+
+        self.root.findmeld('name').content(self.p.name)
+        self.root.findmeld('name_in_title').content("{0}'s Superior Retirement Plan with Karatbars International".format(self.p.name))
+        self.root.findmeld('pic').attributes(src=self.p.pic)
+        self.root.findmeld('skype_id').content(self.p.skype)
+        self.root.findmeld('number').content(self.p.number)
+
+        self.root.findmeld('cyprus_url').attributes(href=self.cyprus_url)
+        self.root.findmeld('buy_gold_url').attributes(href=self.buy_gold_url)
+        self.root.findmeld('get13kilos_url').attributes(href=self.get13kilos_url)
+
+class Cyprus(AffiliatePage):
+
+    def __init__(self, kb_id):
+        super(Cyprus, self).__init__(kb_id, base_dir='cyprus')
+
+    def render(self):
+        super(Cyprus, self).render()
+        for affiliate_url_id in self.affiliate_url_ids:
+            self.root.findmeld(affiliate_url_id).attributes(href=self.affiliate_url)
+
 
 class BuyGold(AffiliatePage):
 
@@ -270,6 +304,15 @@ class Root(object):
     @cherrypy.expose
     def superior(self, s, cmpg=None, banner=None):
         return self.render(Superior(s))
+
+    @cherrypy.expose
+    def ben919(self, s, cmpg=None, banner=None):
+        return self.render(Ben919(s))
+
+
+    @cherrypy.expose
+    def cyprus(self, s, cmpg=None, banner=None):
+        return self.render(Cyprus(s))
 
     @cherrypy.expose
     def buygold(self, s, cmpg=None, banner=None):

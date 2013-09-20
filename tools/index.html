@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:meld=
+        "http://www.plope.com/software/meld3" xmlns:bar="http://foo/bar">
+<head>
+    <meta name="generator" content=
+            "HTML Tidy for Linux/x86 (vers 25 March 2009), see www.w3.org"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=us-ascii"/>
+
+    <title meld:id="name_in_title">Karatbars International Terrence Brannon</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script type="text/javascript" src="js/jquery.capty.min.js">
+    </script>
+    <script type="text/javascript" src="js/jquery.easing.1.3.js">
+    </script>
+    <script type="text/javascript" src="js/scripts.js">
+    </script>
+    <script type="text/javascript" src="js/mosaic.1.0.1.js">
+    </script>
+    <script type="text/javascript" src="js/jquery.js">
+    </script>
+    <script type="text/javascript">
+        //<![CDATA[
+        $(function () {
+            $("a.js_onPageLink").bind("click", function (event) {
+                event.preventDefault ? event.preventDefault() : event.returnValue = false;
+                var target = $(this).attr("href");
+                $("html, body").stop().animate({
+                    scrollLeft: $(target).offset().left,
+                    scrollTop: $(target).offset().top
+                }, 1200);
+            });
+        });
+        //]]>
+    </script>
+</head>
+
+<body>
+<div id="container">
+    <div id="top-wrapper">
+        <div id="top">
+            <div id="logo">
+                <a class="js_onPageLink" href="#container"><img src="images/logo.png" width=
+                        "126" height="54" alt="Terrence Brannon"/></a>
+            </div>
+            <!-- end logo-->
+
+            <div id="navigation">
+                <ul id="nav">
+                    <li><a class="js_onPageLink" href="#theplan-link">REGISTER AFFILIATE</a></li>
+
+                    <li style="list-style: none"><img src="images/divider.png" width="3" height=
+                            "29" style="margin-bottom: -10px; padding-right: 15px;"/></li>
+
+                    <li><a class="js_onPageLink" href="#theprocess-link"></a></li>
+
+                    <li style="list-style: none"><img src="images/divider.png" width="3" height=
+                            "29" style="margin-bottom: -10px; padding-right: 15px;"/></li>
+
+                    <li><a class="js_onPageLink" href="#theresults-link"> </a></li>
+
+                    <li style="list-style: none"><img src="images/divider.png" width="3" height=
+                            "29" style="margin-bottom: -10px; padding-right: 15px;"/></li>
+
+                    <li><a class="js_onPageLink" href="#theproduct-link"> </a></li>
+
+                    <li style="list-style: none"><img src="images/divider.png" width="3" height=
+                            "29" style="margin-bottom: -10px; padding-right: 15px;"/></li>
+
+                    <li><a class="js_onPageLink" href="#moreinformation-link"> </a></li>
+
+                    <li style="list-style: none"><img src="images/divider.png" width="3" height=
+                            "29" style="margin-bottom: -10px; padding-right: 15px;"/></li>
+
+                    <li><a class="js_onPageLink" href="#contact-link"></a></li>
+                </ul>
+            </div>
+            <!--end navigation-->
+        </div>
+        <!--end top-->
+    </div>
+    <!--end top-wrapper-->
+
+    <div id="main-wrapper">
+        <div id="main">
+            <div id="left">
+                <div id="quote">
+                    <h1>TOOLS PAGE</h1>
+
+                    <h2></h2>
+                </div>
+                <!--end quote-->
+
+                <span meld:id="affiliate_url"></span>
+
+            </div>
+            <!--end left-->
+
+        </div>
+    </div>
+    <!--end right-->
+
+    <div id="shadow"><img src="images/shadow.PNG" width="960" height="30" alt=
+            "Shadow"/></div>
+</div>
+<!--end main-->
+<!--end main-wrapper-->
+
+<div id="theplan-link" style="position:relative; top:-60px;"></div>
+
+<div id="theplan-wrapper">
+    <div id="theplan">
+        <div id="theplan-left">
+
+            <div style="padding-top: 1px; padding-right: 1px;">
+                <iframe width=800 height=790 src="form/form.html"></iframe>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<div id="bottom_wrapper">
+    <div id="bottom">
+        Copyright &copy; July 2013 Daniel Reese - All rights reserved.
+    </div>
+</div>
+<script type="text/javascript">
+    //<![CDATA[
+    $(function () {
+        var imgWrapper = $('.slideshow > li');
+        // only show the first image, hide the rest
+        imgWrapper.hide().filter(':first').show();
+        $('ul.recentlist li a').click(function () {
+            // check if this item doesn't have class "current"
+            // if it has class "current" it must not execute the script again
+            if (this.className.indexOf('current') == -1) {
+                imgWrapper.hide();
+                imgWrapper.filter(this.hash).fadeIn(500);
+                $('ul.recentlist li a').removeClass('current');
+                $(this).addClass('current');
+            }
+            return false;
+        });
+    });
+
+    //]]>
+</script>
+</body>
+</html>
