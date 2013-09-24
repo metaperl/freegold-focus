@@ -196,7 +196,7 @@ class Reese(AffiliatePage):
 
         self.root.findmeld('kbgold_uk_url').attributes(href=self.kbgold_uk_url)
         self.root.findmeld('enroll_free').attributes(href=self.affiliate_url)
-        self.root.findmeld('contact_iframe').attributes(src=self.landing_url)
+        #self.root.findmeld('contact_iframe').attributes(src=self.landing_url)
         self.root.findmeld('name').content(self.p.name)
         self.root.findmeld('name_in_title').content(
             "Karatbars International - {0}".format(self.p.name)
@@ -212,6 +212,8 @@ class Reese(AffiliatePage):
         self.root.findmeld('shop_url').attributes(href=self.shop_url)
         self.root.findmeld('main_url').attributes(href=self.main_url)
         self.root.findmeld('mentor_url').attributes(href=self.mentor_url)
+        self.root.findmeld('landing_url').attributes(href=self.landing_url)
+
 
 
 class ReeseMentor(AffiliatePage):
@@ -250,6 +252,44 @@ class ReeseMentor(AffiliatePage):
         self.root.findmeld('skype_id').content(self.p.skype)
         self.root.findmeld('email_href').attributes(href=self.email_href)
         self.root.findmeld('email').content(self.p.email)
+
+class Intro(AffiliatePage):
+
+    def __init__(self, kb_id, page):
+        super(Intro, self).__init__(kb_id, 'intro')
+        self.page=page
+
+    def render(self):
+
+        pass
+        #super(Intro, self).render()
+
+        # self.root.findmeld('tools_register_url').attributes(href='/tools/{0}'.format(self.p.id))
+        #
+        # self.root.findmeld('kbgold_uk_url').attributes(href=self.kbgold_uk_url)
+        # self.root.findmeld('kbgold_uk_url2').attributes(href=self.kbgold_uk_url)
+        # self.root.findmeld('lttw_url').attributes(href=self.lttw_url)
+        #
+        # self.root.findmeld('supreme_team_url').attributes(href=self.supreme_team_url)
+        # self.root.findmeld('supreme_team_url2').attributes(href=self.supreme_team_url)
+        # self.root.findmeld('supreme_team_url_corp').attributes(href=self.supreme_team_url_corp)
+        # self.root.findmeld('supreme_team_url_uk').attributes(href=self.supreme_team_url_uk)
+        #
+        # self.root.findmeld('superior_url').attributes(href=self.superior_url)
+        # self.root.findmeld('ben919_url').attributes(href=self.ben919_url)
+        # self.root.findmeld('landing_url').attributes(href=self.landing_url)
+        #
+        # self.root.findmeld('name').content(self.p.name)
+        # self.root.findmeld('name_in_title').content(
+        #     "{0} - Karatbars International Mentor Page".format(self.p.name)
+        # )
+        #
+        # self.root.findmeld('pic').attributes(src=self.p.pic)
+        # self.root.findmeld('phone').content(self.p.number)
+        # self.root.findmeld('skype_url').attributes(href=self.skype_url)
+        # self.root.findmeld('skype_id').content(self.p.skype)
+        # self.root.findmeld('email_href').attributes(href=self.email_href)
+        # self.root.findmeld('email').content(self.p.email)
 
 class Tools(AffiliatePage):
 
@@ -337,4 +377,6 @@ class Root(object):
     def trainwith(self, s):
         return self.render(ReeseMentor(s))
 
-
+    @cherrypy.expose
+    def intro(self, s, page='pricing', cmpg=None, banner=None):
+        return self.render(Intro(s, page))

@@ -10,10 +10,10 @@ def config_static_directory(d):
     }
 
 def static_dirs():
-    _static_dirs = 'css form img images includes js media slides styles'.split()
+    _static_dirs = 'css form img data1/images engine1 images includes js media slides styles'.split()
     for static_dir in _static_dirs:
         yield config_static_directory(static_dir)
-        for subdir in 'ben919 buygold get13kilos superior tools trainwith'.split():
+        for subdir in 'ben919 buygold get13kilos intro superior tools trainwith'.split():
             yield config_static_directory("{0}/{1}".format(subdir, static_dir))
 
 
