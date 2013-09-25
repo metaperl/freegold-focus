@@ -39,7 +39,7 @@ ul, li, img, body, html {
 
 a {
     text-decoration: none;
-    color: #fff;
+    color: #C0D523;
 }
 
 a:hover {
@@ -74,9 +74,6 @@ h2 {
 
 h3 {
     color: #0e466d;
-    font-size: 400%;
-    line-height: 60px;
-    margin-top: 100px;
 }
 
 h4 {
@@ -386,12 +383,12 @@ h6 {
     height: auto;
     width: 100%;
     background-repeat: repeat-x;
-    background-color: #d2cdb0;
+    background-color: #6d8898;
     border-top: 12px solid white;
 }
 
 #theprocess {
-    height: 10800px;
+    height: 6850px;
     width: 960px;
     margin: 0 auto;
     text-align: left;
@@ -422,12 +419,12 @@ h6 {
     height: auto;
     width: 100%;
     background-repeat: repeat-x;
-    background-color: #6d8898;
+    background-color: #000000;
     border-top: 12px solid white;
 }
 
 #theresults {
-    height: 7000px;
+    height: 3200px;
     width: 960px;
     margin: 0 auto;
     background-repeat: no-repeat;
@@ -464,12 +461,12 @@ h6 {
     height: auto;
     width: 100%;
     background-repeat: repeat-x;
-    background-color: #d2cdb0;
+    background-color: #000000;
     border-top: 12px solid white;
 }
 
 #theproduct {
-    height: 600px;
+    height: 700px;
     width: 960px;
     margin: 0 auto;
     background-repeat: no-repeat;
@@ -504,7 +501,7 @@ h6 {
 }
 
 #moreinformation {
-    height: 450px;
+    height: 2050px;
     width: 960px;
     margin: 0 auto;
     background-repeat: no-repeat;

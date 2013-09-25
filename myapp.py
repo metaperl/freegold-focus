@@ -53,6 +53,11 @@ class AffiliatePage(object):
         self.supreme_team_url_uk = '/?s={0}&opener=uk'.format(kb_id)
         self.affiliate_url = 'http://karatbars.com/signup.php?s={0}'.format(kb_id)
 
+        self.shop_url = 'http://karatbars.com/shop/?s={0}'.format(kb_id)
+        self.main_url = 'http://karatbars.com/?s={0}'.format(kb_id)
+        self.mentor_url = '/trainwith/{0}'.format(kb_id)
+        self.corp_url = self.main_url
+
         self.landing_url = 'http://karatbars.com/landing/?s={0}'.format(kb_id)
 
         self.superior_url = '/superior/{0}'.format(kb_id)
@@ -163,9 +168,7 @@ class Reese(AffiliatePage):
             'selina' : 'http://www.youtube.com/embed/37l6Wdzw490'
         }
         super(Reese, self).__init__(kb_id)
-        self.shop_url = 'http://karatbars.com/shop/?s={0}'.format(kb_id)
-        self.main_url = 'http://karatbars.com/?s={0}'.format(kb_id)
-        self.mentor_url = '/trainwith/{0}'.format(kb_id)
+
 
 
     def followers(self):
@@ -198,6 +201,8 @@ class Reese(AffiliatePage):
         self.root.findmeld('enroll_free').attributes(href=self.affiliate_url)
         #self.root.findmeld('contact_iframe').attributes(src=self.landing_url)
         self.root.findmeld('name').content(self.p.name)
+        self.root.findmeld('name2').content(self.p.name)
+
         self.root.findmeld('name_in_title').content(
             "Karatbars International - {0}".format(self.p.name)
         )
@@ -211,8 +216,11 @@ class Reese(AffiliatePage):
 
         self.root.findmeld('shop_url').attributes(href=self.shop_url)
         self.root.findmeld('main_url').attributes(href=self.main_url)
+        self.root.findmeld('corp_url').attributes(href=self.main_url)
+        self.root.findmeld('main_url2').content(self.main_url)
+
         self.root.findmeld('mentor_url').attributes(href=self.mentor_url)
-        self.root.findmeld('landing_url').attributes(href=self.landing_url)
+        #self.root.findmeld('landing_url').attributes(href=self.landing_url)
 
 
 
@@ -262,7 +270,7 @@ class Intro(AffiliatePage):
     def render(self):
 
         pass
-        #super(Intro, self).render()
+        super(Intro, self).render()
 
         # self.root.findmeld('tools_register_url').attributes(href='/tools/{0}'.format(self.p.id))
         #
@@ -270,8 +278,8 @@ class Intro(AffiliatePage):
         # self.root.findmeld('kbgold_uk_url2').attributes(href=self.kbgold_uk_url)
         # self.root.findmeld('lttw_url').attributes(href=self.lttw_url)
         #
-        # self.root.findmeld('supreme_team_url').attributes(href=self.supreme_team_url)
-        # self.root.findmeld('supreme_team_url2').attributes(href=self.supreme_team_url)
+        self.root.findmeld('supreme_team_url').attributes(href=self.supreme_team_url)
+        self.root.findmeld('supreme_team_url2').attributes(href=self.supreme_team_url)
         # self.root.findmeld('supreme_team_url_corp').attributes(href=self.supreme_team_url_corp)
         # self.root.findmeld('supreme_team_url_uk').attributes(href=self.supreme_team_url_uk)
         #
@@ -279,17 +287,22 @@ class Intro(AffiliatePage):
         # self.root.findmeld('ben919_url').attributes(href=self.ben919_url)
         # self.root.findmeld('landing_url').attributes(href=self.landing_url)
         #
-        # self.root.findmeld('name').content(self.p.name)
+        self.root.findmeld('name').content(self.p.name)
+#self.root.findmeld('name2').content(self.p.name)
+#self.root.findmeld('main_url').attributes(href=self.main_url)
+#self.root.findmeld('corp_url').content(self.main_url)
+
+
         # self.root.findmeld('name_in_title').content(
-        #     "{0} - Karatbars International Mentor Page".format(self.p.name)
+        #     "{0} - Karatbars International Intro Page".format(self.p.name)
         # )
-        #
-        # self.root.findmeld('pic').attributes(src=self.p.pic)
-        # self.root.findmeld('phone').content(self.p.number)
-        # self.root.findmeld('skype_url').attributes(href=self.skype_url)
-        # self.root.findmeld('skype_id').content(self.p.skype)
-        # self.root.findmeld('email_href').attributes(href=self.email_href)
-        # self.root.findmeld('email').content(self.p.email)
+
+        self.root.findmeld('pic').attributes(src=self.p.pic)
+        self.root.findmeld('phone').content(self.p.number)
+        self.root.findmeld('skype_url').attributes(href=self.skype_url)
+        self.root.findmeld('skype_id').content(self.p.skype)
+        self.root.findmeld('email_href').attributes(href=self.email_href)
+        self.root.findmeld('email').content(self.p.email)
 
 class Tools(AffiliatePage):
 
