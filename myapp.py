@@ -52,6 +52,8 @@ class AffiliatePage(object):
         self.supreme_team_url_corp = '/?s={0}&opener=corp'.format(kb_id)
         self.supreme_team_url_uk = '/?s={0}&opener=uk'.format(kb_id)
         self.affiliate_url = 'http://karatbars.com/signup.php?s={0}'.format(kb_id)
+        self.intro_url = "/intro/{0}".format(kb_id)
+        self.intro_kexchange_url = "/intro/{0}#theresults-link".format(kb_id)
 
         self.shop_url = 'http://karatbars.com/shop/?s={0}'.format(kb_id)
         self.main_url = 'http://karatbars.com/?s={0}'.format(kb_id)
@@ -220,7 +222,8 @@ class Reese(AffiliatePage):
         self.root.findmeld('main_url2').content(self.main_url)
 
         self.root.findmeld('mentor_url').attributes(href=self.mentor_url)
-        #self.root.findmeld('landing_url').attributes(href=self.landing_url)
+        self.root.findmeld('intro_url').attributes(href=self.intro_url)
+        self.root.findmeld('intro_kexchange_url').attributes(href=self.intro_kexchange_url)
 
 
 
