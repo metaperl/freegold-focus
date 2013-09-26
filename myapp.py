@@ -191,15 +191,13 @@ class Reese(AffiliatePage):
         followers = self.followers()
 
         carousel = dict(
-            opener=autoplay(self.src[self.opener]),
-            follower = self.src[followers[self.opener][0]],
-            follower2 = self.src[followers[self.opener][1]]
+            opener=autoplay(self.src[self.opener])
         )
 
         for meld_id, url in carousel.iteritems():
             self.root.findmeld(meld_id).attributes(src=url)
 
-        self.root.findmeld('kbgold_uk_url').attributes(href=self.kbgold_uk_url)
+        #self.root.findmeld('kbgold_uk_url').attributes(href=self.kbgold_uk_url)
         self.root.findmeld('enroll_free').attributes(href=self.affiliate_url)
         #self.root.findmeld('contact_iframe').attributes(src=self.landing_url)
         self.root.findmeld('name').content(self.p.name)
