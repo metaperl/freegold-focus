@@ -90,6 +90,7 @@ class Superior(AffiliatePage):
         self.root.findmeld('pic').attributes(src=self.p.pic)
         self.root.findmeld('skype_url').attributes(href=self.skype_url)
         self.root.findmeld('skype_id').content(self.p.skype)
+        self.root.findmeld('number').content(self.p.number)
 
         #self.root.findmeld('home').attributes(href=self.supreme_team_url)
         self.root.findmeld('buy_gold_url').attributes(href=self.buy_gold_url)
