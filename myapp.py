@@ -41,6 +41,23 @@ class AffiliateModel(object):
             raise Exception("could not locate affiliate instance with primary key {0}".format(self.kb_id))
         return p
 
+    @staticmethod
+    def shorten(s, length):
+        if len(s) <= length:
+            return s
+        else:
+            return "{0} ...".format(s[0:length])
+
+
+    @staticmethod
+    def prepare_email(e):
+        if len(e) > 29:
+            return "Click here to email"
+        else:
+            return e
+
+
+
 class AffiliatePage(object):
 
     def __init__(self, kb_id, base_dir='', html_file='index.html'):
@@ -183,6 +200,7 @@ class Reese(AffiliatePage):
         followers.remove(lead)
         return (lead, followers)
 
+
     def render(self):
 
         super(Reese, self).render()
@@ -213,7 +231,7 @@ class Reese(AffiliatePage):
         self.root.findmeld('skype_url').attributes(href=self.skype_url)
         self.root.findmeld('skype_id').content(self.p.skype)
         self.root.findmeld('email_href').attributes(href=self.email_href)
-        self.root.findmeld('email').content(self.p.email)
+        self.root.findmeld('email').content(AffiliateModel.prepare_email(self.p.email))
 
         self.root.findmeld('shop_url').attributes(href=self.shop_url)
         self.root.findmeld('main_url').attributes(href=self.main_url)
