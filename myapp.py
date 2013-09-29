@@ -186,7 +186,7 @@ class Reese(AffiliatePage):
             'corp': 'http://www.youtube.com/embed/0lrqEGlu0Fo',
             'uk': 'http://www.youtube.com/embed/30MfCTLhdZ4',
             'selina' : 'http://www.youtube.com/embed/37l6Wdzw490',
-            'joe': 'http://youtube.com/embed/9vtJGqmjCb0'
+            'joe': 'http://youtube.com/embed/bpegrmdKWpg'
         }
         super(Reese, self).__init__(kb_id)
 
