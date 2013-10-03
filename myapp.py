@@ -236,8 +236,8 @@ class Reese(AffiliatePage):
 
         self.root.findmeld('shop_url').attributes(href=self.shop_url)
         self.root.findmeld('main_url').attributes(href=self.main_url)
-        self.root.findmeld('corp_url').attributes(href=self.main_url)
-        self.root.findmeld('main_url2').content(self.main_url)
+        self.root.findmeld('corp_url').content(self.main_url)
+        self.root.findmeld('main_url2').attributes(href=self.main_url)
 
         self.root.findmeld('mentor_url').attributes(href=self.mentor_url)
         self.root.findmeld('intro_url').attributes(href=self.intro_url)
