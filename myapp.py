@@ -70,6 +70,9 @@ class AffiliatePage(object):
         self.supreme_team_url_uk = '/?s={0}&opener=uk'.format(kb_id)
         self.affiliate_url = 'http://karatbars.com/signup.php?s={0}'.format(kb_id)
         self.intro_url = "/intro/{0}".format(kb_id)
+        self.intro_iamgold_url = "{0}#theplan-link".format(self.intro_url) # http://localhost:8080/intro/bitcoin#theresults-link
+        self.intro_pricing_url = "{0}#theprocess-link".format(self.intro_url)
+
         self.intro_kexchange_url = "/intro/{0}#theresults-link".format(kb_id)
 
         self.shop_url = 'http://karatbars.com/shop/?s={0}'.format(kb_id)
@@ -180,7 +183,7 @@ class Get13Kilos(AffiliatePage):
 
 class Reese(AffiliatePage):
 
-    def __init__(self, kb_id, opener='selina.html', html_file='index.html'):
+    def __init__(self, kb_id, opener='selina.html', html_file='index.html', period='month'):
         self.opener = opener
         self.src = {
             'corp': 'http://www.youtube.com/embed/0lrqEGlu0Fo',
@@ -188,6 +191,7 @@ class Reese(AffiliatePage):
             'selina' : 'http://www.youtube.com/embed/37l6Wdzw490',
             'joe': 'http://youtube.com/embed/bpegrmdKWpg'
         }
+        self.period=period
         super(Reese, self).__init__(kb_id)
 
 
@@ -217,6 +221,9 @@ class Reese(AffiliatePage):
         for meld_id, url in carousel.iteritems():
             self.root.findmeld(meld_id).attributes(src=url)
 
+        for i in xrange(1,6):
+            self.root.findmeld("period{0}".format(i)).content(self.period)
+
         #self.root.findmeld('kbgold_uk_url').attributes(href=self.kbgold_uk_url)
         self.root.findmeld('enroll_free').attributes(href=self.affiliate_url)
         #self.root.findmeld('contact_iframe').attributes(src=self.landing_url)
@@ -242,6 +249,9 @@ class Reese(AffiliatePage):
         self.root.findmeld('mentor_url').attributes(href=self.mentor_url)
         self.root.findmeld('intro_url').attributes(href=self.intro_url)
         self.root.findmeld('intro_kexchange_url').attributes(href=self.intro_kexchange_url)
+        self.root.findmeld('intro_iamgold_url').attributes(href=self.intro_iamgold_url)
+        self.root.findmeld('intro_pricing_url').attributes(href=self.intro_pricing_url)
+
 
 
 

@@ -59,6 +59,18 @@ a img {
     float: left;
 }
 
+.period_uppercase {
+    text-transform: uppercase;
+}
+
+.period_capitalized {
+    text-transform: capitalize;
+}
+
+.period_lowercase {
+    text-transform: lowercase;
+}
+
 h1 {
     color: #0e466d;
     font-size: 300%;
