@@ -183,7 +183,7 @@ class Get13Kilos(AffiliatePage):
 
 class Reese(AffiliatePage):
 
-    def __init__(self, kb_id, opener='selina.html', html_file='index.html', period='month'):
+    def __init__(self, s='supreme', opener='selina.html', html_file='index.html', period='month'):
         self.opener = opener
         self.src = {
             'corp': 'http://www.youtube.com/embed/0lrqEGlu0Fo',
@@ -192,7 +192,7 @@ class Reese(AffiliatePage):
             'joe': 'http://youtube.com/embed/bpegrmdKWpg'
         }
         self.period=period
-        super(Reese, self).__init__(kb_id)
+        super(Reese, self).__init__(s)
 
 
 
