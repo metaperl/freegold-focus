@@ -1,5 +1,10 @@
 import os
-def full_path(p=""): return os.path.join(os.path.dirname(__file__), p)
+import pprint
+
+pp = pprint.PrettyPrinter(indent=4)
+
+def full_path(p=''):
+    return os.path.join(os.path.dirname(__file__), p)
 
 def config_static_directory(d):
     return {
@@ -10,11 +15,13 @@ def config_static_directory(d):
     }
 
 def static_dirs():
-    _static_dirs = 'css form img data1/images engine1 images includes js media slides styles'.split()
-    for static_dir in _static_dirs:
-        yield config_static_directory(static_dir)
-        for subdir in 'ben919 buygold get13kilos intro paidfast superior tools trainwith'.split():
+    static_dirs = 'css form img data1/images engine1 images includes js media slides styles'.split()
+    for static_dir in static_dirs:
+        subdirs = 'ben919 buygold get13kilos intro paidfast superior tools trainwith'.split()
+        for subdir in subdirs:
             yield config_static_directory("{0}/{1}".format(subdir, static_dir))
+
+        yield config_static_directory("{0}".format(static_dir))
 
 
 config = {
@@ -32,3 +39,7 @@ config = {
 
 for static_dir in static_dirs():
     config.update(static_dir)
+
+print "FULLPATH", full_path()
+
+pp.pprint(config)
