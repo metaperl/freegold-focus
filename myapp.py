@@ -68,6 +68,7 @@ class AffiliatePage(object):
         self.supreme_team_url = '/?s={0}'.format(kb_id)
         self.supreme_team_url_corp = '/?s={0}&opener=corp'.format(kb_id)
         self.supreme_team_url_uk = '/?s={0}&opener=uk'.format(kb_id)
+
         self.affiliate_url = 'http://karatbars.com/signup.php?s={0}'.format(kb_id)
         self.intro_url = "/intro/{0}".format(kb_id)
         self.intro_iamgold_url = "{0}#theplan-link".format(self.intro_url) # http://localhost:8080/intro/bitcoin#theresults-link
@@ -142,6 +143,35 @@ class Ben919(AffiliatePage):
             c = 'cyprus_url{0}'.format(i)
             self.root.findmeld(c).attributes(href=self.cyprus_url)
 
+class PaidFast(AffiliatePage):
+
+    def __init__(self, kb_id):
+        super(PaidFast, self).__init__(kb_id, base_dir='paidfast')
+        self.affiliate_url_ids = ('affiliate_url{0}'.format(i) for i in xrange(2,9))
+        self.cyprus_url = '/cyprus/{0}'.format(kb_id)
+
+
+    def render(self):
+        super(PaidFast, self).render()
+        url = '{0}&period=week'.format(self.supreme_team_url_uk)
+        self.root.findmeld('supreme_team_url').attributes(href=url)
+        # for affiliate_url_id in self.affiliate_url_ids:
+        #     self.root.findmeld(affiliate_url_id).attributes(href=self.affiliate_url)
+
+        # self.root.findmeld('name').content(self.p.name)
+        # self.root.findmeld('name_in_title').content("{0}'s Superior Retirement Plan with Karatbars International".format(self.p.name))
+        # self.root.findmeld('pic').attributes(src=self.p.pic)
+        # self.root.findmeld('skype_id').content(self.p.skype)
+        # self.root.findmeld('number').content(self.p.number)
+
+        # self.root.findmeld('buy_gold_url').attributes(href=self.buy_gold_url)
+        # self.root.findmeld('get13kilos_url').attributes(href=self.get13kilos_url)
+
+        # for i in xrange(1,4):
+        #     c = 'cyprus_url{0}'.format(i)
+        #     self.root.findmeld(c).attributes(href=self.cyprus_url)
+
+
 
 class Cyprus(AffiliatePage):
 
@@ -193,8 +223,6 @@ class Reese(AffiliatePage):
         }
         self.period=period
         super(Reese, self).__init__(kb_id)
-
-
 
     def followers(self):
         followers = dict(self.lead_and_followers(l) for l in self.src.keys())
@@ -396,6 +424,9 @@ class Root(object):
     def ben919(self, s, cmpg=None, banner=None):
         return self.render(Ben919(s))
 
+    @cherrypy.expose
+    def paidfast(self, s, cmpg=None, banner=None):
+        return self.render(PaidFast(s))
 
     @cherrypy.expose
     def cyprus(self, s, cmpg=None, banner=None):
