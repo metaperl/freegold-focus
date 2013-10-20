@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>You Get Paid Fast</title>
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.2.1/pure-min.css">
+<script>
+function docheck() {
+	var chk = areCookiesEnabled();
+	if(chk != 1){ alert("You must enable cookies to use this site.");}
+}
+function areCookiesEnabled() {
+  document.cookie = "__verify=1";
+  var supportsCookies = document.cookie.length > 1 &&
+                        document.cookie.indexOf("__verify=1") > -1;
+  var thePast = new Date(1976, 8, 16);
+  document.cookie = "__verify=1;expires=" + thePast.toUTCString();
+  return supportsCookies;
+}
+</script>
+<style type="text/css">
+body {
+	background-color: #FFF;
+}
+.fullscreenDiv {
+    background-color: #1e1e1e;
+	background-image:url(/images/cigarman.jpg);
+	min-width:100%;
+    width: 100%;
+    height: 1124px;
+    bottom: 0px;
+    top: 0px;
+    left: 0;
+    position: absolute;
+}
+.center {
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    margin-left: -50px; /* margin is -0.5 * dimension */
+    margin-top: -25px;
+}?
+.style1 {color: #000000}
+.style13 {font-size: 17px; color: #FFFFFF;}
+.style15 {
+	color: #FFFFFF;
+	font-size: 16px;
+}
+.style24 {color: #CAD58C}
+.style28 {color: #B8CBA5}
+.style115 {
+	font-size: 12px;
+	color: #B8CBA5;
+}
+a:link {
+	color: #B8CBA5;
+	text-decoration: none;
+}
+a:visited {
+	color: #B8CBA5;
+	text-decoration: none;
+}
+a:hover {
+	color: #B8CBA5;
+	text-decoration: none;
+}
+a:active {
+	color: #B8CBA5;
+	text-decoration: none;
+}
+.style116 {
+	color: #FFFFFF;
+	font-size: 30px;
+	font-weight: bold;
+}
+.style117 {color: #FFFFFF}
+</style>
+</head>
+
+<body onload="docheck();">
+<div class="fullscreenDiv">
+  <div align="right" class="style117" style="background-color:#000;padding:5px;font-size:11px; color:#b2b2b2;padding-right:10px;"><a href="http://yougetpaidfast.com/cgi-bin/members/index.cgi" target="_blank">Live Chat  Mon - Fri 3:00 - 5:00 pm &amp; 9:00 pm - 1:00 am CST USA | Member Login  </a><a href="http://yougetpaidfast.com/lostpass.html" target="_blank"> | Lost Password </a>| <a href="http://yougetpaidfast.com/support.php" target="blank">Support</a> | <a href="http://yougetpaidfast.com/YGPFFAQ.html" target="_blank">FAQ Page</a> |<a href="http://yougetpaidfast.com/leaderboard.html" target="_blank"> <img src="./You Get Paid Fast_files/fire.png" width="14" height="20"> Leader Board &amp; Testimonials </a> | <a href="http://yougetpaidfast.com/TOS.php" target="blank">Terms of Service</a>&nbsp;|&nbsp;<a href="http://yougetpaidfast.com/PurchaseAgreement.php" target="blank">Purchase Agreement</a>&nbsp;|&nbsp;<a href="http://yougetpaidfast.com/refundpolicy.php" target="_blank">Refund Policy</a>&nbsp;|&nbsp;<a href="http://yougetpaidfast.com/earningsdisclaimer.php" target="_blank">Earnings Disclaimer</a></div>
+  <p></p>
+    <table width="500" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td valign="top">
+    <div style="width: 500px; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; background: rgba(3,13,4,0.80); text-align: center;">
+
+    <table width="450" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td><br>
+    <div align="center" style="text-shadow: 1px 2px 2px #000; color:#fff; font-family:Impact; font-size:50px; ">YOU GET <span class="style24"><span class="style28">PAID</span></span> FAST</div>
+
+    <div align="center" style="text-shadow: 1px 2px 2px #000; color:#fff; font-family:Helvetica, Arial, sans-serif; font-size:24px;">
+	This Is The Brand New Way To Make Money Everyday Of Your Life!
+
+    </div><br>
+    </td>
+  </tr>
+  <tr>
+    <td>
+    <iframe width="450" height="253" src="./You Get Paid Fast_files/Lp6V5YIaPfQ.html" frameborder="0" allowfullscreen=""></iframe></td>
+  </tr>
+  <tr>
+    <td height="19">&nbsp;</td>
+  </tr>
+  <tr>
+    <td>
+    <div align="center" style="text-shadow: 1px 2px 2px #000; color:#00CC00; font-family:Helvetica, Arial, sans-serif; font-size:24px;"><span class="style116">Start Making Money in Hours </span> <br>
+      <span class="style28" style="font-weight:bold; font-size:34px;">3 Minute Video Spills All! </span></div>    </td>
+  </tr>
+  <tr>
+    <td>
+    <div align="center">
+<form class="pure-form" action="http://yougetpaidfast.com/cgi-bin/replicator/autoresponder44.cgi" method="post" onsubmit="parent.agreewin.hide()">
+   <input type="hidden" name="return_url" value="http://yougetpaidfast.com/bbcoach/secondpage.php">
+            <input type="hidden" name="array_emails" value="followup_1.txt,followup_1_tosponsor.txt">
+<input type="hidden" name="autoresponder" value="followup">
+<input type="hidden" name="required_fields" value="firstname,email">
+<input type="hidden" name="sponsorid" value="bbcoach">
+    <fieldset>
+      <p>
+        <input class="pure-input-2-3" type="text" name="firstname" placeholder="Your First Name">
+      </p>
+      <p>
+        <input class="pure-input-2-3" type="email" name="email" placeholder="Your Best Email">
+      </p>
+      <p>
+        <input type="image" name="imageField" id="imageField" src="./You Get Paid Fast_files/submit.png">
+        <br>
+        <span class="style115"><a href="http://yougetpaidfast.com/cgi-bin/members/index.cgi" target="_blank">Members Click Here To Enter</a></span> </p>
+    </fieldset>
+</form>
+</div>
+    </td>
+  </tr>
+
+  <tr>
+    <td><div align="center" class="pure-menu-label style13 style15">No Upsells: No Pass Ups: No Monthly Fees: No Admin Fees</div></td>
+  </tr>
+
+</tbody></table>
+
+
+    </div>
+    </td>
+  </tr>
+</tbody></table>
+    <p>&nbsp;</p>
+
+
+
+
+
+</div>
+
+
+?
+
+
+<script id="hiddenlpsubmitdiv" style="display: none;"></script><script>try{for(var lastpass_iter=0; lastpass_iter < document.forms.length; lastpass_iter++){ var lastpass_f = document.forms[lastpass_iter]; if(typeof(lastpass_f.lpsubmitorig2)=="undefined"){ lastpass_f.lpsubmitorig2 = lastpass_f.submit; lastpass_f.submit = function(){ var form=this; var customEvent = document.createEvent("Event"); customEvent.initEvent("lpCustomEvent", true, true); var d = document.getElementById("hiddenlpsubmitdiv"); for(var i = 0; i < document.forms.length; i++){ if(document.forms[i]==form){ d.innerText=i; } } d.dispatchEvent(customEvent); form.lpsubmitorig2(); } } }}catch(e){}</script></body></html>
