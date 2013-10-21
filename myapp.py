@@ -153,7 +153,7 @@ class PaidFast(AffiliatePage):
 
     def render(self):
         super(PaidFast, self).render()
-        url = '{0}&period=week'.format(self.supreme_team_url_uk)
+        url = '{0}&period=week'.format(self.supreme_team_url_corp)
         self.root.findmeld('supreme_team_url').attributes(href=url)
         # for affiliate_url_id in self.affiliate_url_ids:
         #     self.root.findmeld(affiliate_url_id).attributes(href=self.affiliate_url)
