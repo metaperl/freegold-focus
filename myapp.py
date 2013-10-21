@@ -249,7 +249,7 @@ class Reese(AffiliatePage):
         for meld_id, url in carousel.iteritems():
             self.root.findmeld(meld_id).attributes(src=url)
 
-        for i in xrange(1,6):
+        for i in xrange(1,7):
             self.root.findmeld("period{0}".format(i)).content(self.period)
 
         #self.root.findmeld('kbgold_uk_url').attributes(href=self.kbgold_uk_url)
