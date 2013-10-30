@@ -288,10 +288,12 @@ class ReeseMentor(AffiliatePage):
     def __init__(self, kb_id):
         super(ReeseMentor, self).__init__(kb_id, 'trainwith')
         self.lttw_url = 'http://www.littletickettowealth.com/?id={0}'.format(self.p.lttw_id)
+        self.paidfast_url = '/paidfast/{0}'.format(kb_id)
 
     def render(self):
 
         super(ReeseMentor, self).render()
+
 
         self.root.findmeld('tools_register_url').attributes(href='/tools/{0}'.format(self.p.id))
 
@@ -306,6 +308,7 @@ class ReeseMentor(AffiliatePage):
 
         self.root.findmeld('superior_url').attributes(href=self.superior_url)
         self.root.findmeld('ben919_url').attributes(href=self.ben919_url)
+        self.root.findmeld('paidfast_url').attributes(href=self.paidfast_url)
         self.root.findmeld('landing_url').attributes(href=self.landing_url)
 
         self.root.findmeld('name').content(self.p.name)
