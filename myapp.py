@@ -416,7 +416,7 @@ class Root(object):
         return affiliate_page.root.write_htmlstring()
 
     @cherrypy.expose
-    def index(self, s="supreme", opener='selina', cmpg=None, banner=None, period='month'):
+    def index(self, s="supreme", opener='selina', cmpg=None, banner=None, period='week'):
         return self.render(Reese(s, opener, period))
 
     @cherrypy.expose

@@ -275,14 +275,13 @@ table td
 
 #photo {
     margin: 0 auto;
-    margin-top: 20px;
+    margin-top: 15px;
     height: 90px;
-    width: 90px;
 }
 
 #name {
     margin: 0 auto;
-    margin-top: 10px;
+    margin-top: 20px;
     height: 30px;
     width: 170px;
     font-size: 120%;
@@ -347,7 +346,7 @@ table td
 
 #starttoday {
     margin: 0 auto;
-    margin-top: 13px;
+    margin-top: 8px;
     height: 30px;
     width: 150px;
     font-size: 120%;
