@@ -68,10 +68,20 @@
           </div>
 
 
-               <input type="hidden" name="kbuk_id" id="field8">
+          <div id="field8-container" class="field f_100">
+               <label for="field8">
+                    KaratbarsGold.co.UK ID (optional, e.g. "80")
+               </label>
+               <input type="number" name="kbuk_id" id="field8">
+          </div>
 
-               <input type="hidden" name="lttw_id" id="field9">
 
+          <div id="field9-container" class="field f_100">
+               <label for="field9">
+                    Little Ticket to Wealth ID (optional, e.g. "thequietcenter")
+               </label>
+               <input type="text" name="lttw_id" id="field9">
+          </div>
 
 
           <div id="form-submit" class="field f_100 clearfix submit">
