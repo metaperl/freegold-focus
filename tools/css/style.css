@@ -178,7 +178,7 @@ h6 {
 }
 
 #main {
-    height: 520px;
+    height: 270px;
     width: 960px;
     margin: 0 auto;
     background-image: url(https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQha9_s_oYbQESqO_MHB6AFx737P0CetKat6o5kOIZCTRqKspvNbg);
@@ -340,11 +340,10 @@ h6 {
     width: 100%;
     background-repeat: repeat-x;
     background-color: #0b3959;
-    border-top: 12px solid white;
 }
 
 #theplan {
-    height: 850px;
+    height: auto;
     width: 960px;
     margin: 0 auto;
     background-repeat: no-repeat;

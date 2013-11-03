@@ -17,7 +17,7 @@ def config_static_directory(d):
 def static_dirs():
     static_dirs = 'css form img data1/images engine1 images includes js media slides styles'.split()
     for static_dir in static_dirs:
-        subdirs = 'ben919 buygold get13kilos intro paidfast superior tools trainwith'.split()
+        subdirs = 'ben919 buygold get13kilos intro paidfast superior tools toolsform trainwith'.split()
         for subdir in subdirs:
             yield config_static_directory("{0}/{1}".format(subdir, static_dir))
 

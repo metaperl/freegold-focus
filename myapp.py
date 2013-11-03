@@ -61,6 +61,7 @@ class AffiliateModel(object):
 class AffiliatePage(object):
 
     def __init__(self, kb_id, base_dir='', html_file='index.html'):
+        self.kb_id = kb_id
         self.base_dir = base_dir
         self.html_file = full_path(self.base_dir, html_file)
         self.p = AffiliateModel(kb_id).affiliate
@@ -219,7 +220,8 @@ class Reese(AffiliatePage):
             'corp': 'http://www.youtube.com/embed/0lrqEGlu0Fo',
             'uk': 'http://www.youtube.com/embed/30MfCTLhdZ4',
             'selina' : 'http://www.youtube.com/embed/37l6Wdzw490',
-            'joe': 'http://youtube.com/embed/bpegrmdKWpg'
+            'joe': 'http://youtube.com/embed/bpegrmdKWpg',
+            'simple': 'http://youtube.com/embed/qC2JUwE0zeY'
         }
         self.period=period
         super(Reese, self).__init__(kb_id)
@@ -350,9 +352,9 @@ class Intro(AffiliatePage):
         # self.root.findmeld('landing_url').attributes(href=self.landing_url)
         #
         self.root.findmeld('name').content(self.p.name)
-#self.root.findmeld('name2').content(self.p.name)
-#self.root.findmeld('main_url').attributes(href=self.main_url)
-#self.root.findmeld('corp_url').content(self.main_url)
+        #self.root.findmeld('name2').content(self.p.name)
+        #self.root.findmeld('main_url').attributes(href=self.main_url)
+        #self.root.findmeld('corp_url').content(self.main_url)
 
 
         # self.root.findmeld('name_in_title').content(
@@ -370,9 +372,24 @@ class Tools(AffiliatePage):
 
     def __init__(self, kb_id):
         super(Tools, self).__init__(kb_id, 'tools')
+        self.toolsform_url = '/toolsform/{0}'.format(kb_id)
+
 
     def render(self):
         super(Tools, self).render()
+        self.root.findmeld('name').content(self.p.name)
+        self.root.findmeld('supreme_team_url').attributes(href=self.supreme_team_url)
+        self.root.findmeld('toolsform_url').attributes(src=self.toolsform_url)
+
+class ToolsForm(AffiliatePage):
+
+    def __init__(self, kb_id):
+        super(ToolsForm, self).__init__(kb_id, 'tools/form')
+
+    def render(self):
+        super(ToolsForm, self).render()
+        self.root.findmeld('sponsorid').attributes(value=self.kb_id)
+        self.root.findmeld('sponsorid2').content(self.kb_id)
 
 class ToolsRegister(object):
 
@@ -416,7 +433,7 @@ class Root(object):
         return affiliate_page.root.write_htmlstring()
 
     @cherrypy.expose
-    def index(self, s="supreme", opener='selina', cmpg=None, banner=None, period='week'):
+    def index(self, s="supreme", opener='corp', cmpg=None, banner=None, period='week'):
         return self.render(Reese(s, opener, period))
 
     @cherrypy.expose
@@ -446,6 +463,10 @@ class Root(object):
     @cherrypy.expose
     def tools(self, s):
         return self.render(Tools(s))
+
+    @cherrypy.expose
+    def toolsform(self, s):
+        return self.render(ToolsForm(s))
 
     @cherrypy.expose
     def tools_register(self, **dbargs):
