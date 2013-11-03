@@ -66,7 +66,7 @@ Your mentor page
 ----------------
 
 The internet section of your mentor page:
-    http://focus.freegold.biz/trainwith/{kbid}
+http://focus.freegold.biz/trainwith/{kbid}
 will be updated with new replicated websites on occasion.
 
 If you have further questions, please contact:

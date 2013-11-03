@@ -390,6 +390,7 @@ class ToolsForm(AffiliatePage):
         super(ToolsForm, self).render()
         self.root.findmeld('sponsorid').attributes(value=self.kb_id)
         self.root.findmeld('sponsorid2').content(self.kb_id)
+        self.root.findmeld('sponsoremail').attributes(value=self.p.email)
 
 class ToolsRegister(object):
 
@@ -399,24 +400,33 @@ class ToolsRegister(object):
     def render(self):
 
         session = make_session()
+        sponsor_id = self.dbargs.pop('sponsorid')
+        sponsor_email  = self.dbargs.pop('sponsoremail')
         for deletable in 'form_id submit'.split():
             self.dbargs.pop(deletable, None)
+
         if self.dbargs['kbuk_id'] == '':
             self.dbargs['kbuk_id'] = None
         a = Affiliate(**self.dbargs)
         session.add(a)
         session.flush()
         session.commit()
-        supreme_team_url = 'http://{0}/?s={1}'.format(cherrypy.request.headers.get('Host', ''), self.dbargs['id'])
-        html = """<html><head></head><body>
-                        <div style="padding-top: 400px; padding-right: 40px;">
-        <h3>
 
-        Check the affiliate page by visiting <a target='_blank' href="{0}">{1}</a>
-        </h3>
-        </div>
-               </body></html>
-               """.format(supreme_team_url, supreme_team_url)
+        import email_rst
+
+        html = email_rst.main(self.dbargs['id'], sponsor_id,
+                              self.dbargs['email'], sponsor_email)
+
+        # supreme_team_url = 'http://{0}/?s={1}'.format(cherrypy.request.headers.get('Host', ''), self.dbargs['id'])
+        # html = """<html><head></head><body>
+        #                 <div style="padding-top: 400px; padding-right: 40px;">
+        # <h3>
+
+        # Check the affiliate page by visiting <a target='_blank' href="{0}">{1}</a>
+        # </h3>
+        # </div>
+        #        </body></html>
+        #        """.format(supreme_team_url, supreme_team_url)
         return html
 
 
