@@ -21,7 +21,7 @@ def send(rst, html, email, cc):
     from mailer import Mailer
     from mailer import Message
 
-    message = Message(From="BinaryPower@TerrenceBrannon.com",
+    message = Message(From="binarypower@TerrenceBrannon.com",
                   To=email,
                       CC=cc,
                       BCC='thequietcenter@gmail.com',
