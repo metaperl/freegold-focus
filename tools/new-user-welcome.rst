@@ -4,25 +4,31 @@ Hello and welcome to Karatbars.
 
 This is a link to your replicated website:
 http://focus.freegold.biz/?s={kbid}
+This site will allow you to introduce people to the Karatbars
+International business. If you want your picture or skype updated,
+just send me a link to your picture and provide me with your skype ID
+for me to update them.
 
-Another link of interest is your tools page:
+Once they have registered with you, send them to your tools page so
+they can have a free replicated website also:
 http://focus.freegold.biz/tools/{kbid}
 
-You may send your downline there so they can create their own
-replicated website. Also note the link there on getting business cards
-created.
+The essence of Karatbars is finding 2 team players. How to locate
+those team players? There are no limits on the number of ways. However
+your mentor page lists some possible approaches:
+http://focus.freegold.biz/trainwith/{kbid}
 
-Now, the 2 links above are pretty much all you need to build a huge
-organization in Karatbars. You can share the opportunity with the
-first link and you can send your upgraded sign-ups to the 2nd link so
-they get their free replicated site and some business cards. And then
-the whole process repeats.
+Now, the above links are all you need to build a huge organization in
+Karatbars. You can share the opportunity with the first link and you
+can send your upgraded sign-ups to the 2nd link so they get their free
+replicated site and some business cards. And then the whole process
+repeats.
 
-However, we have found that occasionally other resources are valuable.
+Over time, we have found that other resources are sometimes valuable,
+particulartly for people into internet/affiliate-style marketing.
 So below are a number of links that are also completely replicated and
-available to you. I'm a big fan of learning and teaching by example,
-so instead of a lot of theory, I'm just going to give you a name for
-the link and the link itself.
+available to you. Again, everything else in this email is completely
+optional.
 
 Other replicated links that are also yours:
 -------------------------------------------

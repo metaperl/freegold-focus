@@ -414,8 +414,9 @@ class ToolsRegister(object):
 
         import email_rst
 
-        html = email_rst.main(self.dbargs['id'], sponsor_id,
-                              self.dbargs['email'], sponsor_email)
+        html = email_rst.main(
+            self.dbargs['id'], self.dbargs['email'], self.dbargs['name'],
+                              sponsor_id, sponsor_email)
 
         # supreme_team_url = 'http://{0}/?s={1}'.format(cherrypy.request.headers.get('Host', ''), self.dbargs['id'])
         # html = """<html><head></head><body>

@@ -17,7 +17,7 @@ def htmlized(rst):
     from docutils.core import publish_string
     return publish_string(rst, writer_name='html')
 
-def send(rst, html, email, cc):
+def send(rst, html, email, name, cc):
     from mailer import Mailer
     from mailer import Message
 
@@ -26,7 +26,7 @@ def send(rst, html, email, cc):
                       CC=cc,
                       BCC='thequietcenter@gmail.com',
                   charset="utf-8")
-    message.Subject = "Your karatbars replicated website"
+    message.Subject = "Karatbars replicated website for {0}".format(name)
     message.Html = html
     message.Body = rst
 
@@ -39,10 +39,10 @@ sponsor_id = 'supreme'
 email = 'schemelab@gmail.com'
 cc = 'metaperl@gmail.com'
 
-def main(kb_id, sponsor_id, email, cc):
+def main(kb_id, kb_email, kb_name, sponsor_id, cc):
     rst = templated(kb_id, sponsor_id)
     html = htmlized(rst)
-    send(rst, html, email, cc)
+    send(rst, html, kb_email, kb_name, cc)
     return html
 
 if __name__ == '__main__':
