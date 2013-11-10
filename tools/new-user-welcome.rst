@@ -5,8 +5,8 @@ Hello and welcome to Karatbars.
 This is a link to your replicated website:
 http://focus.freegold.biz/?s={kbid}
 This site will allow you to introduce people to the Karatbars
-International business. If you want your picture or skype updated,
-just send me a link to your picture and provide me with your skype ID
+International business. If you want your picture or skype ID updated,
+just send me a link to your picture or provide me with your skype ID
 for me to update them.
 
 Once they have registered with you, send them to your tools page so

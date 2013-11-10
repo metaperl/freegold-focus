@@ -118,6 +118,16 @@ class Superior(AffiliatePage):
         self.root.findmeld('buy_gold_url').attributes(href=self.buy_gold_url)
         self.root.findmeld('get13kilos_url').attributes(href=self.get13kilos_url)
 
+class Zimbabwe(AffiliatePage):
+
+    def __init__(self, kb_id):
+        super(Zimbabwe, self).__init__(kb_id, base_dir='zimbabwe')
+
+    def render(self):
+        super(Zimbabwe, self).render()
+        self.root.findmeld('supreme_team_url').attributes(href=self.supreme_team_url)
+
+
 class Ben919(AffiliatePage):
 
     def __init__(self, kb_id):
@@ -486,6 +496,10 @@ class Root(object):
     @cherrypy.expose
     def trainwith(self, s):
         return self.render(ReeseMentor(s))
+
+    @cherrypy.expose
+    def zimbabwe(self, s):
+        return self.render(Zimbabwe(s))
 
     @cherrypy.expose
     def intro(self, s, page='pricing', cmpg=None, banner=None):
