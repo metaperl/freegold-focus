@@ -1,4 +1,15 @@
+#!/usr/bin/python
+
+
+# core
 import os
+
+# 3rd party
+import argh
+
+# local
+
+
 def full_path(*extra):
     return os.path.join(os.path.dirname(__file__), *extra)
 
@@ -34,16 +45,18 @@ def send(rst, html, email, name, cc):
     sender.send(message)
 
 
-kb_id = 'princepawn'
-sponsor_id = 'supreme'
-email = 'schemelab@gmail.com'
-cc = 'metaperl@gmail.com'
+kb_id = 'bodytuner'
+kb_email = 'denise@highonenergy.com'
+kb_name = 'Denise Higgison'
+sponsor_id = 'rikmccoy'
+sponsor_email = 'rikmccoy@gmail.com'
 
-def main(kb_id, kb_email, kb_name, sponsor_id, cc):
+def main(kb_id, kb_email, kb_name, sponsor_id, sponsor_email):
+    cc = sponsor_email
     rst = templated(kb_id, sponsor_id)
     html = htmlized(rst)
     send(rst, html, kb_email, kb_name, cc)
     return html
 
 if __name__ == '__main__':
-    main()
+    argh.dispatch_command(main)

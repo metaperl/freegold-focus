@@ -15,7 +15,7 @@ just like yours:
 http://focus.freegold.biz/tools/{kbid}
 
 The essence of Karatbars is finding 2 team players. How to locate
-those team players? There are no limits on the number of ways. However
+those team players? You have no limits on the number of ways. However
 your mentor page lists some possible approaches for you and your team
 members to take advantage of:
 http://focus.freegold.biz/trainwith/{kbid}
