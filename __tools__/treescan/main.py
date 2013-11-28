@@ -6,9 +6,11 @@ import collections
 import logging
 import pprint
 import re
+import sys
 import time
 
 # 3rd party
+import argh
 from selenium import webdriver
 from selenium.common.exceptions import StaleElementReferenceException
 from selenium.webdriver.common.keys import Keys
@@ -18,7 +20,11 @@ from selenium.webdriver.support import expected_conditions as EC
 
 
 # local
+sys.path.append('../..')
+import email_rst
 import login
+import myapp
+
 
 pp = pprint.PrettyPrinter(indent=4)
 
@@ -26,6 +32,7 @@ pp = pprint.PrettyPrinter(indent=4)
 base_url = 'https://karatbars.com'
 login_url = base_url + '/index.php?page=login_1'
 binary_url = base_url + '/members.php?page=binarytree'
+units_url = base_url + '/members.php?page=binaryunits'
 
 driver = webdriver.Firefox()
 driver.set_window_size(1200,1100)
@@ -36,26 +43,19 @@ driver.find_element_by_name('username').send_keys(login.username)
 driver.find_element_by_name('password').send_keys(login.password)
 driver.find_element_by_name('btn_login').click()
 
-def bitcoins_top():
-    return float(driver.find_element_by_class_name('balanceraw-BTC').text)
-
-def bitcoins_bottom():
-    return float(driver.find_element_by_class_name('symbol2-available').text)
-
-def element_html(elem):
-    #return elem.get_attribute('outerHTML')
-    return driver.execute_script("return new XMLSerializer().serializeToString(arguments[0]);", elem);
-
-SellOrder = collections.namedtuple('SellOrder', ['ask', 'amount'])
-
 def loop_forever():
     while True: pass
+
+def element_html(element):
+    return driver.execute_script(
+        "return arguments[0].outerHTML || new XMLSerializer().serializeToString(arguments[0]);", element)
 
 def scroll_down():
     #driver.execute_script("window.scrollTo(0,Math.max(document.documentElement.scrollHeight,document.body.scrollHeight,document.documentElement.clientHeight));");
     driver.execute_script("window.scrollBy(250, 750)");
 
 def parse_user(s):
+    print "parse-user-input=" + s
     user_re = re.compile(
         '(\w+): ([^<]+)<br>'
         )
@@ -63,10 +63,11 @@ def parse_user(s):
     print "data={0}".format(data)
     return data
 
+def units():
+    driver.get(units_url)
+    loop_forever()
 
-
-def search(username):
-    driver.get(binary_url)
+def _search(username):
     wait = WebDriverWait(driver,20)
     search = wait.until(
         lambda driver:  driver.find_element_by_name('srch_name'))
@@ -77,15 +78,41 @@ def search(username):
     divs = wait.until(
         lambda driver: driver.find_elements_by_class_name('binary_text'))
     div = divs[0]
+    print "div={0}.".format(element_html(div))
     a = div.find_element_by_xpath('../a[2]')
-    parse_user(element_html(a))
-    # tmp = a.get_attribute('onmouseover')
-    # print tmp
-    # return tmp
+    a_html = element_html(a)
+    print "A_HTML=" + a_html
+    user = parse_user(a_html)
+    return dict(user)
 
-def main():
-    search('bitcoin')
-    #loop_forever()
+def search(username, stay=False):
+    driver.get(binary_url)
+    user = _search(username)
+    print "user={0}.".format(pp.pformat(user))
+    if stay:
+        loop_forever()
+    sponsor = _search(user['Sponsor'])
+    return user, sponsor
+
+
+def email_registered(username):
+    user, sponsor = search(username)
+    email_rst.main(
+        user['Username'], user['Email'], user['Name'],
+        sponsor['Username'], sponsor['Email']
+        )
+
+def register(username):
+    user, sponsor = search(username)
+    skype=''
+    myapp.ToolsRegister.insert_and_email_affiliate(
+        user['Email'], user['Username'], user['Name'], user['Phone'],
+        skype,
+        sponsor['Username'], sponsor['Email'],
+        'http://j.mp/17y4bFj')
+
 
 if __name__ == '__main__':
-    main()
+    parser = argh.ArghParser()
+    parser.add_commands([search, register, units])
+    parser.dispatch()

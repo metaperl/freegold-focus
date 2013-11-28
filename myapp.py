@@ -2,6 +2,7 @@
 # imports
 ## core
 import importlib
+import logging
 import os
 import sys
 import StringIO
@@ -14,9 +15,8 @@ import meld3
 def full_path(*extra):
     return os.path.join(os.path.dirname(__file__), *extra)
 sys.path.insert(0, full_path())
+import email_rst
 from saorm import *
-
-import logging
 
 logging.basicConfig()
 logging.getLogger('sqlalchemy.engine').setLevel(logging.DEBUG)
@@ -26,6 +26,10 @@ def make_session():
     from sqlalchemy.orm import sessionmaker
     session = sessionmaker(bind=engine)()
     return session
+
+def session_commit(session):
+    session.flush()
+    session.commit()
 
 class AffiliateModel(object):
 
@@ -407,37 +411,43 @@ class ToolsRegister(object):
     def __init__(self, **dbargs):
         self.dbargs = dbargs
 
-    def render(self):
+    @staticmethod
+    def insert_affiliate(email, id, name, number, skype, pic='http://j.mp/17y4bFj'):
+        a = Affiliate(
+            email=email,
+            id=id,
+            name=name,
+            number=number,
+            pic=pic,
+            skype=skype)
 
         session = make_session()
+        session.add(a)
+        session_commit(session)
+
+    @staticmethod
+    def email_affiliate(email, id, name, sponsor_id, sponsor_email):
+        html = email_rst.main(
+            id, email, name, sponsor_id, sponsor_email)
+        return html
+
+    @staticmethod
+    def insert_and_email_affiliate(email, id, name, number, skype, sponsor_id, sponsor_email, pic='http://j.mp/17y4bFj'):
+        ToolsRegister.insert_affiliate(email, id, name, number, skype, pic)
+        return ToolsRegister.email_affiliate(email, id, name, sponsor_id, sponsor_email)
+
+    def render(self):
         sponsor_id = self.dbargs.pop('sponsorid')
         sponsor_email  = self.dbargs.pop('sponsoremail')
-        for deletable in 'form_id submit'.split():
+        for deletable in 'lttw_id kbuk_id form_id submit'.split():
             self.dbargs.pop(deletable, None)
 
-        if self.dbargs['kbuk_id'] == '':
-            self.dbargs['kbuk_id'] = None
-        a = Affiliate(**self.dbargs)
-        session.add(a)
-        session.flush()
-        session.commit()
+        self.insert_affiliate(**self.dbargs)
 
-        import email_rst
+        html = self.email_affiliate(
+            self.dbargs['email'], self.dbargs['id'], self.dbargs['name'],
+            sponsor_id, sponsor_email)
 
-        html = email_rst.main(
-            self.dbargs['id'], self.dbargs['email'], self.dbargs['name'],
-                              sponsor_id, sponsor_email)
-
-        # supreme_team_url = 'http://{0}/?s={1}'.format(cherrypy.request.headers.get('Host', ''), self.dbargs['id'])
-        # html = """<html><head></head><body>
-        #                 <div style="padding-top: 400px; padding-right: 40px;">
-        # <h3>
-
-        # Check the affiliate page by visiting <a target='_blank' href="{0}">{1}</a>
-        # </h3>
-        # </div>
-        #        </body></html>
-        #        """.format(supreme_team_url, supreme_team_url)
         return html
 
 
