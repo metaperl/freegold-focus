@@ -5,6 +5,7 @@
 import collections
 import logging
 import pprint
+import re
 import time
 
 # 3rd party
@@ -54,6 +55,16 @@ def scroll_down():
     #driver.execute_script("window.scrollTo(0,Math.max(document.documentElement.scrollHeight,document.body.scrollHeight,document.documentElement.clientHeight));");
     driver.execute_script("window.scrollBy(250, 750)");
 
+def parse_user(s):
+    user_re = re.compile(
+        '(\w+): ([^<]+)<br>'
+        )
+    data = user_re.findall(s)
+    print "data={0}".format(data)
+    return data
+
+
+
 def search(username):
     driver.get(binary_url)
     wait = WebDriverWait(driver,20)
@@ -65,16 +76,16 @@ def search(username):
 
     divs = wait.until(
         lambda driver: driver.find_elements_by_class_name('binary_text'))
-    for div in divs:
-        print "a found={0}".format(element_html(div))
-        print div.text
+    div = divs[0]
+    a = div.find_element_by_xpath('../a[2]')
+    parse_user(element_html(a))
     # tmp = a.get_attribute('onmouseover')
     # print tmp
     # return tmp
 
 def main():
     search('bitcoin')
-    loop_forever()
+    #loop_forever()
 
 if __name__ == '__main__':
     main()
