@@ -52,14 +52,12 @@ class AffiliateModel(object):
         else:
             return "{0} ...".format(s[0:length])
 
-
     @staticmethod
     def prepare_email(e):
         if len(e) > 29:
             return "Click here to email"
         else:
             return e
-
 
 
 class AffiliatePage(object):
@@ -441,6 +439,10 @@ class ToolsRegister(object):
         sponsor_email  = self.dbargs.pop('sponsoremail')
         for deletable in 'lttw_id kbuk_id form_id submit'.split():
             self.dbargs.pop(deletable, None)
+
+
+        for k,v in self.dbargs.iteritems():
+            self.dbargs[k] = v.strip()
 
         self.insert_affiliate(**self.dbargs)
 

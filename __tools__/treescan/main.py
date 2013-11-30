@@ -15,9 +15,9 @@ from selenium import webdriver
 from selenium.common.exceptions import StaleElementReferenceException
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import Select
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
 
 # local
 sys.path.append('../..')
@@ -34,17 +34,27 @@ login_url = base_url + '/index.php?page=login_1'
 binary_url = base_url + '/members.php?page=binarytree'
 units_url = base_url + '/members.php?page=binaryunits'
 
-driver = webdriver.Firefox()
-driver.set_window_size(1200,1100)
+driver = None
 
-driver.get(login_url)
+def start_browser():
+    global driver
+    driver = webdriver.Firefox()
+    driver.set_window_size(1200,1100)
 
-driver.find_element_by_name('username').send_keys(login.username)
-driver.find_element_by_name('password').send_keys(login.password)
-driver.find_element_by_name('btn_login').click()
+    driver.get(login_url)
+
+    driver.find_element_by_name('username').send_keys(login.username)
+    driver.find_element_by_name('password').send_keys(login.password)
+    driver.find_element_by_name('btn_login').click()
 
 def loop_forever():
     while True: pass
+
+def echo_text(data, label):
+    print '{0}={1}.'.format(label, data)
+
+def echo_html(elem, label):
+    print '{0}={1}.'.format(label, element_html(elem))
 
 def element_html(element):
     return driver.execute_script(
@@ -63,11 +73,15 @@ def parse_user(s):
     print "data={0}".format(data)
     return data
 
-def units():
-    driver.get(units_url)
-    loop_forever()
+def email_registered(username):
+    user, sponsor = search(username)
+    email_rst.main(
+        user['Username'], user['Email'], user['Name'],
+        sponsor['Username'], sponsor['Email']
+        )
 
 def _search(username):
+    driver.get(binary_url)
     wait = WebDriverWait(driver,20)
     search = wait.until(
         lambda driver:  driver.find_element_by_name('srch_name'))
@@ -79,28 +93,22 @@ def _search(username):
         lambda driver: driver.find_elements_by_class_name('binary_text'))
     div = divs[0]
     print "div={0}.".format(element_html(div))
-    a = div.find_element_by_xpath('../a[2]')
-    a_html = element_html(a)
-    print "A_HTML=" + a_html
-    user = parse_user(a_html)
-    return dict(user)
+    as_ = div.find_elements_by_xpath('../a')
+    for a in as_:
+        a_html = element_html(a)
+        print "A_HTML=" + a_html
+        user = parse_user(a_html)
+        if len(user):
+            return dict(user)
 
 def search(username, stay=False):
-    driver.get(binary_url)
+    start_browser()
     user = _search(username)
     print "user={0}.".format(pp.pformat(user))
     if stay:
         loop_forever()
     sponsor = _search(user['Sponsor'])
     return user, sponsor
-
-
-def email_registered(username):
-    user, sponsor = search(username)
-    email_rst.main(
-        user['Username'], user['Email'], user['Name'],
-        sponsor['Username'], sponsor['Email']
-        )
 
 def register(username):
     user, sponsor = search(username)
@@ -110,6 +118,15 @@ def register(username):
         skype,
         sponsor['Username'], sponsor['Email'],
         'http://j.mp/17y4bFj')
+
+def units():
+    start_browser()
+    driver.get(units_url)
+    driver.find_element_by_class_name('sorting_asc').click()
+    select = Select(
+        driver.find_element_by_name('cab_comm_history_table_length'))
+    select.select_by_visible_text('50')
+    loop_forever()
 
 
 if __name__ == '__main__':
