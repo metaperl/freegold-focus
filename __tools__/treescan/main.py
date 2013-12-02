@@ -73,7 +73,7 @@ def parse_user(s):
     print "data={0}".format(data)
     return data
 
-def email_registered(username):
+def email(username):
     user, sponsor = search(username)
     email_rst.main(
         user['Username'], user['Email'], user['Name'],
@@ -131,5 +131,5 @@ def units():
 
 if __name__ == '__main__':
     parser = argh.ArghParser()
-    parser.add_commands([search, register, units])
+    parser.add_commands([email, search, register, units])
     parser.dispatch()

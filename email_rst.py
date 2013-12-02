@@ -44,13 +44,6 @@ def send(rst, html, email, name, cc):
     sender = Mailer('localhost')
     sender.send(message)
 
-
-kb_id = 'bodytuner'
-kb_email = 'denise@highonenergy.com'
-kb_name = 'Denise Higgison'
-sponsor_id = 'rikmccoy'
-sponsor_email = 'rikmccoy@gmail.com'
-
 def main(kb_id, kb_email, kb_name, sponsor_id, sponsor_email):
     cc = sponsor_email
     rst = templated(kb_id, sponsor_id)

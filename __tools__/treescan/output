@@ -1,0 +1,26 @@
+div=<div xmlns="http://www.w3.org/1999/xhtml" class="binary_text">
+                         	supreme                         </div>.
+A_HTML=<a xmlns="http://www.w3.org/1999/xhtml" href="members.php?page=binarytree&amp;uid=332069"><img border="0" src="images/left.gif" /></a>
+parse-user-input=<a xmlns="http://www.w3.org/1999/xhtml" href="members.php?page=binarytree&amp;uid=332069"><img border="0" src="images/left.gif" /></a>
+data=[]
+A_HTML=<a xmlns="http://www.w3.org/1999/xhtml" onmouseover="showTooltip(event,'Username: supreme<br>Rank: Member<br>Status: Active<br>Maintained: Yes<br>Name: Terrence Brannon<br>Phone: +18183590893<br>Country: United States<br>Email: thequietcenter@gmail.com<br>Sponsor: reply<br>Left Leg: 3<br>Right Leg: 3');return false" onmouseout="hideTooltip()" href="members.php?page=binarytree&amp;uid=332034"><img width="60" height="84" border="0" src="images/icons/vip.png" /></a>
+parse-user-input=<a xmlns="http://www.w3.org/1999/xhtml" onmouseover="showTooltip(event,'Username: supreme<br>Rank: Member<br>Status: Active<br>Maintained: Yes<br>Name: Terrence Brannon<br>Phone: +18183590893<br>Country: United States<br>Email: thequietcenter@gmail.com<br>Sponsor: reply<br>Left Leg: 3<br>Right Leg: 3');return false" onmouseout="hideTooltip()" href="members.php?page=binarytree&amp;uid=332034"><img width="60" height="84" border="0" src="images/icons/vip.png" /></a>
+data=[(u'Username', u'supreme'), (u'Rank', u'Member'), (u'Status', u'Active'), (u'Maintained', u'Yes'), (u'Name', u'Terrence Brannon'), (u'Phone', u'+18183590893'), (u'Country', u'United States'), (u'Email', u'thequietcenter@gmail.com'), (u'Sponsor', u'reply'), (u'Leg', u'3')]
+user={   u'Country': u'United States',
+    u'Email': u'thequietcenter@gmail.com',
+    u'Leg': u'3',
+    u'Maintained': u'Yes',
+    u'Name': u'Terrence Brannon',
+    u'Phone': u'+18183590893',
+    u'Rank': u'Member',
+    u'Sponsor': u'reply',
+    u'Status': u'Active',
+    u'Username': u'supreme'}.
+div=<div xmlns="http://www.w3.org/1999/xhtml" class="binary_text">
+                         	supreme                         </div>.
+A_HTML=<a xmlns="http://www.w3.org/1999/xhtml" href="members.php?page=binarytree&amp;uid=332069"><img border="0" src="images/left.gif" /></a>
+parse-user-input=<a xmlns="http://www.w3.org/1999/xhtml" href="members.php?page=binarytree&amp;uid=332069"><img border="0" src="images/left.gif" /></a>
+data=[]
+A_HTML=<a xmlns="http://www.w3.org/1999/xhtml" onmouseover="showTooltip(event,'Username: supreme<br>Rank: Member<br>Status: Active<br>Maintained: Yes<br>Name: Terrence Brannon<br>Phone: +18183590893<br>Country: United States<br>Email: thequietcenter@gmail.com<br>Sponsor: reply<br>Left Leg: 3<br>Right Leg: 3');return false" onmouseout="hideTooltip()" href="members.php?page=binarytree&amp;uid=332034"><img width="60" height="84" border="0" src="images/icons/vip.png" /></a>
+parse-user-input=<a xmlns="http://www.w3.org/1999/xhtml" onmouseover="showTooltip(event,'Username: supreme<br>Rank: Member<br>Status: Active<br>Maintained: Yes<br>Name: Terrence Brannon<br>Phone: +18183590893<br>Country: United States<br>Email: thequietcenter@gmail.com<br>Sponsor: reply<br>Left Leg: 3<br>Right Leg: 3');return false" onmouseout="hideTooltip()" href="members.php?page=binarytree&amp;uid=332034"><img width="60" height="84" border="0" src="images/icons/vip.png" /></a>
+data=[(u'Username', u'supreme'), (u'Rank', u'Member'), (u'Status', u'Active'), (u'Maintained', u'Yes'), (u'Name', u'Terrence Brannon'), (u'Phone', u'+18183590893'), (u'Country', u'United States'), (u'Email', u'thequietcenter@gmail.com'), (u'Sponsor', u'reply'), (u'Leg', u'3')]

@@ -46,6 +46,7 @@ provides more options for you to customize how you present
 Karatbars. If any of it does not make sense, do not hesitate to let me
 know.
 
+
 Several variations on your main replicated site:
 ------------------------------------------------
 
@@ -77,10 +78,6 @@ http://focus.freegold.biz/?s={kbid}&period=month
 Other replicated links that are also yours:
 -------------------------------------------
 
-Banners
-    http://kbgoldintro.com/go/nettools/ads.html
-    http://iwantyoutoprosper.com/general/karatbars-media/
-
 Detailed Introduction to Karatbars
     http://focus.freegold.biz/intro/{kbid}
 
@@ -96,8 +93,33 @@ Zimbabwe
 Paid Fast
     http://focus.freegold.biz/paidfast/{kbid}
 
-Your Corporate-supplied replicated site
-    http://karatbars.com/landing/?s={kbid}
+
+Your corporate pages:
+---------------------
+
+Your Referral Link
+    http://www.karatbars.com/?s={kbid}
+
+Your personal Shop Link
+    http://www.karatbars.com/shop/?s={kbid}
+
+Your personal Landing Link
+    http://www.karatbars.com/landing/?s={kbid}
+
+Your K-Exchange Link
+    http://www.karatbars.com/k-exchange/?s={kbid}
+
+
+And a few other things for good measure:
+----------------------------------------
+
+Banner ads
+    * http://kbgoldintro.com/go/nettools/ads.html
+
+    * http://iwantyoutoprosper.com/general/karatbars-media/
+
+Business Cards
+    http://iwantyoutoprosper.com/income/residual/karatbars/karatbars-business-cards/
 
 
 Welcome to real money.
