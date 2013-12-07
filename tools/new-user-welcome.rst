@@ -90,6 +90,9 @@ Wealth Insurance
 Zimbabwe
     http://focus.freegold.biz/zimbabwe/{kbid}
 
+Lookout
+    http://focus.freegold.biz/lookout/{kbid}
+
 Paid Fast
     http://focus.freegold.biz/paidfast/{kbid}
 

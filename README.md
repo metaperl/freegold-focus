@@ -17,3 +17,5 @@ Make sure the HTML has an `affiliate_url` value even if it's empty:
 All pages have to have it - it goes directly to the Karatbars sign-up form.
 
 Add a routing for the folder in `myapp.py` in the `Root` class.
+
+Edit tools/new-user-welcome.rst and add a link to the new page.
