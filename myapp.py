@@ -122,13 +122,17 @@ class Superior(AffiliatePage):
 
 class Zimbabwe(AffiliatePage):
 
-    def __init__(self, kb_id):
-        super(Zimbabwe, self).__init__(kb_id, base_dir='zimbabwe')
+    def __init__(self, kb_id, base_dir='zimbabwe'):
+        super(Zimbabwe, self).__init__(kb_id, base_dir=base_dir)
 
     def render(self):
         super(Zimbabwe, self).render()
         self.root.findmeld('supreme_team_url').attributes(href=self.supreme_team_url)
 
+class Lookout(Zimbabwe):
+
+    def __init__(self, kb_id):
+        super(Lookout, self).__init__(kb_id, base_dir='lookout')
 
 class Ben919(AffiliatePage):
 
@@ -512,6 +516,10 @@ class Root(object):
     @cherrypy.expose
     def zimbabwe(self, s):
         return self.render(Zimbabwe(s))
+
+    @cherrypy.expose
+    def lookout(self, s):
+        return self.render(Lookout(s))
 
     @cherrypy.expose
     def intro(self, s, page='pricing', cmpg=None, banner=None):
