@@ -1,4 +1,5 @@
 __tools__/treescan/login.py
+__tools__/treescan/output
 
 *.py[cod]
 

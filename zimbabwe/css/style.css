@@ -233,7 +233,7 @@ td:last-child {
 #slide02 > .text {
 	position: absolute;
 	left: 290px;
-	bottom: 65px;
+	bottom: 35px;
 }
 
 #slide03 > img {
@@ -245,7 +245,7 @@ td:last-child {
 #slide03 > .text {
 	position: absolute;
 	left: 270px;
-	bottom: 25px;
+	bottom: 15px;
 }
 
 #slide04 > img {
@@ -257,7 +257,7 @@ td:last-child {
 #slide04 > .text {
 	position: absolute;
 	left: 290px;
-	bottom: 25px;
+	bottom: 50px;
 }
 
 #slide05 > img {
