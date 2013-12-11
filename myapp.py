@@ -317,10 +317,6 @@ class ReeseMentor(AffiliatePage):
 
         self.root.findmeld('tools_register_url').attributes(href='/tools/{0}'.format(self.p.id))
 
-        self.root.findmeld('kbgold_uk_url').attributes(href=self.kbgold_uk_url)
-        self.root.findmeld('kbgold_uk_url2').attributes(href=self.kbgold_uk_url)
-        self.root.findmeld('lttw_url').attributes(href=self.lttw_url)
-
         self.root.findmeld('supreme_team_url').attributes(href=self.supreme_team_url)
         self.root.findmeld('supreme_team_url2').attributes(href=self.supreme_team_url)
         self.root.findmeld('supreme_team_url_corp').attributes(href=self.supreme_team_url_corp)
