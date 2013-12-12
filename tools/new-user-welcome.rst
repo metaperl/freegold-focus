@@ -78,11 +78,12 @@ http://focus.freegold.biz/?s={kbid}&period=month
 Other replicated links that are also yours:
 -------------------------------------------
 
-Detailed Introduction to Karatbars
-    http://focus.freegold.biz/intro/{kbid}
 
 The Superior Retirement Program
     http://focus.freegold.biz/superior/{kbid}
+    This one has a couple of sub-pages that people like also:
+    * http://focus.freegold.biz/superior/{kbid}
+    * http://focus.freegold.biz/buygold/{kbid}
 
 Wealth Insurance
     http://focus.freegold.biz/ben919/{kbid}
