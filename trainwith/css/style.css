@@ -342,7 +342,7 @@ h6 {
 }
 
 #theplan {
-    height: 650px;
+    height: auto;
     width: 960px;
     margin: 0 auto;
     background-repeat: no-repeat;

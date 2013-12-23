@@ -82,16 +82,22 @@ class AffiliatePage(object):
 
         self.shop_url = 'http://karatbars.com/shop/?s={0}'.format(kb_id)
         self.main_url = 'http://karatbars.com/?s={0}'.format(kb_id)
-        self.mentor_url = '/trainwith/{0}'.format(kb_id)
-        self.corp_url = self.main_url
-        self.corp_kexchange_url = 'http://karatbars.com/k-exchange/?s={0}'.format(kb_id)
-
         self.landing_url = 'http://karatbars.com/landing/?s={0}'.format(kb_id)
+        self.mentor_url = '/trainwith/{0}'.format(kb_id)
+
+        self.corp_url = self.main_url
+        self.corp_shop_url = self.shop_url
+        self.corp_kexchange_url = 'http://karatbars.com/k-exchange/?s={0}'.format(kb_id)
+        self.corp_landing_url = self.landing_url
 
         self.superior_url = '/superior/{0}'.format(kb_id)
         self.ben919_url = '/ben919/{0}'.format(kb_id)
         self.buy_gold_url = '/buygold/{0}'.format(kb_id)
         self.get13kilos_url = '/get13kilos/{0}'.format(kb_id)
+        self.cyprus_url = '/cyprus/{0}'.format(kb_id)
+
+        self.zimbabwe_url = '/zimbabwe/{0}'.format(kb_id)
+        self.paidfast_url = '/paidfast/{0}'.format(kb_id)
 
         self.skype_url = 'skype:{0}?add'.format(self.p.skype)
         self.kbgold_uk_url = 'http://www.karatbarsgold.co.uk/{0}'.format(self.p.kbuk_id)
@@ -150,7 +156,7 @@ class Ben919(AffiliatePage):
             self.root.findmeld(affiliate_url_id).attributes(href=self.affiliate_url)
 
         self.root.findmeld('name').content(self.p.name)
-        self.root.findmeld('name_in_title').content("{0}'s Superior Retirement Plan with Karatbars International".format(self.p.name))
+        self.root.findmeld('name_in_title').content("{0}'s Wealth Insurance Plan with Karatbars International".format(self.p.name))
         self.root.findmeld('pic').attributes(src=self.p.pic)
         self.root.findmeld('skype_id').content(self.p.skype)
         self.root.findmeld('number').content(self.p.number)
@@ -308,7 +314,7 @@ class ReeseMentor(AffiliatePage):
     def __init__(self, kb_id):
         super(ReeseMentor, self).__init__(kb_id, 'trainwith')
         self.lttw_url = 'http://www.littletickettowealth.com/?id={0}'.format(self.p.lttw_id)
-        self.paidfast_url = '/paidfast/{0}'.format(kb_id)
+
 
     def render(self):
 
@@ -323,9 +329,20 @@ class ReeseMentor(AffiliatePage):
         self.root.findmeld('supreme_team_url_uk').attributes(href=self.supreme_team_url_uk)
 
         self.root.findmeld('superior_url').attributes(href=self.superior_url)
+        self.root.findmeld('get13kilos_url').attributes(href=self.get13kilos_url)
+        self.root.findmeld('buy_gold_url').attributes(href=self.buy_gold_url)
         self.root.findmeld('ben919_url').attributes(href=self.ben919_url)
+        self.root.findmeld('cyprus_url').attributes(href=self.cyprus_url)
+
+        self.root.findmeld('zimbabwe_url').attributes(href=self.zimbabwe_url)
+
         self.root.findmeld('paidfast_url').attributes(href=self.paidfast_url)
         self.root.findmeld('landing_url').attributes(href=self.landing_url)
+
+        self.root.findmeld('corp_url').attributes(href=self.corp_url)
+        self.root.findmeld('corp_shop_url').attributes(href=self.corp_shop_url)
+        self.root.findmeld('corp_kexchange_url').attributes(href=self.corp_kexchange_url)
+
 
         self.root.findmeld('name').content(self.p.name)
         self.root.findmeld('name_in_title').content(
