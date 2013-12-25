@@ -549,7 +549,7 @@ table td
 }
 
 #contact {
-    height: 2520px;
+    height: auto;
     width: 960px;
     margin: 0 auto;
     background-repeat: no-repeat;

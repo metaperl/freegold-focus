@@ -71,6 +71,7 @@ class AffiliatePage(object):
         self.supreme_team_url = '/?s={0}'.format(kb_id)
         self.supreme_team_url_corp = '/?s={0}&opener=corp'.format(kb_id)
         self.supreme_team_url_uk = '/?s={0}&opener=uk'.format(kb_id)
+        self.supreme_team_contact_url = '/?s={0}#contact-link'.format(kb_id)
 
         self.affiliate_url = 'http://karatbars.com/signup.php?s={0}'.format(kb_id)
         self.intro_url = "/intro/{0}".format(kb_id)
@@ -244,8 +245,11 @@ class Reese(AffiliatePage):
             'corp': 'http://www.youtube.com/embed/0lrqEGlu0Fo',
             'uk': 'http://www.youtube.com/embed/30MfCTLhdZ4',
             'selina' : 'http://www.youtube.com/embed/37l6Wdzw490',
-            'joe': 'http://youtube.com/embed/bpegrmdKWpg',
-            'simple': 'http://youtube.com/embed/qC2JUwE0zeY'
+            'joe': 'http://youtube.com/embed/aBSCmgOyoxg',
+            'simple': 'http://youtube.com/embed/qC2JUwE0zeY',
+            'iamgold': 'http://youtube.com/embed/1Twnl6Lz0Nw',
+            'silent': 'http://youtube.com/embed/jxR7VV7o-Pk',
+
         }
         self.period=period
         super(Reese, self).__init__(kb_id)
@@ -327,6 +331,7 @@ class ReeseMentor(AffiliatePage):
         self.root.findmeld('supreme_team_url2').attributes(href=self.supreme_team_url)
         self.root.findmeld('supreme_team_url_corp').attributes(href=self.supreme_team_url_corp)
         self.root.findmeld('supreme_team_url_uk').attributes(href=self.supreme_team_url_uk)
+        self.root.findmeld('intro_url').attributes(href=self.intro_url)
 
         self.root.findmeld('superior_url').attributes(href=self.superior_url)
         self.root.findmeld('get13kilos_url').attributes(href=self.get13kilos_url)
@@ -361,10 +366,10 @@ class Intro(AffiliatePage):
     def __init__(self, kb_id, page):
         super(Intro, self).__init__(kb_id, 'intro')
         self.page=page
+        self.snapback_url = '{0}&opener=silent#contact-link'.format(
+            self.supreme_team_url)
 
     def render(self):
-
-        pass
         super(Intro, self).render()
 
         # self.root.findmeld('tools_register_url').attributes(href='/tools/{0}'.format(self.p.id))
@@ -375,7 +380,7 @@ class Intro(AffiliatePage):
         #
         self.root.findmeld('supreme_team_url').attributes(href=self.supreme_team_url)
         self.root.findmeld('supreme_team_url2').attributes(href=self.supreme_team_url)
-        # self.root.findmeld('supreme_team_url_corp').attributes(href=self.supreme_team_url_corp)
+        self.root.findmeld('supreme_team_contact_url').attributes(href=self.snapback_url)
         # self.root.findmeld('supreme_team_url_uk').attributes(href=self.supreme_team_url_uk)
         #
         # self.root.findmeld('superior_url').attributes(href=self.superior_url)
