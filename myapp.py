@@ -237,6 +237,23 @@ class Get13Kilos(AffiliatePage):
 
         self.root.findmeld('buy_gold_url').attributes(href=self.buy_gold_url)
 
+class Get3Kilos(AffiliatePage):
+
+    def __init__(self, kb_id):
+        super(Get3Kilos, self).__init__(kb_id, base_dir='get3kilos')
+
+    def render(self):
+        super(Get3Kilos, self).render()
+        for affiliate_url_id in 'affiliate_url2'.split():
+            self.root.findmeld(affiliate_url_id).attributes(href=self.affiliate_url)
+
+        self.root.findmeld('home').attributes(href=self.superior_url)
+        self.root.findmeld('name_in_title').content("Buy Gold from {0} with Karatbars International".format(self.p.name))
+
+        self.root.findmeld('buy_gold_url').attributes(href=self.buy_gold_url)
+
+
+
 class Reese(AffiliatePage):
 
     def __init__(self, kb_id, opener, period):
@@ -516,6 +533,10 @@ class Root(object):
     @cherrypy.expose
     def get13kilos(self, s, cmpg=None, banner=None):
         return self.render(Get13Kilos(s))
+
+    @cherrypy.expose
+    def get3kilos(self, s, cmpg=None, banner=None):
+        return self.render(Get3Kilos(s))
 
     @cherrypy.expose
     def tools(self, s):

@@ -82,7 +82,7 @@ Other replicated links that are also yours:
 The Superior Retirement Program
     http://focus.freegold.biz/superior/{kbid}
     This one has a couple of sub-pages that people like also:
-    * http://focus.freegold.biz/superior/{kbid}
+    * http://focus.freegold.biz/get3kilos/{kbid}
     * http://focus.freegold.biz/buygold/{kbid}
 
 Wealth Insurance
