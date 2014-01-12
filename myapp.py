@@ -95,6 +95,7 @@ class AffiliatePage(object):
         self.ben919_url = '/ben919/{0}'.format(kb_id)
         self.buy_gold_url = '/buygold/{0}'.format(kb_id)
         self.get13kilos_url = '/get13kilos/{0}'.format(kb_id)
+        self.get3kilos_url = '/get3kilos/{0}'.format(kb_id)
         self.cyprus_url = '/cyprus/{0}'.format(kb_id)
 
         self.zimbabwe_url = '/zimbabwe/{0}'.format(kb_id)
@@ -127,7 +128,7 @@ class Superior(AffiliatePage):
 
         self.root.findmeld('home').attributes(href=self.supreme_team_url)
         self.root.findmeld('buy_gold_url').attributes(href=self.buy_gold_url)
-        self.root.findmeld('get13kilos_url').attributes(href=self.get13kilos_url)
+        self.root.findmeld('get3kilos_url').attributes(href=self.get3kilos_url)
 
 class Zimbabwe(AffiliatePage):
 
