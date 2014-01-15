@@ -54,7 +54,7 @@ class AffiliateModel(object):
 
     @staticmethod
     def prepare_email(e):
-        if len(e) > 29:
+        if len(e) > 25:
             return "Click here to email"
         else:
             return e

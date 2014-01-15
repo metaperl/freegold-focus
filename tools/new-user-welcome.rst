@@ -2,70 +2,93 @@
 Hello and welcome to Karatbars.
 ===============================
 
-This is a link to your replicated website:
+I am pleased that you have joined an opportunity that offers tbe value
+of gold money to every sector of society:
+
+Everyday Consumers
+  Everyday consumers can open a savings account in real money
+Local businesses
+  Local businesses can accept Karatbars gold as money and *profit*
+  from every transaction. Contrast with losing money via credit cards
+  and breaking even with cash!
+Affiliates
+  Affiliates are paid on their entire organization in Karatbars.
+
+Now that we understand that we have a product that is applicable to
+all 7 billion people on this earth, let us see how we go about
+building our personal cash and gold empire. Well, it consists of these
+simple steps:
+
+Prospecting
+  Prospecting is the act of deciding who you want to introduce
+  Karatbars to.
+Invitation
+  Invitation is contacting the prospect about your opportunity. We
+  have plenty of training on both prospecting and invitation. An
+  effective approach to invitation is shown at 22 minutes into
+  this video - http://focus.freegold.biz/get3kilos/{kbid}
+Presentation
+  Since a picture is worth 1,000 words, the presentation lets the
+  prospect form his own opinion about this opportunity. The exact
+  presentation you use depends on the type of prospect you have.
+Follow-up
+  After the presentation is finished, you want to followup. We have
+  weekly trainings on this process as well. A number of common
+  questions about Karatbars are addressed on `your details page
+  <http://focus.freegold.biz/intro/{kbid}>`_ so you simply need to
+  direct the prospect there for further education in most cases.
+Sign-up
+  The complete sign-up process for your prospect is available by
+  clicking "GET STARTED" here -
+  http://focus.freegold.biz/?s={kbid}. She simply needs to watch the
+  videos and do what they say.
+Training
+  A wide variety of training materials are available in Karatbars, but
+  we only share them person to person. So, once a person has signed up
+  in karatbars, here is how they begin training:
+  - First, they
+The first step is for them to
+  get a free replicated website just like yours by visiting `your
+  tools page <http://focus.freegold.biz/tools/{kbid}>`_.
+
+
+
+Now that we've covered the overall process on how to build your
+Karatbars organization, let's reflect a bit. In some cases,
+prospecting and invitation is done in a flash. What if a flashy banner
+ad caught your eye and you clicked on it. Why, all of a sudden you are
+in front a presentation. The first 3 steps of the process have
+happened without the sponsor even lifting a finger! This style of
+building an organization is known as internet marketing or affiliate
+marketing and my sponsor
+`Ben Alexander <http://ben.kbgoldintro.com/)>`_ has provided us plenty
+of banners for that purpose:
+
+  - http://kbgoldintro.com/go/nettools/ads.html
+  - http://iwantyoutoprosper.com/general/karatbars-media/
+
+Now let's again look at the presentation part of building your
+organization. My goal is to make sure that you have adequate
+presentation material for whatever type of prsopect you may be dealing
+with. While it is certainly possible to invite your prospect to a
+webinar, you need to be aware that the speaker lineup varies widely
+and there may not be a good match between the background of your
+prospect and the current speaker. This is why I have prepared a large
+number of presentations that give you complete control over how the
+prospect is introduced to Karatbars. I am also open to adding more.
+
+This is a link to your main replicated website:
 http://focus.freegold.biz/?s={kbid}
 This site will allow you to introduce people to the Karatbars
 International business. If you want your picture or skype ID updated,
 just send me a link to your picture or provide me with your skype ID
-and I will update them promptly.
+and I will update them promptly. Here are some other videos that you
+may prefer to show on this main site:
 
-Once your prospects have purchased their affiliate package, send them
-to your tools page so they can instantly get a free replicated website
-just like yours:
-http://focus.freegold.biz/tools/{kbid}
-
-The essence of Karatbars is finding 2 team players. How to locate
-those team players? You have no limits on the number of ways. However
-your mentor page lists some possible approaches for you and your team
-members to take advantage of:
-http://focus.freegold.biz/trainwith/{kbid}
-
-Now, the above links are *all* you need to build a huge organization in
-Karatbars. You can share the opportunity with your first link and you
-can send your upgraded sign-ups to your 2nd link so they can get their
-free replicated site and some business cards. And if your upgraded
-sign-ups are curious about how to locate their 2 team players, provide
-them with your third link. And then the whole process repeats.
-
-That being said, there is *one* more link that you may need
-occassionally. And that is a link that addresses some very common
-questions. So, on your main site ( http://focus.freegold.biz/?s={kbid}
-) click on "MORE INFORMATION" and from there click on "much, much,
-more." Now you are at your details page -
-http://focus.freegold.biz/intro/{kbid}
-
-The details page will answer many common questions that prospective
-new affiliates might have before joining with you. And of all
-questions, the most common misunderstanding about Karatbars is the
-pricing of the product. There is ample information here on that topic.
-You can simply direct individuals to this information so that they
-can get a full and accurate answer.
-
-Everything else in this email is completely optional. It simply
-provides more options for you to customize how you present
-Karatbars. If any of it does not make sense, do not hesitate to let me
-know.
-
-
-Several variations on your main replicated site:
-------------------------------------------------
-
-Let's look at a few different ways you can tailor your replicated
-website. First, let's try a few different videos. The default video
-that automatically plays is the corporate video. But there are other
-choices available (and I'm open to adding more if you suggest them):
-
-Here is Selina Brantley's video
-    http://focus.freegold.biz/?s={kbid}&opener=selina
-
-Here is Lyndon Farrington's video
-    http://focus.freegold.biz/?s={kbid}&opener=uk
-
-Here is a simple to-the-point video
-    http://focus.freegold.biz/?s={kbid}&opener=simple
-
-Here is a very long video by Joe Norman:
-    http://focus.freegold.biz/?s={kbid}&opener=joe
+  - http://focus.freegold.biz/?s={kbid}&opener=joe
+  - http://focus.freegold.biz/?s={kbid}&opener=selina
+  - http://focus.freegold.biz/?s={kbid}&opener=uk
+  - http://focus.freegold.biz/?s={kbid}&opener=simple
 
 Also, for some people, saving in gold every week is not
 affordable. Saving on a monthly basis is more to their liking. They
@@ -75,21 +98,21 @@ plan instead of a 12-week plan:
 http://focus.freegold.biz/?s={kbid}&period=month
 
 
-Other replicated links that are also yours:
--------------------------------------------
+Other replicated presentation links that are also yours:
+--------------------------------------------------------
 
+Zimbabwe
+    http://focus.freegold.biz/zimbabwe/{kbid}
 
 The Superior Retirement Program
     http://focus.freegold.biz/superior/{kbid}
     This one has a couple of sub-pages that people like also:
+
     * http://focus.freegold.biz/get3kilos/{kbid}
     * http://focus.freegold.biz/buygold/{kbid}
 
 Wealth Insurance
     http://focus.freegold.biz/ben919/{kbid}
-
-Zimbabwe
-    http://focus.freegold.biz/zimbabwe/{kbid}
 
 Lookout
     http://focus.freegold.biz/lookout/{kbid}
@@ -112,18 +135,6 @@ Your personal Landing Link
 
 Your K-Exchange Link
     http://www.karatbars.com/k-exchange/?s={kbid}
-
-
-And a few other things for good measure:
-----------------------------------------
-
-Banner ads
-    * http://kbgoldintro.com/go/nettools/ads.html
-
-    * http://iwantyoutoprosper.com/general/karatbars-media/
-
-Business Cards
-    http://iwantyoutoprosper.com/income/residual/karatbars/karatbars-business-cards/
 
 
 Welcome to real money.
