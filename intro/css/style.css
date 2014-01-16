@@ -501,9 +501,9 @@ h6 {
 }
 
 #moreinformation {
-    height: 2050px;
+    height: auto;
     width: 960px;
-    margin: 0 auto;
+    margin: auto;
     background-repeat: no-repeat;
     color: #fff;
     text-align: left;

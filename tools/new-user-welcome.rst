@@ -2,11 +2,11 @@
 Hello and welcome to Karatbars.
 ===============================
 
-I am pleased that you have joined an opportunity that offers tbe value
+I am pleased that you have joined an opportunity that offers the value
 of gold money to every sector of society:
 
 Everyday Consumers
-  Everyday consumers can open a savings account in real money
+  Everyday consumers can open a savings account in real money.
 Local businesses
   Local businesses can accept Karatbars gold as money and *profit*
   from every transaction. Contrast with losing money via credit cards
@@ -14,7 +14,7 @@ Local businesses
 Affiliates
   Affiliates are paid on their entire organization in Karatbars.
 
-Now that we understand that we have a product that is applicable to
+Now that we understand that we have a product that is valuable to
 all 7 billion people on this earth, let us see how we go about
 building our personal cash and gold empire. Well, it consists of these
 simple steps:
@@ -30,7 +30,10 @@ Invitation
 Presentation
   Since a picture is worth 1,000 words, the presentation lets the
   prospect form his own opinion about this opportunity. The exact
-  presentation you use depends on the type of prospect you have.
+  presentation you use depends on the type of prospect you have. Heck,
+  if you are up to it, you can give a presentation right over the phone
+  with `these slides
+  <http://focus.freegold.biz/intro/{kbid}#moreinformation-link>`_.
 Follow-up
   After the presentation is finished, you want to followup. We have
   weekly trainings on this process as well. A number of common
@@ -46,30 +49,42 @@ Training
   A wide variety of training materials are available in Karatbars, but
   we only share them person to person. So, once a person has signed up
   in karatbars, here is how they begin training:
-  - First, they
-The first step is for them to
-  get a free replicated website just like yours by visiting `your
+
+  1. Get a free replicated website just like yours by visiting `your
   tools page <http://focus.freegold.biz/tools/{kbid}>`_.
 
+  2. Watch all the training videos on `your
+  mentor page <http://focus.freegold.biz/trainwith/{kbid}>`_. It is
+  very important that you learn about binary compensation plans
+  so be sure to watch every video, including the last one.
 
+  3. Ask your sponsor if he will be building out your right or left
+  leg. Then have your sponsor help you set your placement
+  (don't worry, she will know what this means) to the *opposite* leg.
+
+  4. Get in the habit of attending the trainings suggested by your
+  sponsor.
+
+  5. Put things in motion by prospecting, invitation, presentation,
+  follow-up, sign-up and training!!!
 
 Now that we've covered the overall process on how to build your
 Karatbars organization, let's reflect a bit. In some cases,
 prospecting and invitation is done in a flash. What if a flashy banner
-ad caught your eye and you clicked on it. Why, all of a sudden you are
+ad caught your eye and you clicked on it? Why, all of a sudden you are
 in front a presentation. The first 3 steps of the process have
 happened without the sponsor even lifting a finger! This style of
 building an organization is known as internet marketing or affiliate
-marketing and my sponsor
-`Ben Alexander <http://ben.kbgoldintro.com/)>`_ has provided us plenty
-of banners for that purpose:
+marketing. My sponsor
+(`Ben Alexander <http://ben.kbgoldintro.com/>`_) has provided us with
+plenty of banners for that purpose:
 
   - http://kbgoldintro.com/go/nettools/ads.html
   - http://iwantyoutoprosper.com/general/karatbars-media/
 
 Now let's again look at the presentation part of building your
 organization. My goal is to make sure that you have adequate
-presentation material for whatever type of prsopect you may be dealing
+presentation material for whatever type of prospect you may be dealing
 with. While it is certainly possible to invite your prospect to a
 webinar, you need to be aware that the speaker lineup varies widely
 and there may not be a good match between the background of your

@@ -20,3 +20,5 @@ Add a routing for the folder in `myapp.py` in the `Root` class.
 
 Edit tools/new-user-welcome.rst and add a link to the new page.
 Edit trainwith/index.html and add a link to the new page in the affiliate/internet-style marketing section.
+
+## Send an email
