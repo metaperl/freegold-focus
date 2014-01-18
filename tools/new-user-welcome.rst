@@ -1,4 +1,3 @@
-===============================
 Hello and welcome to Karatbars.
 ===============================
 
@@ -16,8 +15,10 @@ Affiliates
 
 Now that we understand that we have a product that is valuable to
 all 7 billion people on this earth, let us see how we go about
-building our personal cash and gold empire. Well, it consists of these
-simple steps:
+building our personal cash and gold empire.
+
+The Steps to Building Your Karatbars Business
+=============================================
 
 Prospecting
   Prospecting is the act of deciding who you want to introduce
@@ -81,6 +82,9 @@ plenty of banners for that purpose:
 
   - http://kbgoldintro.com/go/nettools/ads.html
   - http://iwantyoutoprosper.com/general/karatbars-media/
+
+Many Presentation Tools Are Available To You
+============================================
 
 Now let's again look at the presentation part of building your
 organization. My goal is to make sure that you have adequate
