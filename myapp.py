@@ -482,6 +482,10 @@ class Root(object):
         return self.render(Reese(s, opener, period))
 
     @cherrypy.expose
+    def paidfast(self, s):
+        return self.render(Reese(s, opener='simple'))
+
+    @cherrypy.expose
     def superior(self, s, cmpg=None, banner=None):
         return self.render(Superior(s))
 
