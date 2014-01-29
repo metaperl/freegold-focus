@@ -514,7 +514,7 @@ table td
 }
 
 #moreinformation-wrapper {
-    height: auto;
+    height: 100%;
     width: 100%;
     background-repeat: repeat-x;
     background-color: #0e466d;
@@ -522,7 +522,7 @@ table td
 }
 
 #moreinformation {
-    height: 450px;
+    height: auto;
     width: 960px;
     margin: 0 auto;
     background-repeat: no-repeat;
