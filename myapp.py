@@ -482,8 +482,9 @@ class Root(object):
         return self.render(Reese(s, opener, period))
 
     @cherrypy.expose
-    def paidfast(self, s):
-        return self.render(Reese(s, opener='simple'))
+    def paidfast(self, s, cmpg=None, banner=None):
+        raise cherrypy.HTTPRedirect(
+            "/?s={0}&opener=simple".format(s))
 
     @cherrypy.expose
     def superior(self, s, cmpg=None, banner=None):
