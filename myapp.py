@@ -99,7 +99,6 @@ class AffiliatePage(object):
         self.cyprus_url = '/cyprus/{0}'.format(kb_id)
 
         self.zimbabwe_url = '/zimbabwe/{0}'.format(kb_id)
-        self.paidfast_url = '/paidfast/{0}'.format(kb_id)
 
         self.skype_url = 'skype:{0}?add'.format(self.p.skype)
         self.kbgold_uk_url = 'http://www.karatbarsgold.co.uk/{0}'.format(self.p.kbuk_id)
@@ -169,35 +168,6 @@ class Ben919(AffiliatePage):
         for i in xrange(1,4):
             c = 'cyprus_url{0}'.format(i)
             self.root.findmeld(c).attributes(href=self.cyprus_url)
-
-class PaidFast(AffiliatePage):
-
-    def __init__(self, kb_id):
-        super(PaidFast, self).__init__(kb_id, base_dir='paidfast')
-        self.affiliate_url_ids = ('affiliate_url{0}'.format(i) for i in xrange(2,9))
-        self.cyprus_url = '/cyprus/{0}'.format(kb_id)
-
-
-    def render(self):
-        super(PaidFast, self).render()
-        url = '{0}&period=week'.format(self.supreme_team_url_corp)
-        self.root.findmeld('supreme_team_url').attributes(href=url)
-        # for affiliate_url_id in self.affiliate_url_ids:
-        #     self.root.findmeld(affiliate_url_id).attributes(href=self.affiliate_url)
-
-        # self.root.findmeld('name').content(self.p.name)
-        # self.root.findmeld('name_in_title').content("{0}'s Superior Retirement Plan with Karatbars International".format(self.p.name))
-        # self.root.findmeld('pic').attributes(src=self.p.pic)
-        # self.root.findmeld('skype_id').content(self.p.skype)
-        # self.root.findmeld('number').content(self.p.number)
-
-        # self.root.findmeld('buy_gold_url').attributes(href=self.buy_gold_url)
-        # self.root.findmeld('get13kilos_url').attributes(href=self.get13kilos_url)
-
-        # for i in xrange(1,4):
-        #     c = 'cyprus_url{0}'.format(i)
-        #     self.root.findmeld(c).attributes(href=self.cyprus_url)
-
 
 
 class Cyprus(AffiliatePage):
@@ -359,7 +329,7 @@ class ReeseMentor(AffiliatePage):
 
         self.root.findmeld('zimbabwe_url').attributes(href=self.zimbabwe_url)
 
-        self.root.findmeld('paidfast_url').attributes(href=self.paidfast_url)
+
         self.root.findmeld('landing_url').attributes(href=self.landing_url)
 
         self.root.findmeld('corp_url').attributes(href=self.corp_url)
@@ -518,10 +488,6 @@ class Root(object):
     @cherrypy.expose
     def ben919(self, s, cmpg=None, banner=None):
         return self.render(Ben919(s))
-
-    @cherrypy.expose
-    def paidfast(self, s, cmpg=None, banner=None):
-        return self.render(PaidFast(s))
 
     @cherrypy.expose
     def cyprus(self, s, cmpg=None, banner=None):

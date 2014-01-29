@@ -136,9 +136,6 @@ Wealth Insurance
 Lookout
     http://focus.freegold.biz/lookout/{kbid}
 
-Paid Fast
-    http://focus.freegold.biz/paidfast/{kbid}
-
 
 Your corporate pages:
 ---------------------
