@@ -381,9 +381,9 @@ class Intro(AffiliatePage):
         #self.root.findmeld('corp_url').content(self.main_url)
 
 
-        # self.root.findmeld('name_in_title').content(
-        #     "{0} - Karatbars International Intro Page".format(self.p.name)
-        # )
+        self.root.findmeld('name_in_title').content(
+            "{0} - Karatbars International Intro Page".format(self.p.name)
+        )
 
         self.root.findmeld('pic').attributes(src=self.p.pic)
         self.root.findmeld('phone').content(self.p.number)
