@@ -1,1 +1,3 @@
 ssh -X schemelab@li2-168.members.linode.com 'cd domains/biz/freegold/focustest/__tools__/treescan/ ; python main.py units > output'
+
+ssh -X schemelab@li2-168.members.linode.com 'cd domains/biz/freegold/focustest/__tools__/treescan/ ; python main.py email aminramji > output'
