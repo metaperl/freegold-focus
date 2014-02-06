@@ -1,4 +1,4 @@
 #!/bin/bash -x
 
 
-git commit -a -m fix ; git push ; pushd ../focus ; git pull; popd
+git commit -a -m fix ; git push ; pushd ../focus ; sleep 2; git pull; popd
