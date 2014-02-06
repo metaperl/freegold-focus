@@ -1,8 +1,15 @@
 Hello and welcome to Karatbars.
 ===============================
 
-I am pleased that you have joined an opportunity that offers the value
-of gold money to every sector of society:
+This is a very long email, so if you want it short and sweet, here is
+your roadmap to success in Karatbars:
+
+    http://focus.freegold.biz/trainwith/{sponsorid}#roadmap
+
+Since you're still reading, I can see you like all the details. No
+problem. I am happy to provide them. I am pleased that you have joined
+an opportunity that offers the value of gold money to every sector of
+society:
 
 Everyday Consumers
   Everyday consumers can open a savings account in real money.
@@ -64,7 +71,7 @@ Training
   (don't worry, she will know what this means) to the *opposite* leg.
 
   4. Get in the habit of attending the trainings and webinars
-     suggested by your sponsor.
+  suggested by your sponsor.
 
   5. Put things in motion by prospecting, invitation, presentation,
   follow-up, sign-up and training!!!

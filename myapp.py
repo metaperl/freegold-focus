@@ -322,6 +322,7 @@ class ReeseMentor(AffiliatePage):
 
         self.root.findmeld('supreme_team_url').attributes(href=self.supreme_team_url)
         self.root.findmeld('supreme_team_url2').attributes(href=self.supreme_team_url)
+        self.root.findmeld('supreme_team_url3').attributes(href=self.supreme_team_url)
         self.root.findmeld('supreme_team_url_corp').attributes(href=self.supreme_team_url_corp)
         self.root.findmeld('supreme_team_url_uk').attributes(href=self.supreme_team_url_uk)
         self.root.findmeld('intro_url').attributes(href=self.intro_url)

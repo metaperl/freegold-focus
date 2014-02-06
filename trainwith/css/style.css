@@ -68,7 +68,7 @@ h1 {
 h2 {
     color: #0e466d;
     font-size: 300%;
-  /*  padding-left: 100px;*/
+    /*  padding-left: 100px;*/
     line-height: 0px;
 }
 
@@ -522,10 +522,15 @@ h6 {
 #contact-wrapper {
     height: auto;
     width: 100%;
+    text-align: left;
     background-repeat: repeat-x;
     background-color: #d2cdb0;
     border-top: 12px solid white;
 
+}
+
+#contact-wrapper ul, a, li {
+    list-style-type: decimal;
 }
 
 #contact {
@@ -639,7 +644,7 @@ li a:visited:hover {
 }
 
 ul.recentlist li a:hover, ul.recentlist
-ul.recentlist li a.current {
+                            ul.recentlist li a.current {
     background-color: #99c93a;
     background-image: linear-gradient(bottom, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.04) 0%);
     background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.04) 0%);
@@ -650,10 +655,10 @@ ul.recentlist li a.current {
 
 .slideshow,
 ul.recentlist li a, ul.recentlist li a:visited {
-    background-color: #0e466d;
-    background-image: linear-gradient(bottom, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.09) 0%);
-    background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.09) 0%);
-    background-image: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.09) 0%);
-    background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.09) 0%);
-    background-image: -ms-linear-gradient(bottom, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.09) 0%);
-}
+                        background-color: #0e466d;
+                        background-image: linear-gradient(bottom, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.09) 0%);
+                        background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.09) 0%);
+                        background-image: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.09) 0%);
+                        background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.09) 0%);
+                        background-image: -ms-linear-gradient(bottom, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.09) 0%);
+                    }
