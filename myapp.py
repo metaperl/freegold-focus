@@ -68,7 +68,10 @@ class AffiliatePage(object):
         self.html_file = full_path(self.base_dir, html_file)
         self.p = AffiliateModel(kb_id).affiliate
 
+        self.gfg_url = 'http://{0}.GarageFullOfGold.com'.format(kb_id)
+
         self.supreme_team_url = '/?s={0}'.format(kb_id)
+        self.supreme_team_url_contact = '/?s={0}#contact-link'.format(kb_id)
         self.supreme_team_url_corp = '/?s={0}&opener=corp'.format(kb_id)
         self.supreme_team_url_uk = '/?s={0}&opener=uk'.format(kb_id)
         self.supreme_team_contact_url = '/?s={0}#contact-link'.format(kb_id)
@@ -312,6 +315,8 @@ class ReeseMentor(AffiliatePage):
 
         super(ReeseMentor, self).render()
 
+        self.root.findmeld('gfg_url').attributes(href=self.gfg_url)
+        self.root.findmeld('supreme_team_url_contact').attributes(href=self.supreme_team_url_contact)
 
         self.root.findmeld('tools_register_url').attributes(href='/tools/{0}'.format(self.p.id))
 

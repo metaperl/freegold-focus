@@ -68,7 +68,7 @@ h1 {
 h2 {
     color: #0e466d;
     font-size: 300%;
-    padding-left: 100px;
+  /*  padding-left: 100px;*/
     line-height: 0px;
 }
 
@@ -467,7 +467,7 @@ h6 {
 }
 
 #theproduct {
-    height: 600px;
+    height: auto;
     width: 960px;
     margin: 0 auto;
     background-repeat: no-repeat;
@@ -502,7 +502,7 @@ h6 {
 }
 
 #moreinformation {
-    height: 450px;
+    height: auto;
     width: 960px;
     margin: 0 auto;
     background-repeat: no-repeat;

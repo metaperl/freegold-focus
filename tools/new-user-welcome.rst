@@ -63,8 +63,8 @@ Training
   leg. Then have your sponsor help you set your placement
   (don't worry, she will know what this means) to the *opposite* leg.
 
-  4. Get in the habit of attending the trainings suggested by your
-  sponsor.
+  4. Get in the habit of attending the trainings and webinars
+     suggested by your sponsor.
 
   5. Put things in motion by prospecting, invitation, presentation,
   follow-up, sign-up and training!!!
@@ -152,6 +152,18 @@ Your personal Landing Link
 Your K-Exchange Link
     http://www.karatbars.com/k-exchange/?s={kbid}
 
+Let's Summarize
+---------------
+
+This has been a very long document. I would hate for you to think that
+this is a complex business, because it is not. It is a very simple
+business where you can earn as much as a big businessman but without the
+overhead of inventory, real estate and employees.
+
+It is vital that you have a roadmap for the entire process from start
+to finish so here it is:
+
+    http://focus.freegold.biz/lookout/{sponsorid}#roadmap
 
 Welcome to real money.
 ----------------------
