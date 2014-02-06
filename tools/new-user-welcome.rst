@@ -163,7 +163,7 @@ overhead of inventory, real estate and employees.
 It is vital that you have a roadmap for the entire process from start
 to finish so here it is:
 
-    http://focus.freegold.biz/lookout/{sponsorid}#roadmap
+    http://focus.freegold.biz/trainwith/{sponsorid}#roadmap
 
 Welcome to real money.
 ----------------------
