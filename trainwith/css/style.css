@@ -534,7 +534,7 @@ h6 {
 }
 
 #contact {
-    height: 820px;
+    height: auto;
     width: 960px;
     margin: 0 auto;
     background-repeat: no-repeat;
