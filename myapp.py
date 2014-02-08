@@ -70,6 +70,7 @@ class AffiliatePage(object):
 
         self.gfg_url = 'http://{0}.GarageFullOfGold.com'.format(kb_id)
 
+
         self.supreme_team_url = '/?s={0}'.format(kb_id)
         self.supreme_team_url_contact = '/?s={0}#contact-link'.format(kb_id)
         self.supreme_team_url_corp = '/?s={0}&opener=corp'.format(kb_id)
@@ -88,6 +89,7 @@ class AffiliatePage(object):
         self.main_url = 'http://karatbars.com/?s={0}'.format(kb_id)
         self.landing_url = 'http://karatbars.com/landing/?s={0}'.format(kb_id)
         self.mentor_url = '/trainwith/{0}'.format(kb_id)
+        self.roadmap_url = self.mentor_url + '#roadmap'
 
         self.corp_url = self.main_url
         self.corp_shop_url = self.shop_url
@@ -140,6 +142,15 @@ class Zimbabwe(AffiliatePage):
     def render(self):
         super(Zimbabwe, self).render()
         self.root.findmeld('supreme_team_url').attributes(href=self.supreme_team_url)
+
+class Roadmap(AffiliatePage):
+
+    def __init__(self, kb_id, base_dir='roadmap'):
+        super(Roadmap, self).__init__(kb_id, base_dir=base_dir)
+
+    def render(self):
+        super(Roadmap, self).render()
+        self.root.findmeld('roadmap_url').attributes(href=self.roadmap_url)
 
 class Lookout(Zimbabwe):
 
@@ -535,6 +546,10 @@ class Root(object):
     @cherrypy.expose
     def zimbabwe(self, s):
         return self.render(Zimbabwe(s))
+
+    @cherrypy.expose
+    def roadmap(self, s):
+        return self.render(Roadmap(s))
 
     @cherrypy.expose
     def lookout(self, s):
