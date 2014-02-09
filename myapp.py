@@ -89,7 +89,9 @@ class AffiliatePage(object):
         self.main_url = 'http://karatbars.com/?s={0}'.format(kb_id)
         self.landing_url = 'http://karatbars.com/landing/?s={0}'.format(kb_id)
         self.mentor_url = '/trainwith/{0}'.format(kb_id)
-        self.roadmap_url = self.mentor_url + '#roadmap'
+        self.roadmap_details_url = self.mentor_url + '#roadmap'
+        self.roadmap_landing_url = '/roadmap/{0}'.format(kb_id)
+
 
         self.corp_url = self.main_url
         self.corp_shop_url = self.shop_url
@@ -150,7 +152,7 @@ class Roadmap(AffiliatePage):
 
     def render(self):
         super(Roadmap, self).render()
-        self.root.findmeld('roadmap_url').attributes(href=self.roadmap_url)
+        self.root.findmeld('roadmap_details_url').attributes(href=self.roadmap_details_url)
 
 class Lookout(Zimbabwe):
 
@@ -326,6 +328,7 @@ class ReeseMentor(AffiliatePage):
 
         super(ReeseMentor, self).render()
 
+        self.root.findmeld('roadmap_landing_url').attributes(href=self.roadmap_landing_url)
         self.root.findmeld('gfg_url').attributes(href=self.gfg_url)
         self.root.findmeld('supreme_team_url_contact').attributes(href=self.supreme_team_url_contact)
 
