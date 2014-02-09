@@ -4,7 +4,7 @@ Hello and welcome to Karatbars.
 This is a very long email, so if you want it short and sweet, here is
 your roadmap to success in Karatbars:
 
-    http://focus.freegold.biz/trainwith/{sponsorid}#roadmap
+    http://focus.freegold.biz/roadmap/{sponsorid}
 
 Since you're still reading, I can see you like all the details. No
 problem. I am happy to provide them. I am pleased that you have joined
@@ -49,10 +49,10 @@ Follow-up
   <http://focus.freegold.biz/intro/{kbid}>`_ so you simply need to
   direct the prospect there for further education in most cases.
 Sign-up
-  The complete sign-up process for your prospect is available by
-  clicking "GET STARTED" here -
-  http://focus.freegold.biz/?s={kbid}. She simply needs to watch the
-  videos and do what they say.
+  The complete sign-up process for your prospect is available on
+  your roadmap page:
+  http://focus.freegold.biz/roadmap/{kbid}. She simply needs to follow
+  the practical sign-up steps.
 Training
   A wide variety of training materials are available in Karatbars, but
   we only share them person to person. So, once a person has signed up
@@ -123,7 +123,6 @@ these people, you are better off presenting Karatbars as a 12-month
 plan instead of a 12-week plan:
 http://focus.freegold.biz/?s={kbid}&period=month
 
-
 Other replicated presentation links that are also yours:
 --------------------------------------------------------
 
@@ -170,7 +169,7 @@ overhead of inventory, real estate and employees.
 It is vital that you have a roadmap for the entire process from start
 to finish so here it is:
 
-    http://focus.freegold.biz/trainwith/{sponsorid}#roadmap
+    http://focus.freegold.biz/roadmap/{sponsorid}
 
 Welcome to real money.
 ----------------------
