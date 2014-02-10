@@ -1,13 +1,7 @@
 Hello and welcome to Karatbars.
 ===============================
 
-This is a very long email, so if you want it short and sweet, here is
-your roadmap to success in Karatbars:
-
-    http://focus.freegold.biz/roadmap/{sponsorid}
-
-Since you're still reading, I can see you like all the details. No
-problem. I am happy to provide them. I am pleased that you have joined
+I am pleased that you have joined
 an opportunity that offers the value of gold money to every sector of
 society:
 
@@ -23,6 +17,13 @@ Affiliates
 Now that we understand that we have a product that is valuable to
 all 7 billion people on this earth, let us see how we go about
 building our personal cash and gold empire.
+
+Your sponsor has paved the way for you. They have a complete roadmap
+for your success from start to finish so here it is:
+
+    http://focus.freegold.biz/roadmap/{sponsorid}
+
+But let's go ahead and break it down step by step.
 
 The Steps to Building Your Karatbars Business
 =============================================
