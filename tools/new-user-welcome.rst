@@ -59,17 +59,18 @@ Training
   we only share them person to person. So, once a person has signed up
   in karatbars, here is how they begin training:
 
-  1. Get a free replicated website just like yours by visiting `your
+  1. They get a free replicated website just like yours by visiting `your
   tools page <http://focus.freegold.biz/tools/{kbid}>`_.
 
-  2. Watch all the training videos on `your
+  2. They watch all the training videos on `your
   mentor page <http://focus.freegold.biz/trainwith/{kbid}>`_. It is
   very important that you learn about binary compensation plans
   so be sure to watch every video, including the last one.
 
   3. Ask your sponsor if he will be building out your right or left
-  leg. Then have your sponsor help you set your placement
-  (don't worry, she will know what this means) to the *opposite* leg.
+  leg. Then have your sponsor help you set your placement to the
+  *opposite* leg. This is *very* important. If you don't understand
+  this, contact your sponsor.
 
   4. Get in the habit of attending the trainings and webinars
   suggested by your sponsor.

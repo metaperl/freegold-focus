@@ -72,7 +72,7 @@ class AffiliatePage(object):
 
 
         self.supreme_team_url = '/?s={0}'.format(kb_id)
-        self.supreme_team_url_contact = '/?s={0}#contact-link'.format(kb_id)
+        self.supreme_team_url_contact = '/?s={0}&no_autoplay=1#contact-link'.format(kb_id)
         self.supreme_team_url_corp = '/?s={0}&opener=corp'.format(kb_id)
         self.supreme_team_url_uk = '/?s={0}&opener=uk'.format(kb_id)
         self.supreme_team_contact_url = '/?s={0}#contact-link'.format(kb_id)
@@ -272,7 +272,12 @@ class Reese(AffiliatePage):
 
         super(Reese, self).render()
 
-        def autoplay(u): return '{0}?autoplay=1'.format(u)
+        def autoplay(u):
+            try:
+                cherrypy.request.params.get('no_autoplay')
+                return u
+            except KeyError:
+                return '{0}?autoplay=1'.format(u)
 
         followers = self.followers()
 
@@ -498,7 +503,7 @@ class Root(object):
         return affiliate_page.root.write_htmlstring()
 
     @cherrypy.expose
-    def index(self, s="supreme", opener='corp', cmpg=None, banner=None, period='week'):
+    def index(self, s="supreme", no_autoplay=0, opener='corp', cmpg=None, banner=None, period='week'):
         return self.render(Reese(s, opener, period))
 
     @cherrypy.expose
