@@ -4,9 +4,9 @@ Hello and welcome to Karatbars.
 This is a link to your replicated website:
 http://focus.freegold.biz/?s={kbid}
 
-When people have signed up with you, send them to `your
-tools page <http://focus.freegold.biz/tools/{kbid}>`_ so they can get
-a replicated website as well.
+When people want to sign up with you, just send them to `your
+getting started link <http://focus.freegold.biz/?s={kbid}#contact-link>`_
+and have them follow the steps.
 
 That's the short version of this email. The rest of this email is very
 long and simply expands on the 2 sentences above.
