@@ -4,6 +4,7 @@
 import importlib
 import logging
 import os
+import pprint
 import sys
 import StringIO
 
@@ -110,6 +111,10 @@ class AffiliatePage(object):
         self.skype_url = 'skype:{0}?add'.format(self.p.skype)
         self.kbgold_uk_url = 'http://www.karatbarsgold.co.uk/{0}'.format(self.p.kbuk_id)
         self.email_href = 'mailto:{0}'.format(self.p.email)
+
+    @property
+    def pprint(self):
+        return pprint.PrettyPrinter(indent=4)
 
     def render(self):
         self.root.findmeld('affiliate_url').attributes(href=self.affiliate_url)
@@ -441,10 +446,12 @@ class ToolsForm(AffiliatePage):
         self.root.findmeld('sponsorid2').content(self.kb_id)
         self.root.findmeld('sponsoremail').attributes(value=self.p.email)
 
-class ToolsRegister(object):
+class ToolsRegister(AffiliatePage):
 
     def __init__(self, **dbargs):
+        dbargs['id'] = dbargs['id'].lower()
         self.dbargs = dbargs
+        cherrypy.log("dbargs={0}".format(self.pprint.pprint(dbargs)))
 
     @staticmethod
     def insert_affiliate(email, id, name, number, skype, pic='http://j.mp/17y4bFj'):
