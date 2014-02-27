@@ -1,4 +1,3 @@
-
 # imports
 ## core
 import importlib
@@ -149,6 +148,11 @@ class Zimbabwe(AffiliatePage):
     def render(self):
         super(Zimbabwe, self).render()
         self.root.findmeld('supreme_team_url').attributes(href=self.supreme_team_url)
+
+class Numbers(Zimbabwe):
+
+    def __init__(self, kb_id, base_dir='numbers'):
+        super(Numbers, self).__init__(kb_id, base_dir=base_dir)
 
 class Roadmap(AffiliatePage):
 
@@ -517,6 +521,10 @@ class Root(object):
     def paidfast(self, s, cmpg=None, banner=None):
         raise cherrypy.HTTPRedirect(
             "/?s={0}&opener=simple".format(s))
+
+    @cherrypy.expose
+    def numbers(self, s, cmpg=None, banner=None):
+        return self.render(Numbers(s))
 
     @cherrypy.expose
     def superior(self, s, cmpg=None, banner=None):
