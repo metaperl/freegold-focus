@@ -72,7 +72,7 @@ class AffiliatePage(object):
 
 
         self.supreme_team_url = '/?s={0}'.format(kb_id)
-        self.supreme_team_url_contact = '/?s={0}&no_autoplay=1#contact-link'.format(kb_id)
+        self.supreme_team_url_contact = '/?s={0}&opener=silent#contact-link'.format(kb_id)
         self.supreme_team_url_corp = '/?s={0}&opener=corp'.format(kb_id)
         self.supreme_team_url_uk = '/?s={0}&opener=uk'.format(kb_id)
         self.supreme_team_contact_url = '/?s={0}#contact-link'.format(kb_id)
@@ -255,14 +255,11 @@ class Reese(AffiliatePage):
     def __init__(self, kb_id, opener, period):
         self.opener = opener
         self.src = {
-            'corp': 'http://www.youtube.com/embed/hn2cVVJ99Sg',
-            'uk': 'http://www.youtube.com/embed/30MfCTLhdZ4',
-            'selina' : 'http://www.youtube.com/embed/37l6Wdzw490',
-            'joe': 'http://youtube.com/embed/aBSCmgOyoxg',
-            'simple': 'http://youtube.com/embed/qC2JUwE0zeY',
-            'iamgold': 'http://youtube.com/embed/1Twnl6Lz0Nw',
-            'silent': 'http://youtube.com/embed/jxR7VV7o-Pk',
-
+            'corp': '87767039',
+            'uk': '87808367',
+            'joe': '87802145',
+            'simple': '87802144',
+            'silent': '87809443'
         }
         self.period=period
         super(Reese, self).__init__(kb_id)
@@ -286,12 +283,13 @@ class Reese(AffiliatePage):
                 cherrypy.request.params.get('no_autoplay')
                 return u
             except KeyError:
-                return '{0}?autoplay=1'.format(u)
+                return '{0};autoplay=1'.format(u)
 
         followers = self.followers()
 
+        _url = '//player.vimeo.com/video/{0}?title=0;byline=0;portrait=0;autoplay=1'.format(self.src[self.opener])
         carousel = dict(
-            opener=autoplay(self.src[self.opener])
+            opener=_url
         )
 
         for meld_id, url in carousel.iteritems():
