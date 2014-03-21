@@ -383,7 +383,7 @@ h6 {
     height: auto;
     width: 100%;
     background-repeat: repeat-x;
-    background-color: #d2cdb0;
+    background-color: #0b3959;
     border-top: 12px solid white;
 }
 
@@ -392,7 +392,7 @@ h6 {
     width: 960px;
     margin: 0 auto;
     text-align: left;
-    color: #0F191D;
+
 }
 
 #theprocess-left {
@@ -403,7 +403,7 @@ h6 {
 #theprocess-right {
     width: 700px;
     padding-top: 70px;
-    color: #0e466d;
+
     float: right;
 }
 
