@@ -69,7 +69,7 @@ class AffiliatePage(object):
         self.html_file = full_path(self.base_dir, html_file)
         self.p = AffiliateModel(kb_id).affiliate
 
-        self.gfg_url = 'http://{0}.GarageFullOfGold.com'.format(kb_id)
+
 
 
         self.supreme_team_url = '/?s={0}'.format(kb_id)
@@ -111,6 +111,14 @@ class AffiliatePage(object):
         self.skype_url = 'skype:{0}?add'.format(self.p.skype)
         self.kbgold_uk_url = 'http://www.karatbarsgold.co.uk/{0}'.format(self.p.kbuk_id)
         self.email_href = 'mailto:{0}'.format(self.p.email)
+
+    @property
+    def gfg_url(self):
+        if self.p.gfg:
+            _kb_id = self.p.id
+        else:
+            _kb_id = 'supreme'
+        return 'http://{0}.GarageFullOfGold.com'.format(_kb_id)
 
     @property
     def pprint(self):
@@ -371,7 +379,8 @@ class ReeseMentor(AffiliatePage):
         self.root.findmeld('corp_kexchange_url').attributes(href=self.corp_kexchange_url)
 
 
-        self.root.findmeld('name').content(self.p.name)
+        for meld in 'name name2'.split():
+            self.root.findmeld(meld).content(self.p.name)
         self.root.findmeld('name_in_title').content(
             "{0} - Karatbars International Mentor Page".format(self.p.name)
         )

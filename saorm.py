@@ -20,6 +20,7 @@ class Affiliate(DeclarativeBase):
 
     #column definitions
     email = Column(u'email', VARCHAR(length=128), nullable=False)
+    gfg = Column(u'gfg', BOOLEAN())
     id = Column(u'id', VARCHAR(length=128), primary_key=True, nullable=False)
     kbuk_id = Column(u'kbuk_id', INTEGER())
     lttw_id = Column(u'lttw_id', VARCHAR())
@@ -32,7 +33,7 @@ class Affiliate(DeclarativeBase):
 
 
 #example on how to query your Schema
-# from sqlalchemy.orm import sessionmaker
-# session = sessionmaker(bind=engine)()
-# objs = session.query(Affiliate).all()
-# print 'All Affiliate objects: %s'%objs
+from sqlalchemy.orm import sessionmaker
+session = sessionmaker(bind=engine)()
+objs = session.query(Affiliate).all()
+print 'All Affiliate objects: %s'%objs
