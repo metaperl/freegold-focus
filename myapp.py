@@ -162,6 +162,7 @@ class Roadmap(AffiliatePage):
 
     def render(self):
         super(Roadmap, self).render()
+        self.root.findmeld('name').content(self.p.name)
         self.root.findmeld('roadmap_details_url').attributes(href=self.roadmap_details_url)
 
 class Lookout(Zimbabwe):
