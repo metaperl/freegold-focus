@@ -262,16 +262,18 @@ class Get3Kilos(AffiliatePage):
 
 class Reese(AffiliatePage):
 
-    def __init__(self, kb_id, opener, period):
+    def __init__(self, kb_id, opener, period, steps):
         self.opener = opener
         self.src = {
             'corp': '87767039',
             'uk': '87808367',
             'joe': '87802145',
             'simple': '87802144',
-            'silent': '87809443'
+            'silent': '87809443',
+            '7': '90211695'
         }
         self.period=period
+        self.steps=steps
         super(Reese, self).__init__(kb_id)
 
     def followers(self):
@@ -307,6 +309,7 @@ class Reese(AffiliatePage):
 
         for i in xrange(1,7):
             self.root.findmeld("period{0}".format(i)).content(self.period)
+        #self.root.findmeld("steps").content(self.steps)
 
         #self.root.findmeld('kbgold_uk_url').attributes(href=self.kbgold_uk_url)
         self.root.findmeld('enroll_free').attributes(href=self.affiliate_url)
@@ -523,8 +526,8 @@ class Root(object):
         return affiliate_page.root.write_htmlstring()
 
     @cherrypy.expose
-    def index(self, s="supreme", no_autoplay=0, opener='corp', cmpg=None, banner=None, period='week'):
-        return self.render(Reese(s, opener, period))
+    def index(self, s="supreme", no_autoplay=0, opener='corp', cmpg=None, banner=None, period='week', steps=12):
+        return self.render(Reese(s, opener, period, steps))
 
     @cherrypy.expose
     def paidfast(self, s, cmpg=None, banner=None):
