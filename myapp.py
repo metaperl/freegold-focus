@@ -113,6 +113,10 @@ class AffiliatePage(object):
         self.email_href = 'mailto:{0}'.format(self.p.email)
 
     @property
+    def tools_url(self):
+        return '/tools/{0}'.format(self.p.id)
+
+    @property
     def gfg_url(self):
         if self.p.gfg:
             _kb_id = self.p.id
@@ -307,15 +311,32 @@ class Reese(AffiliatePage):
         for meld_id, url in carousel.iteritems():
             self.root.findmeld(meld_id).attributes(src=url)
 
-        for i in xrange(1,7):
+        for i in xrange(1,4):
             self.root.findmeld("period{0}".format(i)).content(self.period)
-        #self.root.findmeld("steps").content(self.steps)
+        self.root.findmeld("steps").content(str(self.steps))
+        earnings = dict()
+        earnings['12'] = [str(i) for i in [
+            13, 0, 0, 26, 39, 65, 143, 286, 546, 1131, 2223, 4485]]
+        earnings['7'] =  [str(i) for i in [65, 55, 110, 220, 385, 1237, 3416]]
+
+        earnings_iterator = self.root.findmeld('earnings_tr').repeat(
+            earnings[self.steps])
+        count=1
+        for element, item in earnings_iterator:
+            element.findmeld('td1').content(str(count))
+            element.findmeld('td2').content(item)
+            count += 1
+
+
 
         #self.root.findmeld('kbgold_uk_url').attributes(href=self.kbgold_uk_url)
         self.root.findmeld('enroll_free').attributes(href=self.affiliate_url)
         #self.root.findmeld('contact_iframe').attributes(src=self.landing_url)
         self.root.findmeld('name').content(self.p.name)
         self.root.findmeld('name2').content(self.p.name)
+        self.root.findmeld('name3').content(self.p.name)
+
+        self.root.findmeld('tools_url').attributes(href=self.tools_url)
 
         self.root.findmeld('name_in_title').content(
             "Karatbars International - {0}".format(self.p.name)
@@ -406,7 +427,7 @@ class Intro(AffiliatePage):
     def render(self):
         super(Intro, self).render()
 
-        # self.root.findmeld('tools_register_url').attributes(href='/tools/{0}'.format(self.p.id))
+
         #
         # self.root.findmeld('kbgold_uk_url').attributes(href=self.kbgold_uk_url)
         # self.root.findmeld('kbgold_uk_url2').attributes(href=self.kbgold_uk_url)
@@ -526,7 +547,7 @@ class Root(object):
         return affiliate_page.root.write_htmlstring()
 
     @cherrypy.expose
-    def index(self, s="supreme", no_autoplay=0, opener='corp', cmpg=None, banner=None, period='week', steps=12):
+    def index(self, s="supreme", no_autoplay=0, opener='corp', cmpg=None, banner=None, period='week', steps='12'):
         return self.render(Reese(s, opener, period, steps))
 
     @cherrypy.expose
