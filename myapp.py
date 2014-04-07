@@ -117,6 +117,10 @@ class AffiliatePage(object):
         return '/tools/{0}'.format(self.p.id)
 
     @property
+    def seven_weeks_url(self):
+        return '/?s={0}&opener=7&steps=7'.format(self.p.id)
+
+    @property
     def gfg_url(self):
         if self.p.gfg:
             _kb_id = self.p.id
@@ -289,7 +293,6 @@ class Reese(AffiliatePage):
         followers.remove(lead)
         return (lead, followers)
 
-
     def render(self):
 
         super(Reese, self).render()
@@ -360,6 +363,7 @@ class Reese(AffiliatePage):
         self.root.findmeld('intro_iamgold_url').attributes(href=self.intro_iamgold_url)
         self.root.findmeld('intro_pricing_url').attributes(href=self.intro_pricing_url)
 
+        self.root.findmeld('roadmap_landing_url').attributes(href=self.roadmap_landing_url)
 
 
 
@@ -380,6 +384,7 @@ class ReeseMentor(AffiliatePage):
 
         self.root.findmeld('tools_register_url').attributes(href='/tools/{0}'.format(self.p.id))
 
+        self.root.findmeld('seven_weeks_url').attributes(href=self.seven_weeks_url)
         self.root.findmeld('supreme_team_url').attributes(href=self.supreme_team_url)
         self.root.findmeld('supreme_team_url2').attributes(href=self.supreme_team_url)
         self.root.findmeld('supreme_team_url3').attributes(href=self.supreme_team_url)
@@ -586,6 +591,11 @@ class Root(object):
     @cherrypy.expose
     def tools(self, s):
         return self.render(Tools(s))
+
+    @cherrypy.expose
+    def cycle(self, left, right):
+        import cycle
+        return cycle.cycle_factor(int(left), int(right))
 
     @cherrypy.expose
     def toolsform(self, s):
