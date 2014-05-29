@@ -116,9 +116,6 @@ class AffiliatePage(object):
     def tools_url(self):
         return '/tools/{0}'.format(self.p.id)
 
-    @property
-    def seven_weeks_url(self):
-        return '/?s={0}&opener=7&steps=7'.format(self.p.id)
 
     @property
     def gfg_url(self):
@@ -384,7 +381,7 @@ class ReeseMentor(AffiliatePage):
 
         self.root.findmeld('tools_register_url').attributes(href='/tools/{0}'.format(self.p.id))
 
-        self.root.findmeld('seven_weeks_url').attributes(href=self.seven_weeks_url)
+
         self.root.findmeld('supreme_team_url').attributes(href=self.supreme_team_url)
         self.root.findmeld('supreme_team_url2').attributes(href=self.supreme_team_url)
         self.root.findmeld('supreme_team_url3').attributes(href=self.supreme_team_url)
