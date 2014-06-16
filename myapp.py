@@ -92,6 +92,7 @@ class AffiliatePage(object):
         self.mentor_url = '/trainwith/{0}'.format(kb_id)
         self.roadmap_details_url = self.mentor_url + '#roadmap'
         self.roadmap_landing_url = '/roadmap/{0}'.format(kb_id)
+        self.p2p_url =  self.mentor_url + '#theplan-link'
 
 
         self.corp_url = self.main_url
@@ -376,7 +377,9 @@ class ReeseMentor(AffiliatePage):
         super(ReeseMentor, self).render()
 
         self.root.findmeld('roadmap_landing_url').attributes(href=self.roadmap_landing_url)
+        self.root.findmeld('roadmap_landing_url2').attributes(href=self.roadmap_landing_url)
         self.root.findmeld('gfg_url').attributes(href=self.gfg_url)
+        self.root.findmeld('p2p_url').attributes(href=self.p2p_url)
         self.root.findmeld('supreme_team_url_contact').attributes(href=self.supreme_team_url_contact)
 
         self.root.findmeld('tools_register_url').attributes(href='/tools/{0}'.format(self.p.id))

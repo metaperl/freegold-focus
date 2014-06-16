@@ -38,8 +38,13 @@ ul, li, img, body, html {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: underline;
     color: #fff;
+}
+
+a.nounder {
+    text-decoration: none;
+
 }
 
 a:hover {
