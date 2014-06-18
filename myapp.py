@@ -69,14 +69,12 @@ class AffiliatePage(object):
         self.html_file = full_path(self.base_dir, html_file)
         self.p = AffiliateModel(kb_id).affiliate
 
-
-
-
         self.supreme_team_url = '/?s={0}'.format(kb_id)
         self.supreme_team_url_contact = '/?s={0}&opener=silent#contact-link'.format(kb_id)
         self.supreme_team_url_corp = '/?s={0}&opener=corp'.format(kb_id)
         self.supreme_team_url_uk = '/?s={0}&opener=uk'.format(kb_id)
         self.supreme_team_contact_url = '/?s={0}#contact-link'.format(kb_id)
+        self.supreme_team_more_info_url = '/?s={0}#moreinformation-link'.format(kb_id)
 
         self.affiliate_url = 'http://karatbars.com/signup.php?s={0}'.format(kb_id)
         self.intro_url = "/intro/{0}".format(kb_id)
@@ -85,7 +83,6 @@ class AffiliatePage(object):
 
         self.intro_kexchange_url = "/intro/{0}#theresults-link".format(kb_id)
 
-
         self.shop_url = 'http://karatbars.com/shop/?s={0}'.format(kb_id)
         self.main_url = 'http://karatbars.com/?s={0}'.format(kb_id)
         self.landing_url = 'http://karatbars.com/landing/?s={0}'.format(kb_id)
@@ -93,7 +90,6 @@ class AffiliatePage(object):
         self.roadmap_details_url = self.mentor_url + '#roadmap'
         self.roadmap_landing_url = '/roadmap/{0}'.format(kb_id)
         self.p2p_url =  self.mentor_url + '#theplan-link'
-
 
         self.corp_url = self.main_url
         self.corp_shop_url = self.shop_url
@@ -380,6 +376,7 @@ class ReeseMentor(AffiliatePage):
         self.root.findmeld('roadmap_landing_url2').attributes(href=self.roadmap_landing_url)
         self.root.findmeld('gfg_url').attributes(href=self.gfg_url)
         self.root.findmeld('p2p_url').attributes(href=self.p2p_url)
+        self.root.findmeld('intro_url').attributes(href=self.intro_url)
         self.root.findmeld('supreme_team_url_contact').attributes(href=self.supreme_team_url_contact)
 
         self.root.findmeld('tools_register_url').attributes(href='/tools/{0}'.format(self.p.id))
@@ -387,13 +384,15 @@ class ReeseMentor(AffiliatePage):
 
         self.root.findmeld('supreme_team_url').attributes(href=self.supreme_team_url)
         self.root.findmeld('supreme_team_url2').attributes(href=self.supreme_team_url)
-        #self.root.findmeld('supreme_team_url3').attributes(href=self.supreme_team_url)
+        self.root.findmeld('more_info').attributes(href=self.supreme_team_more_info_url)
         self.root.findmeld('supreme_team_url_corp').attributes(href=self.supreme_team_url_corp)
         self.root.findmeld('supreme_team_url_uk').attributes(href=self.supreme_team_url_uk)
         self.root.findmeld('intro_url').attributes(href=self.intro_url)
+        self.root.findmeld('intro_url2').attributes(href=self.intro_url)
 
         self.root.findmeld('superior_url').attributes(href=self.superior_url)
         self.root.findmeld('get13kilos_url').attributes(href=self.get13kilos_url)
+        self.root.findmeld('get3kilos_url').attributes(href=self.get3kilos_url)
         self.root.findmeld('buy_gold_url').attributes(href=self.buy_gold_url)
         self.root.findmeld('ben919_url').attributes(href=self.ben919_url)
         self.root.findmeld('cyprus_url').attributes(href=self.cyprus_url)
@@ -402,6 +401,7 @@ class ReeseMentor(AffiliatePage):
 
 
         self.root.findmeld('landing_url').attributes(href=self.landing_url)
+        self.root.findmeld('roadmap_landing_url2').attributes(href=self.roadmap_landing_url)
 
         self.root.findmeld('corp_url').attributes(href=self.corp_url)
         self.root.findmeld('corp_shop_url').attributes(href=self.corp_shop_url)
