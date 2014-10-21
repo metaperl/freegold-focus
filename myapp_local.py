@@ -10,10 +10,17 @@ import cherrypy
 
 # local
 def full_path(*extra):
-    pathname  = os.path.dirname(sys.argv[0])
-    full_path = os.path.abspath(pathname)
-    return '{0}/{1}'.format(full_path, __file__)
+    a = os.path.abspath(__file__)
+    #pathname  = os.path.dirname(sys.argv[0])
+    #return os.path.abspath(pathname)
+    # raise ValueError, "abspath = {}. d = {}".format(
+    #     a, os.path.dirname(a)
+    #     )
+    return os.path.dirname(a)
+
 sys.path.insert(0, full_path())
+
+
 import config
 import myapp
 
