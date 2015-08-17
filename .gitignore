@@ -1,6 +1,9 @@
 __tools__/treescan/login.py
 __tools__/treescan/output
 
+.access.log
+.error.log
+
 tmp
 
 *.py[cod]

@@ -79,7 +79,7 @@ class AffiliatePage(object):
         self.supreme_team_contact_url = '/?s={0}#contact-link'.format(kb_id)
         self.supreme_team_more_info_url = '/?s={0}#moreinformation-link'.format(kb_id)
 
-        self.affiliate_url = 'http://karatbars.com/signup.php?s={0}'.format(kb_id)
+        self.affiliate_url = 'http://karatbars.com/?s={0}'.format(kb_id)
         self.intro_url = "/intro/{0}".format(kb_id)
         self.intro_iamgold_url = "{0}#theplan-link".format(self.intro_url) # http://localhost:8080/intro/bitcoin#theresults-link
         self.intro_pricing_url = "{0}#theprocess-link".format(self.intro_url)
