@@ -3,6 +3,22 @@ freegold-focus
 
 source code for my [Karatbars Affiliate Pages](http://TerrenceBrannon.com)
 
+## Deploying to Apache
+
+    <Macro WSGISite $domain ${approot} $script>
+    <VirtualHost *:80>
+       ServerName $domain
+       WSGIScriptAlias / ${approot}/$script
+       #SetEnv configuration /path/to/config/file
+       ErrorLog ${approot}/.error.log
+       CustomLog ${approot}/.access.log combined
+    </VirtualHost>
+    </Macro>
+
+
+Use WSGISite karatbars.iwantyoutoprosper.com /home/schemelab/domains/com/iwantyoutoprosper/karatbars myapp.wsgi
+
+
 ## Adding a new affiliate page
 
 Create a folder for it (e.g. `lookout`)
