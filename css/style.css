@@ -377,11 +377,11 @@ table td
 }
 
 #theplan-right {
-    height: 500px;
+    height: 550px;
     width: 320px;
-    float: right;
+    float: left;
     margin-right: 5px;
-    padding-top: 150px;
+    padding-top: 80px;
 }
 
 #theplan-title {

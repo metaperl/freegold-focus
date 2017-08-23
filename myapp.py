@@ -311,21 +311,21 @@ class Reese(AffiliatePage):
         for meld_id, url in carousel.iteritems():
             self.root.findmeld(meld_id).attributes(src=url)
 
-        for i in xrange(1,4):
-            self.root.findmeld("period{0}".format(i)).content(self.period)
-        self.root.findmeld("steps").content(str(self.steps))
-        earnings = dict()
-        earnings['12'] = [str(i) for i in [
-            13, 0, 0, 26, 39, 65, 143, 286, 546, 1131, 2223, 4485]]
-        earnings['7'] =  [str(i) for i in [65, 55, 110, 220, 385, 1237, 3416]]
+        # for i in xrange(1,4):
+        #     self.root.findmeld("period{0}".format(i)).content(self.period)
+        # self.root.findmeld("steps").content(str(self.steps))
+        # earnings = dict()
+        # earnings['12'] = [str(i) for i in [
+        #     13, 0, 0, 26, 39, 65, 143, 286, 546, 1131, 2223, 4485]]
+        # earnings['7'] =  [str(i) for i in [65, 55, 110, 220, 385, 1237, 3416]]
 
-        earnings_iterator = self.root.findmeld('earnings_tr').repeat(
-            earnings[self.steps])
-        count=1
-        for element, item in earnings_iterator:
-            element.findmeld('td1').content(str(count))
-            element.findmeld('td2').content(item)
-            count += 1
+        # earnings_iterator = self.root.findmeld('earnings_tr').repeat(
+        #     earnings[self.steps])
+        # count=1
+        # for element, item in earnings_iterator:
+        #     element.findmeld('td1').content(str(count))
+        #     element.findmeld('td2').content(item)
+        #     count += 1
 
 
 

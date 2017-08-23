@@ -1,2 +1,0 @@
-
- sqlautocode -o saorm.py postgres://metaperl:m0ney123@localhost/focus -t affiliate --declarative --example

@@ -1,0 +1,94 @@
+<!--
+ Created with Webformgenerator by easyclick.ch
+ www.easyclick.ch
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="css/style.css" media="screen" rel="stylesheet" type="text/css"/>
+    <link href="css/uniform.css" media="screen" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+<div class="TTWForm-container">
+
+
+     <form action="/tools_register" class="TTWForm" method="post" novalidate="">
+
+
+          <div id="field1-container" class="field f_100">
+               <label for="field1">
+                    Karatbars Username (e.g. supreme)
+               </label>
+               <input type="text" name="id" id="field1" required="required">
+          </div>
+
+
+          <div id="field2-container" class="field f_100">
+               <label for="field2">
+                    Full Name
+               </label>
+               <input type="text" name="name" id="field2" required="required">
+          </div>
+
+
+          <div id="field3-container" class="field f_100">
+               <label for="field3">
+                    Phone Number
+               </label>
+               <input type="text" name="number" id="field3" required="required">
+          </div>
+
+
+          <div id="field5-container" class="field f_100">
+               <label for="field5">
+                    Email Address
+               </label>
+               <input type="email" name="email" id="field5" required="required">
+          </div>
+
+
+          <div id="field6-container" class="field f_100">
+               <label for="field6">
+                    Skype ID (optional)
+               </label>
+               <input type="text" name="skype" id="field6">
+          </div>
+
+
+          <div id="field7-container" class="field f_100">
+               <label for="field7">
+                    URL to Picture (optional)
+               </label>
+               <input type="url" name="pic" value="http://j.mp/17y4bFj"
+                      id="field7">
+          </div>
+
+
+          <div id="field8-container" class="field f_100">
+               <label for="field8">
+                    KaratbarsGold.co.UK ID (optional, e.g. "80")
+               </label>
+               <input type="number" name="kbuk_id" id="field8">
+          </div>
+
+
+          <div id="field9-container" class="field f_100">
+               <label for="field9">
+                    Little Ticket to Wealth ID (optional, e.g. "thequietcenter")
+               </label>
+               <input type="text" name="lttw_id" id="field9">
+          </div>
+
+
+          <div id="form-submit" class="field f_100 clearfix submit">
+               <input type="submit" value="Submit">
+          </div>
+     </form>
+</div>
+
+</body>
+</html>
