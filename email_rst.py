@@ -1,13 +1,12 @@
-#!/usr/bin/python
-
-
 # core
 import os
-
+import sys
 # 3rd party
 import argh
 
 # local
+
+sys.path.insert(0, "/home/schemelab/prg/marrowmailer")
 
 
 def full_path(*extra):
@@ -29,20 +28,29 @@ def htmlized(rst):
     return publish_string(rst, writer_name='html')
 
 def send(rst, html, email, name, cc):
-    from mailer import Mailer
-    from mailer import Message
+    from marrow.mailer import Mailer, Message
 
-    message = Message(From="binarypower@TerrenceBrannon.com",
-                  To=email,
-                      CC=cc,
-                      BCC='thequietcenter@gmail.com',
-                  charset="utf-8")
-    message.Subject = "Karatbars replicated website for {0}".format(name)
-    message.Html = html
-    message.Body = rst
+    mailer = Mailer(
+        dict(
+            transport = dict(
+                use = 'smtp',
+                host = 'localhost')))
 
-    sender = Mailer('localhost')
-    sender.send(message)
+    mailer.start()
+
+    message = Message(
+        author="FindYourTwoAndBeFree@TerrenceBrannon.com",
+        to=email,
+        cc=cc,
+        bcc='thequietcenter@gmail.com'
+    )
+
+    message.subject = "Karatbars replicated website for {0}".format(name)
+    message.rich = html
+    message.plain = rst
+
+    mailer.send(message)
+    mailer.stop()
 
 def main(kb_id, kb_email, kb_name, sponsor_id, sponsor_email):
     cc = sponsor_email

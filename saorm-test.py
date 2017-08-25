@@ -1,7 +1,7 @@
 
 from sqlalchemy import create_engine
 
-from saorm import Affiliate
+from saorm import Affiliate, engine
 
 engine = create_engine(
     'mysql+pymysql://root:m0ney123@localhost/focus',

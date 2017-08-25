@@ -11,6 +11,7 @@ import StringIO
 ## 3rd party
 import cherrypy
 sys.path.insert(0, "/home/schemelab/prg/meld3")
+
 import meld3
 
 ## local
@@ -114,13 +115,13 @@ class AffiliatePage(object):
 
     @property
     def tools_url(self):
-        return '/tools/{0}'.format(self.p.id)
+        return '/tools/{0}'.format(self.p.kb_id)
 
 
     @property
     def gfg_url(self):
         if self.p.gfg:
-            _kb_id = self.p.id
+            _kb_id = self.p.kb_id
         else:
             _kb_id = 'supreme'
         return 'http://{0}.GarageFullOfGold.com'.format(_kb_id)
@@ -382,7 +383,7 @@ class ReeseMentor(AffiliatePage):
         self.root.findmeld('intro_url').attributes(href=self.intro_url)
         self.root.findmeld('supreme_team_url_contact').attributes(href=self.supreme_team_url_contact)
 
-        self.root.findmeld('tools_register_url').attributes(href='/tools/{0}'.format(self.p.id))
+        self.root.findmeld('tools_register_url').attributes(href='/tools/{0}'.format(self.p.kb_id))
 
 
         self.root.findmeld('supreme_team_url').attributes(href=self.supreme_team_url)
@@ -502,7 +503,7 @@ class ToolsRegister(AffiliatePage):
     def insert_affiliate(email, id, name, number, skype, pic='http://j.mp/17y4bFj'):
         a = Affiliate(
             email=email,
-            id=id,
+            kb_id=id,
             name=name,
             number=number,
             pic=pic,

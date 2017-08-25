@@ -18,6 +18,16 @@ source code for my [Karatbars Affiliate Pages](http://TerrenceBrannon.com)
 
 Use WSGISite karatbars.iwantyoutoprosper.com /home/schemelab/domains/com/iwantyoutoprosper/karatbars myapp.wsgi
 
+## Database
+
+Create via alembic.
+
+## Modules
+
+### wsgi
+The python that is running mod_wsgi will need several modules
+The new-user-welcome.rst must be edited to have the correct domain
+
 
 ## Adding a new affiliate page
 

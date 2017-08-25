@@ -1,16 +1,21 @@
 # coding: utf-8
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, String, create_engine
 from sqlalchemy.ext.declarative import declarative_base
 
 
 Base = declarative_base()
 metadata = Base.metadata
 
+engine = create_engine(
+    'mysql+pymysql://root:m0ney123@localhost/focus',
+    echo=True
+)
+
 
 class Affiliate(Base):
     __tablename__ = 'affiliate'
 
-    id = Column(Integer, primary_key=True)
+    kb_id = Column(String(128), primary_key=True)
     gfg = Column(Integer)
     kbuk_id = Column(Integer)
     lttw_id = Column(String(128))
