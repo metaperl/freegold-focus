@@ -126,8 +126,12 @@ table td
     /* add background */
 }
 
-#container ul,
-#container ul, a, li {
+#roadmap {
+    list-style-type: decimal;
+    text-align: left;
+}
+
+#container ul, a, {
     list-style-type: none;
 }
 

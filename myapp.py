@@ -276,7 +276,8 @@ class Reese(AffiliatePage):
             'joe': '87802145',
             'simple': '87802144',
             'silent': '87809443',
-            '7': '90211695'
+            'corp2': '300013283',
+            'matt': '303834941'
         }
         self.period=period
         self.steps=steps
@@ -312,8 +313,8 @@ class Reese(AffiliatePage):
         for meld_id, url in carousel.iteritems():
             self.root.findmeld(meld_id).attributes(src=url)
 
-        # for i in xrange(1,4):
-        #     self.root.findmeld("period{0}".format(i)).content(self.period)
+        #for i in xrange(1,4):
+        #    self.root.findmeld("period{0}".format(i)).content(self.period)
         # self.root.findmeld("steps").content(str(self.steps))
         # earnings = dict()
         # earnings['12'] = [str(i) for i in [
@@ -379,7 +380,7 @@ class ReeseMentor(AffiliatePage):
         self.root.findmeld('roadmap_landing_url').attributes(href=self.roadmap_landing_url)
         self.root.findmeld('roadmap_landing_url2').attributes(href=self.roadmap_landing_url)
         self.root.findmeld('gfg_url').attributes(href=self.gfg_url)
-        self.root.findmeld('p2p_url').attributes(href=self.p2p_url)
+        #self.root.findmeld('p2p_url').attributes(href=self.p2p_url)
         self.root.findmeld('intro_url').attributes(href=self.intro_url)
         self.root.findmeld('supreme_team_url_contact').attributes(href=self.supreme_team_url_contact)
 
@@ -443,7 +444,7 @@ class Intro(AffiliatePage):
         # self.root.findmeld('lttw_url').attributes(href=self.lttw_url)
         #
         self.root.findmeld('supreme_team_url').attributes(href=self.supreme_team_url)
-        self.root.findmeld('supreme_team_url2').attributes(href=self.supreme_team_url)
+        #self.root.findmeld('supreme_team_url2').attributes(href=self.supreme_team_url)
         self.root.findmeld('supreme_team_contact_url').attributes(href=self.snapback_url)
         # self.root.findmeld('supreme_team_url_uk').attributes(href=self.supreme_team_url_uk)
         #
@@ -556,7 +557,7 @@ class Root(object):
         return affiliate_page.root.write_htmlstring()
 
     @cherrypy.expose
-    def index(self, s="supreme", no_autoplay=0, opener='corp', cmpg=None, banner=None, period='week', steps='12'):
+    def index(self, s="supreme", no_autoplay=0, opener='corp', cmpg=None, banner=None, period='month', steps='12'):
         return self.render(Reese(s, opener, period, steps))
 
     @cherrypy.expose
@@ -615,6 +616,10 @@ class Root(object):
 
     @cherrypy.expose
     def zimbabwe(self, s):
+        return self.render(Zimbabwe(s))
+
+    @cherrypy.expose
+    def africa(self, s):
         return self.render(Zimbabwe(s))
 
     @cherrypy.expose

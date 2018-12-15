@@ -1,12 +1,12 @@
 # core
 import os
 import sys
+
 # 3rd party
 import argh
 
 # local
-
-sys.path.insert(0, "/home/schemelab/prg/marrowmailer")
+import mymail
 
 
 def full_path(*extra):
@@ -56,7 +56,10 @@ def main(kb_id, kb_email, kb_name, sponsor_id, sponsor_email):
     cc = sponsor_email
     rst = templated(kb_id, sponsor_id)
     html = htmlized(rst)
-    send(rst, html, kb_email, kb_name, cc)
+
+    import mymail
+
+    mymail.send(rst, html, kb_email, kb_name, cc)
     return html
 
 if __name__ == '__main__':

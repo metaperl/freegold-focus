@@ -161,6 +161,11 @@ Lookout
 Your corporate pages:
 ---------------------
 
+Most recently and most importantly, Karatbars now has capture pages
+with autoresponder. It's called the [Karatbars
+Academy](http://karatbars.academy) and you can register there to get
+that system.
+
 Your Referral Link
     http://www.karatbars.com/?s={kbid}
 
@@ -172,6 +177,8 @@ Your personal Landing Link
 
 Your K-Exchange Link
     http://www.karatbars.com/k-exchange/?s={kbid}
+
+
 
 Let's Summarize
 ---------------
