@@ -171,7 +171,7 @@ class Numbers(Zimbabwe):
 
 class Roadmap(AffiliatePage):
 
-    def __init__(self, kb_id, base_dir='roadmap'):
+    def __init__(self, kb_id, base_dir='roadmap', fbclid=None):
         super(Roadmap, self).__init__(kb_id, base_dir=base_dir)
 
     def render(self):
@@ -268,7 +268,7 @@ class Get3Kilos(AffiliatePage):
 
 class Reese(AffiliatePage):
 
-    def __init__(self, kb_id, opener, period, steps):
+    def __init__(self, kb_id, opener, period, steps, **kwargs):
         self.opener = opener
         self.src = {
             'corp': '87767039',
@@ -358,7 +358,7 @@ class Reese(AffiliatePage):
 
         self.root.findmeld('mentor_url').attributes(href=self.mentor_url)
         self.root.findmeld('intro_url').attributes(href=self.intro_url)
-        self.root.findmeld('corp_kexchange_url').attributes(href=self.corp_kexchange_url)
+        # self.root.findmeld('corp_kexchange_url').attributes(href=self.corp_kexchange_url)
         self.root.findmeld('intro_iamgold_url').attributes(href=self.intro_iamgold_url)
         self.root.findmeld('intro_pricing_url').attributes(href=self.intro_pricing_url)
 
@@ -469,6 +469,28 @@ class Intro(AffiliatePage):
         self.root.findmeld('email_href').attributes(href=self.email_href)
         self.root.findmeld('email').content(self.p.email)
 
+class GoldMoney(AffiliatePage):
+
+    def __init__(self, kb_id, page):
+        super(GoldMoney, self).__init__(kb_id, page)
+        self.page=page
+        self.snapback_url = '{0}&opener=silent#contact-link'.format(
+            self.supreme_team_url)
+
+    def render(self):
+        super(GoldMoney, self).render()
+
+
+        self.root.findmeld('name').content(self.p.name)
+        # self.root.findmeld('name_in_title').content(
+        #     "{0} - Karatbars International Intro Page".format(self.p.name)
+        # )
+
+        self.root.findmeld('pic').attributes(src=self.p.pic)
+        self.root.findmeld('phone').content(self.p.number)
+        self.root.findmeld('email').content(self.p.email)
+
+
 class Tools(AffiliatePage):
 
     def __init__(self, kb_id):
@@ -557,7 +579,7 @@ class Root(object):
         return affiliate_page.root.write_htmlstring()
 
     @cherrypy.expose
-    def index(self, s="supreme", no_autoplay=0, opener='corp', cmpg=None, banner=None, period='month', steps='12'):
+    def index(self, s="supreme", no_autoplay=0, opener='corp', cmpg=None, banner=None, period='month', steps='12', fbclid=None):
         return self.render(Reese(s, opener, period, steps))
 
     @cherrypy.expose
@@ -615,15 +637,15 @@ class Root(object):
         return self.render(ReeseMentor(s))
 
     @cherrypy.expose
-    def zimbabwe(self, s):
+    def zimbabwe(self, s, fbclid=None):
         return self.render(Zimbabwe(s))
 
     @cherrypy.expose
-    def africa(self, s):
+    def africa(self, s, fbclid=None):
         return self.render(Zimbabwe(s))
 
     @cherrypy.expose
-    def roadmap(self, s):
+    def roadmap(self, s, **kwargs):
         return self.render(Roadmap(s))
 
     @cherrypy.expose
@@ -633,3 +655,7 @@ class Root(object):
     @cherrypy.expose
     def intro(self, s, page='pricing', cmpg=None, banner=None):
         return self.render(Intro(s, page))
+
+    @cherrypy.expose
+    def goldmoney(self, s, page='goldmoney', cmpg=None, banner=None, fbclid=None):
+        return self.render(GoldMoney(s, page))
