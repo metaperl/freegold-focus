@@ -32,7 +32,7 @@
           text-align: center;
           color: #f2f2f2;
           text-align: center;
-          padding: 3px 3px;
+          padding: 0px 0px;
           text-decoration: none;
           font-size: 17px;
       }
@@ -55,7 +55,7 @@
 
     </style>
   </head>
-  <body>
+  <body onload="choosePage('intro')">
 
     <div class="topnav">
       <a class="active"
@@ -90,19 +90,29 @@
              />
       </a>
 
+
+      <button onclick="choosePage('intro')">Introduction</button>
+      <button onclick="choosePage('moreinfo')">More Info</button>
+
+
     </div>
 
 
-    <iframe src="http://goldmoneyintro.com" class="frame" >
-    </iframe>
-
-    <iframe src="http://synergygoldgroup.com/" class="frame" >
+    <iframe id="flexframe" src="http://goldmoneyintro.com" class="frame" >
     </iframe>
 
 
-
-
-
+    <script>
+      function choosePage(name) {
+          var elem = document.getElementById("flexframe");
+          if (name == "moreinfo") {
+              elem.src="http://synergygoldgroup.com";
+          }
+          if (name == "intro") {
+              elem.src="http://GoldMoneyIntro.com";
+          }
+      }
+    </script>
 
   </body>
 </html>

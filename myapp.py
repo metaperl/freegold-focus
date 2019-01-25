@@ -659,3 +659,7 @@ class Root(object):
     @cherrypy.expose
     def goldmoney(self, s, page='goldmoney', cmpg=None, banner=None, fbclid=None):
         return self.render(GoldMoney(s, page))
+
+    @cherrypy.expose
+    def eldorado(self, s, page=None, cmpg=None, banner=None, fbclid=None):
+        return self.render(GoldMoney(s, page))
