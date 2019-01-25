@@ -656,6 +656,7 @@ class Root(object):
         return self.render(Intro(s, page))
 
     @cherrypy.expose
+
     def goldmoney(self, s, base_dir='goldmoney', cmpg=None, banner=None, fbclid=None):
         return self.render(GoldMoney(s, base_dir))
 
