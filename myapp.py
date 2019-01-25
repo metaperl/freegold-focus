@@ -471,9 +471,8 @@ class Intro(AffiliatePage):
 
 class GoldMoney(AffiliatePage):
 
-    def __init__(self, kb_id, page):
-        super(GoldMoney, self).__init__(kb_id, page)
-        self.page=page
+    def __init__(self, kb_id, base_dir):
+        super(GoldMoney, self).__init__(kb_id, base_dir)
         self.snapback_url = '{0}&opener=silent#contact-link'.format(
             self.supreme_team_url)
 
@@ -657,5 +656,10 @@ class Root(object):
         return self.render(Intro(s, page))
 
     @cherrypy.expose
-    def goldmoney(self, s, page='goldmoney', cmpg=None, banner=None, fbclid=None):
-        return self.render(GoldMoney(s, page))
+    def goldmoney(self, s, base_dir='goldmoney', cmpg=None, banner=None, fbclid=None):
+        return self.render(GoldMoney(s, base_dir))
+
+    @cherrypy.expose
+    def eldorado(self, s,
+                 base_dir='eldorado', cmpg=None, banner=None, fbclid=None):
+        return self.render(GoldMoney(s, base_dir))
