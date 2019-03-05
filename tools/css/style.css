@@ -178,10 +178,10 @@ h6 {
 }
 
 #main {
-    height: 270px;
+    height: 20px;
     width: 960px;
     margin: 0 auto;
-    background-image: url(https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQha9_s_oYbQESqO_MHB6AFx737P0CetKat6o5kOIZCTRqKspvNbg);
+    /* background-image: url(https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQha9_s_oYbQESqO_MHB6AFx737P0CetKat6o5kOIZCTRqKspvNbg); */
     background-repeat: no-repeat;
 }
 

@@ -2,11 +2,10 @@ Hello and welcome to Karatbars.
 ===============================
 
 This is a link to your replicated website:
-http://karatbars.iwantyoutoprosper.com/?s={kbid}
+http://freegold.biz/eldorado/{kbid}
 
-When people want to sign up with you, just send them to `your
-roadmap link <http://karatbars.iwantyoutoprosper.com/roadmap/{kbid}>`_
-and have them follow the steps.
+This your link to give someone else a replicated website:
+http://freegold.biz/tools/{kbid}
 
 That's the short version of this email. The rest of this email is very
 long and simply expands on the 2 sentences above.
@@ -34,7 +33,7 @@ building our personal cash and gold empire.
 Your sponsor has paved the way for you. They have a complete roadmap
 for your success from start to finish so here it is:
 
-    http://karatbars.iwantyoutoprosper.com/roadmap/{sponsorid}
+    http://freegold.biz/roadmap/{sponsorid}
 
 But let's go ahead and break it down step by step.
 
@@ -48,24 +47,24 @@ Invitation
   Invitation is contacting the prospect about your opportunity. We
   have plenty of training on both prospecting and invitation. An
   effective approach to invitation is shown at 22 minutes into
-  this video - http://karatbars.iwantyoutoprosper.com/get3kilos/{kbid}
+  this video - http://freegold.biz/get3kilos/{kbid}
 Presentation
   Since a picture is worth 1,000 words, the presentation lets the
   prospect form his own opinion about this opportunity. The exact
   presentation you use depends on the type of prospect you have. Heck,
   if you are up to it, you can give a presentation right over the phone
   with `these slides
-  <http://karatbars.iwantyoutoprosper.com/intro/{kbid}#moreinformation-link>`_.
+  <http://freegold.biz/intro/{kbid}#moreinformation-link>`_.
 Follow-up
   After the presentation is finished, you want to followup. We have
   weekly trainings on this process as well. A number of common
   questions about Karatbars are addressed on `your details page
-  <http://karatbars.iwantyoutoprosper.com/intro/{kbid}>`_ so you simply need to
+  <http://freegold.biz/intro/{kbid}>`_ so you simply need to
   direct the prospect there for further education in most cases.
 Sign-up
   The complete sign-up process for your prospect is available on
   your roadmap page:
-  http://karatbars.iwantyoutoprosper.com/roadmap/{kbid}. She simply needs to follow
+  http://freegold.biz/roadmap/{kbid}. She simply needs to follow
   the practical sign-up steps.
 Training
   A wide variety of training materials are available in Karatbars, but
@@ -73,10 +72,10 @@ Training
   in karatbars, here is how they begin training:
 
   1. They get a free replicated website just like yours by visiting `your
-  tools page <http://karatbars.iwantyoutoprosper.com/tools/{kbid}>`_.
+  tools page <http://freegold.biz/tools/{kbid}>`_.
 
   2. They watch all the training videos on `your
-  mentor page <http://karatbars.iwantyoutoprosper.com/trainwith/{kbid}>`_. It is
+  mentor page <http://freegold.biz/trainwith/{kbid}>`_. It is
   very important that you learn about binary compensation plans
   so be sure to watch every video, including the last one.
 
@@ -119,52 +118,47 @@ number of presentations that give you complete control over how the
 prospect is introduced to Karatbars. I am also open to adding more.
 
 This is a link to your main replicated website:
-http://karatbars.iwantyoutoprosper.com/?s={kbid}
+http://freegold.biz/?s={kbid}
 This site will allow you to introduce people to the Karatbars
 International business. If you want your picture or skype ID updated,
 just send me a link to your picture or provide me with your skype ID
 and I will update them promptly. Here are some other videos that you
 may prefer to show on this main site:
 
-  - http://karatbars.iwantyoutoprosper.com/?s={kbid}&opener=joe
-  - http://karatbars.iwantyoutoprosper.com/?s={kbid}&opener=selina
-  - http://karatbars.iwantyoutoprosper.com/?s={kbid}&opener=uk
-  - http://karatbars.iwantyoutoprosper.com/?s={kbid}&opener=simple
+  - http://freegold.biz/?s={kbid}&opener=joe
+  - http://freegold.biz/?s={kbid}&opener=selina
+  - http://freegold.biz/?s={kbid}&opener=uk
+  - http://freegold.biz/?s={kbid}&opener=simple
 
 Also, for some people, saving in gold every week is not
 affordable. Saving on a monthly basis is more to their liking. They
 may also find it a bit challenging to find 2 people within 1 week. For
 these people, you are better off presenting Karatbars as a 12-month
 plan instead of a 12-week plan:
-http://karatbars.iwantyoutoprosper.com/?s={kbid}&period=month
+http://freegold.biz/?s={kbid}&period=month
 
 Other replicated presentation links that are also yours:
 --------------------------------------------------------
 
 Zimbabwe
-    http://karatbars.iwantyoutoprosper.com/zimbabwe/{kbid}
+    http://freegold.biz/zimbabwe/{kbid}
 
 The Superior Retirement Program
-    http://karatbars.iwantyoutoprosper.com/superior/{kbid}
+    http://freegold.biz/superior/{kbid}
     This one has a couple of sub-pages that people like also:
 
-    * http://karatbars.iwantyoutoprosper.com/get3kilos/{kbid}
-    * http://karatbars.iwantyoutoprosper.com/buygold/{kbid}
+    * http://freegold.biz/get3kilos/{kbid}
+    * http://freegold.biz/buygold/{kbid}
 
 Wealth Insurance
-    http://karatbars.iwantyoutoprosper.com/ben919/{kbid}
+    http://freegold.biz/ben919/{kbid}
 
 Lookout
-    http://karatbars.iwantyoutoprosper.com/lookout/{kbid}
+    http://freegold.biz/lookout/{kbid}
 
 
 Your corporate pages:
 ---------------------
-
-Most recently and most importantly, Karatbars now has capture pages
-with autoresponder. It's called the [Karatbars
-Academy](http://karatbars.academy) and you can register there to get
-that system.
 
 Your Referral Link
     http://www.karatbars.com/?s={kbid}
@@ -191,14 +185,14 @@ overhead of inventory, real estate and employees.
 It is vital that you have a roadmap for the entire process from start
 to finish so here it is:
 
-    http://karatbars.iwantyoutoprosper.com/roadmap/{sponsorid}
+    http://freegold.biz/roadmap/{sponsorid}
 
 Welcome to real money.
 ----------------------
 
 If you have further questions, please contact:
 
-* your sponsor at http://karatbars.iwantyoutoprosper.com/?s={sponsorid}
+* your sponsor at http://freegold.biz/?s={sponsorid}
 * or Terrence Brannon at http://www.TerrenceBrannon.com
 
 Well, that's all for now, may the power of the binary lead to many

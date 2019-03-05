@@ -39,7 +39,7 @@ def send(rst, html, email, name, cc):
     mailer.start()
 
     message = Message(
-        author="FindYourTwoAndBeFree@TerrenceBrannon.com",
+        author="admin@freegold.biz",
         to=email,
         cc=cc,
         bcc='thequietcenter@gmail.com'

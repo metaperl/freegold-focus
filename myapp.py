@@ -313,8 +313,8 @@ class Reese(AffiliatePage):
         for meld_id, url in carousel.iteritems():
             self.root.findmeld(meld_id).attributes(src=url)
 
-        #for i in xrange(1,4):
-        #    self.root.findmeld("period{0}".format(i)).content(self.period)
+        for i in (1,4):
+            self.root.findmeld("period{0}".format(i)).content(self.period)
         # self.root.findmeld("steps").content(str(self.steps))
         # earnings = dict()
         # earnings['12'] = [str(i) for i in [
@@ -499,7 +499,7 @@ class Tools(AffiliatePage):
 
     def render(self):
         super(Tools, self).render()
-        self.root.findmeld('name').content(self.p.name)
+        # self.root.findmeld('name').content(self.p.name)
         self.root.findmeld('supreme_team_url').attributes(href=self.supreme_team_url)
         self.root.findmeld('toolsform_url').attributes(src=self.toolsform_url)
 

@@ -10,11 +10,11 @@ def send(text, html, email, name, cc):
     from email.mime.multipart import MIMEMultipart
     from email.mime.text import MIMEText
 
-    me = "BinaryPower@TerrenceBrannon.com"
+    me = "ElDorado@FreeGold.Biz"
     you = email
 
     COMMASPACE = ', '
-    addressees = [you, cc, 'thequietcenter@gmail.com']
+    addressees = [you, cc, 'terrence.brannon@gmail.com']
 
     msg = MIMEMultipart('alternative')
     msg['Subject'] = "Karatbars replicated website for {0}".format(name)
