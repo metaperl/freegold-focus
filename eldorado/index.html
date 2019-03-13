@@ -1,5 +1,8 @@
 <html>
   <head>
+
+    <link rel="stylesheet" href="/css/flyout/jquery.flyout.css">
+
     <style>
       body {
           margin: 0;
@@ -95,7 +98,8 @@
       <button onclick="choosePage('intro')">Introduction</button>
       <button onclick="choosePage('moreinfo')">More Info</button>
       <button
-        onclick="location.href='http://synergygoldteam.com';">
+        id="webinar"
+        >
         Webinar
       </button>
       <button onclick="choosePage('replicate')">Replicate</button>
@@ -117,6 +121,9 @@
           if (name == "intro") {
               elem.src="http://GoldMoneyIntro.com";
           }
+          if (name == 3) {
+              elem.src="http://GoldMoneyIntro.com/#3steps";
+          }
           if (name == "replicate") {
               elem.src="http://freegold.biz/tools/supreme";
           }
@@ -124,5 +131,21 @@
       }
     </script>
 
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="/css/flyout/jquery.flyout.js"></script>
+
+    <script>
+      $('#webinar').flyout({
+          title: 'Attend Live or Pre-recorded Webinars Below!',
+          content: '<ol>' +
+              '<li><button onclick="location.href=\'http://synergygoldteam.com\';">Live webinars</button> are held in English Tue and Thu at 9pm EST and Sat at approximately 10:30am. Spanish Wed at 9pm EST</li>' +
+              '<li>Pre-recorded webinars are available anytime. <button onclick="choosePage(3)">Take the 3-step tour</button> to learn more.</li>' +
+              '</ol>'             ,
+          html: true,
+	  placement: 'left'
+      });
+    </script>
+
   </body>
+
 </html>
