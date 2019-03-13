@@ -137,11 +137,10 @@
     <script>
       $('#webinar').flyout({
           title: 'Attend Live or Pre-recorded Webinars Below!',
-          content: '<ul>' +
-              '<li>nbsp;</li>' +
-              '<li><button onclick="location.href=\'http://synergygoldteam.com\';">Live webinars</button> are held in English Tue and Thu at 9pm EST and Sat at approximately 10:30am. Spanish Wed at 9pm EST</li>' +
-              '<li>Pre-recorded webinars are available anytime. <button onclick="choosePage(3)">Take the 3-step tour</button> to learn more.</li>' +
-              '</ul>'             ,
+          content: '<div>&nbsp;</div>' +
+              '<div><button onclick="location.href=\'http://synergygoldteam.com\';">Live webinars</button> are held in English Tue and Thu at 9pm EST and Sat at approximately 10:30am. Spanish Wed at 9pm EST</div>' +
+              '<div>Pre-recorded webinars are available anytime. <button onclick="choosePage(3)">Take the 3-step tour</button> to learn more.</div>' +
+                   '<div>&nbsp;</div>',
           html: true,
 	  placement: 'left'
       });
