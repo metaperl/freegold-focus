@@ -24,7 +24,10 @@
       .topnav {
           background-color: #399ddb;
           overflow: hidden;
+
       }
+
+
 
       /* Style the links inside the navigation bar */
       .topnav a {
@@ -56,6 +59,10 @@
           background-color: #4CAF50;
           color: white;
       }
+
+    .swlFlyout ul {
+          list-style-type: none;
+    }
 
     </style>
   </head>
@@ -90,7 +97,7 @@
 
       <a href="#news"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </a>
       <a meld:id="affiliate_url" href="http://www.karatbars.com">
-        <img src="https://web.payactiv.com/signature/images/Enroll-button-with-cursor.png"
+        <img src="/images/enroll-button.png"
              />
       </a>
 
@@ -137,10 +144,11 @@
     <script>
       $('#webinar').flyout({
           title: 'Attend Live or Pre-recorded Webinars Below!',
-          content: '<div>&nbsp;</div>' +
-              '<div><button onclick="location.href=\'http://synergygoldteam.com\';">Live webinars</button> are held in English Tue and Thu at 9pm EST and Sat at approximately 10:30am. Spanish Wed at 9pm EST</div>' +
-              '<div>Pre-recorded webinars are available anytime. <button onclick="choosePage(3)">Take the 3-step tour</button> to learn more.</div>' +
-                   '<div>&nbsp;</div>',
+          content: '<ul class="flyout">' +
+              '<li>&nbsp;</li>' +               '<li>&nbsp;</li>' +
+              '<li><button onclick="location.href=\'http://synergygoldteam.com\';">Attend Live Webinars</button> in English on Tuesday and Thursday at 9pm EST and Saturday at approximately 10:40am EST as well as Wednesday at 2pm EST. Spanish webinar is Wednesday at 9pm EST. </li>' +
+              '<li>Pre-recorded webinars are available anytime. <button onclick="choosePage(3)">Take the 3-step tour</button> to learn more.</li>' +
+              '</ul>',
           html: true,
 	  placement: 'left'
       });
