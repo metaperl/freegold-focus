@@ -136,7 +136,7 @@ class AffiliatePage(object):
 
 class Superior(AffiliatePage):
 
-    def __init__(self, kb_id, base_dir='superior'):
+    def __init__(self, kb_id, base_dir='superior', fbclid=None):
         super(Superior, self).__init__(kb_id, base_dir=base_dir)
 
     def render(self):
@@ -157,7 +157,7 @@ class Superior(AffiliatePage):
 
 class Zimbabwe(AffiliatePage):
 
-    def __init__(self, kb_id, base_dir='zimbabwe'):
+    def __init__(self, kb_id, base_dir='zimbabwe', fbclid=None):
         super(Zimbabwe, self).__init__(kb_id, base_dir=base_dir)
 
     def render(self):
@@ -166,7 +166,7 @@ class Zimbabwe(AffiliatePage):
 
 class Numbers(Zimbabwe):
 
-    def __init__(self, kb_id, base_dir='numbers'):
+    def __init__(self, kb_id, base_dir='numbers', fbclid=None):
         super(Numbers, self).__init__(kb_id, base_dir=base_dir)
 
 class Roadmap(AffiliatePage):
@@ -181,12 +181,12 @@ class Roadmap(AffiliatePage):
 
 class Lookout(Zimbabwe):
 
-    def __init__(self, kb_id):
+    def __init__(self, kb_id, fbclid=None):
         super(Lookout, self).__init__(kb_id, base_dir='lookout')
 
 class Ben919(AffiliatePage):
 
-    def __init__(self, kb_id):
+    def __init__(self, kb_id, fbclid=None):
         super(Ben919, self).__init__(kb_id, base_dir='ben919')
         self.affiliate_url_ids = ('affiliate_url{0}'.format(i) for i in xrange(2,9))
         self.cyprus_url = '/cyprus/{0}'.format(kb_id)
@@ -213,7 +213,7 @@ class Ben919(AffiliatePage):
 
 class Cyprus(AffiliatePage):
 
-    def __init__(self, kb_id):
+    def __init__(self, kb_id, fbclid=None):
         super(Cyprus, self).__init__(kb_id, base_dir='cyprus')
 
     def render(self):
@@ -222,7 +222,7 @@ class Cyprus(AffiliatePage):
 
 class BuyGold(AffiliatePage):
 
-    def __init__(self, kb_id):
+    def __init__(self, kb_id, fbclid=None):
         super(BuyGold, self).__init__(kb_id, base_dir='buygold')
 
     def render(self):
@@ -236,7 +236,7 @@ class BuyGold(AffiliatePage):
 
 class Get13Kilos(AffiliatePage):
 
-    def __init__(self, kb_id):
+    def __init__(self, kb_id, fbclid=None):
         super(Get13Kilos, self).__init__(kb_id, base_dir='get13kilos')
 
     def render(self):
@@ -251,7 +251,7 @@ class Get13Kilos(AffiliatePage):
 
 class Get3Kilos(AffiliatePage):
 
-    def __init__(self, kb_id):
+    def __init__(self, kb_id, fbclid=None):
         super(Get3Kilos, self).__init__(kb_id, base_dir='get3kilos')
 
     def render(self):
@@ -368,7 +368,7 @@ class Reese(AffiliatePage):
 
 class ReeseMentor(AffiliatePage):
 
-    def __init__(self, kb_id):
+    def __init__(self, kb_id, fbclid=None):
         super(ReeseMentor, self).__init__(kb_id, 'trainwith')
         self.lttw_url = 'http://www.littletickettowealth.com/?id={0}'.format(self.p.lttw_id)
 
@@ -428,7 +428,7 @@ class ReeseMentor(AffiliatePage):
 
 class Intro(AffiliatePage):
 
-    def __init__(self, kb_id, page):
+    def __init__(self, kb_id, page, fbclid=None):
         super(Intro, self).__init__(kb_id, 'intro')
         self.page=page
         self.snapback_url = '{0}&opener=silent#contact-link'.format(
@@ -471,7 +471,7 @@ class Intro(AffiliatePage):
 
 class GoldMoney(AffiliatePage):
 
-    def __init__(self, kb_id, base_dir):
+    def __init__(self, kb_id, base_dir, fbclid=None):
         super(GoldMoney, self).__init__(kb_id, base_dir)
         self.snapback_url = '{0}&opener=silent#contact-link'.format(
             self.supreme_team_url)
@@ -492,7 +492,7 @@ class GoldMoney(AffiliatePage):
 
 class Tools(AffiliatePage):
 
-    def __init__(self, kb_id):
+    def __init__(self, kb_id, fbclid=None):
         super(Tools, self).__init__(kb_id, 'tools')
         self.toolsform_url = '/toolsform/{0}'.format(kb_id)
 
@@ -582,36 +582,36 @@ class Root(object):
         return self.render(Reese(s, opener, period, steps))
 
     @cherrypy.expose
-    def paidfast(self, s, cmpg=None, banner=None):
+    def paidfast(self, s, cmpg=None, banner=None, fbclid=None):
         raise cherrypy.HTTPRedirect(
             "/?s={0}&opener=simple".format(s))
 
     @cherrypy.expose
-    def numbers(self, s, cmpg=None, banner=None):
+    def numbers(self, s, cmpg=None, banner=None, fbclid=None):
         return self.render(Numbers(s))
 
     @cherrypy.expose
-    def superior(self, s, cmpg=None, banner=None):
+    def superior(self, s, cmpg=None, banner=None, fbclid=None):
         return self.render(Superior(s))
 
     @cherrypy.expose
-    def ben919(self, s, cmpg=None, banner=None):
+    def ben919(self, s, cmpg=None, banner=None, fbclid=None):
         return self.render(Ben919(s))
 
     @cherrypy.expose
-    def cyprus(self, s, cmpg=None, banner=None):
+    def cyprus(self, s, cmpg=None, banner=None, fbclid=None):
         return self.render(Cyprus(s))
 
     @cherrypy.expose
-    def buygold(self, s, cmpg=None, banner=None):
+    def buygold(self, s, cmpg=None, banner=None, fbclid=None):
         return self.render(BuyGold(s))
 
     @cherrypy.expose
-    def get13kilos(self, s, cmpg=None, banner=None):
+    def get13kilos(self, s, cmpg=None, banner=None, fbclid=None):
         return self.render(Get13Kilos(s))
 
     @cherrypy.expose
-    def get3kilos(self, s, cmpg=None, banner=None):
+    def get3kilos(self, s, cmpg=None, banner=None, fbclid=None):
         return self.render(Get3Kilos(s))
 
     @cherrypy.expose
@@ -632,7 +632,7 @@ class Root(object):
         return (ToolsRegister(**dbargs)).render()
 
     @cherrypy.expose
-    def trainwith(self, s):
+    def trainwith(self, s, fbclid=None):
         return self.render(ReeseMentor(s))
 
     @cherrypy.expose
@@ -648,11 +648,11 @@ class Root(object):
         return self.render(Roadmap(s))
 
     @cherrypy.expose
-    def lookout(self, s):
+    def lookout(self, s, fbclid=None):
         return self.render(Lookout(s))
 
     @cherrypy.expose
-    def intro(self, s, page='pricing', cmpg=None, banner=None):
+    def intro(self, s, page='pricing', cmpg=None, banner=None, fbclid=None):
         return self.render(Intro(s, page))
 
     @cherrypy.expose
