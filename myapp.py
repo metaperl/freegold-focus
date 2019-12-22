@@ -488,7 +488,7 @@ class GoldMoney(AffiliatePage):
 
         self.root.findmeld('pic').attributes(src=self.p.pic)
         self.root.findmeld('phone').content(self.p.number)
-        self.root.findmeld('email').content(self.p.email)
+        # self.root.findmeld('email').content(self.p.email)
 
 
 class Tools(AffiliatePage):
