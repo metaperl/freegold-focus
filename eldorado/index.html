@@ -104,6 +104,8 @@
 
       <button onclick="choosePage('intro')">Introduction</button>
       <button onclick="choosePage('moreinfo')">More Info</button>
+      <button onclick="choosePage('news')">News</button>
+
       <button
         id="webinar"
         >
@@ -124,6 +126,9 @@
           var elem = document.getElementById("flexframe");
           if (name == "moreinfo") {
               elem.src="http://synergygoldgroup.com";
+          }
+          if (name == "news") {
+              elem.src="http://www.karatnews.org";
           }
           if (name == "intro") {
               elem.src="http://GoldStandardWebinar.com";
