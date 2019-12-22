@@ -277,7 +277,8 @@ class Reese(AffiliatePage):
             'simple': '87802144',
             'silent': '87809443',
             'corp2': '300013283',
-            'matt': '303834941'
+            'matt': '303834941',
+            '2020': '381038352'
         }
         self.period=period
         self.steps=steps
@@ -578,7 +579,7 @@ class Root(object):
         return affiliate_page.root.write_htmlstring()
 
     @cherrypy.expose
-    def index(self, s="supreme", no_autoplay=0, opener='corp', cmpg=None, banner=None, period='month', steps='12', fbclid=None):
+    def index(self, s="supreme", no_autoplay=0, opener='2020', cmpg=None, banner=None, period='month', steps='12', fbclid=None):
         return self.render(Reese(s, opener, period, steps))
 
     @cherrypy.expose
