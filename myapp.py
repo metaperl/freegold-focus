@@ -113,6 +113,11 @@ class AffiliatePage(object):
         self.kbgold_uk_url = 'http://www.karatbarsgold.co.uk/{0}'.format(self.p.kbuk_id)
         self.email_href = 'mailto:{0}'.format(self.p.email)
 
+
+    @property
+    def eldorado_url(self):
+        return '/eldorado/{0}'.format(self.p.kb_id)
+
     @property
     def tools_url(self):
         return '/tools/{0}'.format(self.p.kb_id)
@@ -358,7 +363,9 @@ class Reese(AffiliatePage):
         self.root.findmeld('main_url2').attributes(href=self.main_url)
 
         self.root.findmeld('mentor_url').attributes(href=self.mentor_url)
-        self.root.findmeld('intro_url').attributes(href=self.intro_url)
+
+        self.root.findmeld('eldorado_url').attributes(href=self.eldorado_url)
+
         # self.root.findmeld('corp_kexchange_url').attributes(href=self.corp_kexchange_url)
         self.root.findmeld('intro_iamgold_url').attributes(href=self.intro_iamgold_url)
         self.root.findmeld('intro_pricing_url').attributes(href=self.intro_pricing_url)
