@@ -119,6 +119,10 @@ class AffiliatePage(object):
         return '/eldorado/{0}'.format(self.p.kb_id)
 
     @property
+    def wbw_url(self):
+        return '/wbw/{0}'.format(self.p.kb_id)
+
+    @property
     def tools_url(self):
         return '/tools/{0}'.format(self.p.kb_id)
 
@@ -664,7 +668,6 @@ class Root(object):
         return self.render(Intro(s, page))
 
     @cherrypy.expose
-
     def goldmoney(self, s, base_dir='goldmoney', cmpg=None, banner=None, fbclid=None):
         return self.render(GoldMoney(s, base_dir))
 
@@ -672,3 +675,9 @@ class Root(object):
     def eldorado(self, s,
                  base_dir='eldorado', cmpg=None, banner=None, fbclid=None):
         return self.render(GoldMoney(s, base_dir))
+
+    @cherrypy.expose
+    def wbw(self, s,
+                 base_dir='wbw', cmpg=None, banner=None, fbclid=None):
+        return self.render(GoldMoney(s, base_dir))
+        

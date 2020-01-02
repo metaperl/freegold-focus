@@ -1,0 +1,152 @@
+<html>
+  <head>
+
+    <link rel="stylesheet" href="/css/flyout/jquery.flyout.css">
+
+    <style>
+      body {
+          margin: 0;
+          padding: 0;
+      }
+
+      .frame {
+          display: block;
+          width: 100vw;
+          height: 100vh;
+          max-width: 100%;
+          margin: 0;
+          padding: 0;
+          border: 0 none;
+          box-sizing: border-box;
+      }
+
+      /* Add a black background color to the top navigation */
+      .topnav {
+          background-color: #399ddb;
+          overflow: hidden;
+
+      }
+
+
+
+      /* Style the links inside the navigation bar */
+      .topnav a {
+          float: left;
+          font-family: Helvetica, sans-serif;
+          height: 75px;
+          line-height: 75px;
+          text-align: center;
+          color: #000;
+          text-shadow: 1px 1px 1px #000000;
+          text-align: center;
+          padding: 0px 0px;
+          text-decoration: none;
+          font-size: 20px;
+      }
+
+      .topnav img {
+          height: 100%;
+      }
+
+      /* Change the color of links on hover */
+      .topnav a:hover {
+          background-color: #ddd;
+          color: black;
+      }
+
+      /* Add a color to the active/current link */
+      .topnav a.active {
+          background-color: #4CAF50;
+          color: white;
+      }
+
+    .swlFlyout ul {
+          list-style-type: none;
+    }
+
+    </style>
+  </head>
+  <body onload="choosePage('intro')">
+
+    <div class="topnav">
+      <a class="active"
+      href="#home"><img meld:id="pic" src="https://avatars3.githubusercontent.com/u/21293?s=400&v=4"
+                        /></a>
+      <a href="#news">
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+      </a>
+      <b><a meld:id="name" href="#contact">Terrence Brannon</a></b>
+      <a href="#news">
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+      </a>
+
+      <a meld:id="phone" href="#about">818-359-0893</a>
+
+      <a href="#news"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </a>
+
+      <a href="#news"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </a>
+      <a meld:id="affiliate_url" href="http://www.karatbars.com">
+        <img src="/images/enroll-button.png"
+             />
+      </a>
+
+
+      <button onclick="choosePage('intro')">Introduction</button>
+      <button onclick="choosePage('moreinfo')">More Info</button>
+      <button onclick="choosePage('news')">News</button>
+
+      <button
+        id="webinar"
+        >
+        Webinar
+      </button>
+      <button onclick="choosePage('replicate')">Replicate</button>
+
+
+    </div>
+
+
+    <iframe id="flexframe" src="http://goldstandardwebinar.com" class="frame" >
+    </iframe>
+
+
+    <script>
+      function choosePage(name) {
+          var elem = document.getElementById("flexframe");
+          if (name == "moreinfo") {
+              elem.src="http://synergygoldgroup.com";
+          }
+          if (name == "news") {
+              elem.src="http://www.karatnews.org";
+          }
+          if (name == "intro") {
+              elem.src="http://WealthBuildersWorldwide.net/presentation/";
+          }
+          if (name == 3) {
+              elem.src="http://GoldMoneyIntro.com/#3steps";
+          }
+          if (name == "replicate") {
+              elem.src="http://freegold.biz/tools/supreme";
+          }
+
+      }
+    </script>
+
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="/css/flyout/jquery.flyout.js"></script>
+
+
+
+  </body>
+
+</html>
