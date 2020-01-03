@@ -122,6 +122,7 @@ class AffiliatePage(object):
     def wbw_url(self):
         return '/wbw/{0}'.format(self.p.kb_id)
 
+
     @property
     def tools_url(self):
         return '/tools/{0}'.format(self.p.kb_id)
@@ -287,7 +288,8 @@ class Reese(AffiliatePage):
             'silent': '87809443',
             'corp2': '300013283',
             'matt': '303834941',
-            '2020': '381344445'
+            '2020': '381344445',
+            'teaser': '382643005'
         }
         self.period=period
         self.steps=steps
