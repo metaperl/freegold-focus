@@ -327,7 +327,7 @@ class Reese(AffiliatePage):
 
         for i in (1,4):
             self.root.findmeld("period{0}".format(i)).content(self.period)
-        # self.root.findmeld("steps").content(str(self.steps))
+        self.root.findmeld("steps").content(str(self.steps))
         # earnings = dict()
         # earnings['12'] = [str(i) for i in [
         #     13, 0, 0, 26, 39, 65, 143, 286, 546, 1131, 2223, 4485]]
@@ -592,7 +592,7 @@ class Root(object):
         return affiliate_page.root.write_htmlstring()
 
     @cherrypy.expose
-    def index(self, s="supreme", no_autoplay=0, opener='2020', cmpg=None, banner=None, period='month', steps='12', fbclid=None):
+    def index(self, s="supreme", no_autoplay=0, opener='teaser', cmpg=None, banner=None, period='', steps='', fbclid=None):
         return self.render(Reese(s, opener, period, steps))
 
     @cherrypy.expose
