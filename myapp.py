@@ -289,7 +289,7 @@ class Reese(AffiliatePage):
             'corp2': '300013283',
             'matt': '303834941',
             '2020': '381344445',
-            'teaser': '382643005'
+            'teaser': '384129681'
         }
         self.period=period
         self.steps=steps
@@ -682,4 +682,3 @@ class Root(object):
     def wbw(self, s,
                  base_dir='wbw', cmpg=None, banner=None, fbclid=None):
         return self.render(GoldMoney(s, base_dir))
-        
