@@ -289,7 +289,7 @@ class Reese(AffiliatePage):
             'corp2': '300013283',
             'matt': '303834941',
             '2020': '381344445',
-            'teaser': '385340760'
+            'teaser': 'tCB_lRpJ6s8'
         }
         self.period=period
         self.steps=steps
@@ -317,7 +317,7 @@ class Reese(AffiliatePage):
 
         followers = self.followers()
 
-        _url = '//player.vimeo.com/video/{0}?title=0;byline=0;portrait=0;autoplay=1'.format(self.src[self.opener])
+        _url = 'https://www.youtube.com/embed/{0}'.format(self.src[self.opener])
         carousel = dict(
             opener=_url
         )
