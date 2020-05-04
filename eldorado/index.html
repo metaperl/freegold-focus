@@ -122,15 +122,20 @@
 
     <script>
       function choosePage(name) {
+
           var elem = document.getElementById("flexframe");
+
+          if (name == "intro") {
+              elem.src="http://GoldStandardWebinar.com";
+          }
           if (name == "moreinfo") {
               elem.src="http://synergygoldgroup.com";
           }
           if (name == "news") {
               elem.src="http://www.karatnews.org";
           }
-          if (name == "intro") {
-              elem.src="http://GoldStandardWebinar.com";
+          if (name == "events") {
+              elem.src="http://synergygoldgroup.com/#events";
           }
           if (name == 3) {
               elem.src="http://GoldMoneyIntro.com/#3steps";
@@ -150,8 +155,9 @@
           title: 'Attend Live or Pre-recorded Webinars Below!',
           content: '<ul class="flyout">' +
               '<li>&nbsp;</li>' +               '<li>&nbsp;</li>' +
-              '<li><a href="http://synergygoldteam.com" target="_blank"><button>Attend Live Webinars</button></a> in English on Tuesday and Thursday at 9pm EST and Saturday at approximately 10:40am EST as well as Wednesday at 2pm EST. Spanish webinar is Wednesday at 9pm EST. </li>' +
-              // '<li>Pre-recorded webinars are available anytime. <button onclick="choosePage(3)">Take the 3-step tour</button> to learn more.</li>' +
+              "<li>Attend Live Virtual Gold Receptions at the times <button onclick=choosePage('events')>listed here</button></li>" +
+              '<li>&nbsp;</li>' + 
+              '<li>Pre-recorded webinars</a> are available anytime <a target="_blank" href="https://youtu.be/hs26OoAXamQ"><button>at this link</button></a>.</li>' +
               '</ul>',
           html: true,
 	  placement: 'left'
